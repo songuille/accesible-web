@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accesible — Outils d’accessibilité pour le spectacle vivant avec QLab (Figure 53) : sous-titres, traduction, audiodescription et vidéodescription.">
+  <title>Accesible — Accessibilité en direct pour macOS</title>
+  <link rel="alternate" hreflang="es" href="../es/index.html">
+  <link rel="alternate" hreflang="en" href="../en/index.html">
+  <link rel="alternate" hreflang="fr" href="../fr/index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html">Accesible</a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Menu principal">
+            <a href="index.html#fonctions">Fonctions</a>
+            <a href="support.html">Assistance</a>
+            <a href="privacy.html">Confidentialité</a>
+          </nav>
+          <div class="lang-switch" role="navigation" aria-label="Langue">
+            <a href="../es/index.html" hreflang="es" title="Español">🇪🇸</a>
+            <a href="../en/index.html" hreflang="en" title="English">🇬🇧</a>
+            <a href="index.html" hreflang="fr" title="Français" aria-current="page">🇫🇷</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <h1>Accessibilité en direct, intégrée à QLab</h1>
+          <p class="tagline">
+            <strong>Accesible</strong> est une application macOS pour les spectacles accessibles.
+            Elle s’appuie sur <strong>QLab (Figure 53)</strong> et propose des serveurs de sous-titres, de traduction,
+            d’audiodescription et de vidéodescription sur le réseau local.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#" aria-disabled="true">Télécharger sur le Mac App Store</a>
+            <a class="btn btn-secondary" href="support.html">Assistance</a>
+          </div>
+          <p class="tagline" style="margin-top:1.5rem;font-size:0.9rem;">
+            Le lien vers la boutique sera mis à jour lorsque l’app sera publiée.
+          </p>
+        </div>
+      </section>
+
+      <section id="fonctions">
+        <div class="wrap">
+          <h2>Ce que l’app propose</h2>
+          <div class="grid">
+            <article class="card">
+              <div class="icon" aria-hidden="true">📝</div>
+              <h3>Sous-titres</h3>
+              <p>Messages OSC et page web pour afficher le texte en temps réel, avec styles et commandes avancées.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">🌐</div>
+              <h3>Traduction</h3>
+              <p>Même flux que les sous-titres ; traduction vers la langue de sortie choisie et affichage sur un autre port.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">🎵</div>
+              <h3>Audiodescription</h3>
+              <p>Lecture d’audio préenregistré depuis les dossiers du projet, pilotée par OSC.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">🎬</div>
+              <h3>Vidéodescription</h3>
+              <p>Streaming MP4, synchronisation et contrôles OSC pour le client dans le navigateur.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Projets et QLab</h2>
+          <p style="color:var(--text-muted);max-width:42rem;margin:0;">
+            Vous pouvez choisir le dossier de votre projet QLab ou gérer des projets dans un emplacement de base.
+            L’app conserve une structure claire pour les médias et la configuration.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Accesible</span>
+        <div class="links">
+          <a href="support.html">Assistance</a>
+          <a href="privacy.html">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

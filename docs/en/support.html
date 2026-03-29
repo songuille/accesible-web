@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support and help for the Accesible app on macOS.">
+  <title>Support — Accesible</title>
+  <link rel="alternate" hreflang="es" href="../es/support.html">
+  <link rel="alternate" hreflang="en" href="../en/support.html">
+  <link rel="alternate" hreflang="fr" href="../fr/support.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html">Accesible</a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <div class="lang-switch" role="navigation" aria-label="Language">
+            <a href="../es/support.html" hreflang="es" title="Español">🇪🇸</a>
+            <a href="support.html" hreflang="en" title="English" aria-current="page">🇬🇧</a>
+            <a href="../fr/support.html" hreflang="fr" title="Français">🇫🇷</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap page-hero">
+        <h1>Support</h1>
+        <p class="meta">Help, requirements and common questions</p>
+      </div>
+
+      <div class="wrap prose">
+        <h2>Documentation in the app</h2>
+        <p>
+          The most complete reference is inside the app: <strong>Help → Documentation</strong>
+          (window with sections on projects, QLab, OSC, subtitles, translation, audio and video).
+        </p>
+
+        <h2>Requirements</h2>
+        <ul>
+          <li>macOS (minimum version as shown on the Mac App Store).</li>
+          <li>A local network so clients (browsers on other devices) can reach the HTTP/WebSocket servers.</li>
+          <li>Some features (e.g. translation) may require internet on the Mac running the app.</li>
+          <li><strong>QLab (Figure 53)</strong> when you want to align folders and workflow with a .qlab4 / .qlab5 project.</li>
+        </ul>
+
+        <h2>Subscription</h2>
+        <p>
+          Full use of Accesible requires a subscription managed by Apple (StoreKit).
+          Purchase, renewal and cancellation are handled through your Apple account; the app checks subscription status on the device.
+        </p>
+
+        <h2>Common issues</h2>
+        <ul>
+          <li><strong>Audio/video servers won’t start:</strong> make sure a <strong>project</strong> is open or created and that project folders are accessible (including macOS sandbox permissions).</li>
+          <li><strong>Clients can’t see the page:</strong> same Wi‑Fi/Ethernet network; use the IP shown by the app, not <code>localhost</code> from another device.</li>
+          <li><strong>OSC not arriving:</strong> correct UDP port (e.g. 3333 depending on the feature) and system firewall.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+          For issues or suggestions, email:
+          <a href="mailto:songuille@icloud.com">songuille@icloud.com</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Accesible</span>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

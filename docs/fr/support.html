@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assistance et aide pour l’app Accesible sur macOS.">
+  <title>Assistance — Accesible</title>
+  <link rel="alternate" hreflang="es" href="../es/support.html">
+  <link rel="alternate" hreflang="en" href="../en/support.html">
+  <link rel="alternate" hreflang="fr" href="../fr/support.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html">Accesible</a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Menu principal">
+            <a href="index.html">Accueil</a>
+            <a href="support.html">Assistance</a>
+            <a href="privacy.html">Confidentialité</a>
+          </nav>
+          <div class="lang-switch" role="navigation" aria-label="Langue">
+            <a href="../es/support.html" hreflang="es" title="Español">🇪🇸</a>
+            <a href="../en/support.html" hreflang="en" title="English">🇬🇧</a>
+            <a href="support.html" hreflang="fr" title="Français" aria-current="page">🇫🇷</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap page-hero">
+        <h1>Assistance</h1>
+        <p class="meta">Aide, prérequis et questions fréquentes</p>
+      </div>
+
+      <div class="wrap prose">
+        <h2>Documentation dans l’app</h2>
+        <p>
+          La référence la plus complète se trouve dans l’application : menu <strong>Aide → Documentation</strong>
+          (fenêtre avec des sections sur les projets, QLab, OSC, sous-titres, traduction, audio et vidéo).
+        </p>
+
+        <h2>Prérequis</h2>
+        <ul>
+          <li>macOS (version minimale indiquée sur le Mac App Store).</li>
+          <li>Réseau local pour que les clients (navigateurs sur d’autres appareils) atteignent les serveurs HTTP/WebSocket.</li>
+          <li>Pour certaines fonctions (p. ex. traduction), une connexion internet peut être nécessaire sur le Mac qui exécute l’app.</li>
+          <li><strong>QLab (Figure 53)</strong> lorsque vous souhaitez aligner dossiers et flux avec un projet .qlab4 / .qlab5.</li>
+        </ul>
+
+        <h2>Abonnement</h2>
+        <p>
+          L’utilisation complète d’Accesible nécessite un abonnement géré par Apple (StoreKit).
+          L’achat, le renouvellement et l’annulation passent par votre compte Apple ; l’app vérifie l’état de l’abonnement sur l’appareil.
+        </p>
+
+        <h2>Problèmes courants</h2>
+        <ul>
+          <li><strong>Les serveurs audio/vidéo ne démarrent pas :</strong> vérifiez qu’un <strong>projet</strong> est ouvert ou créé et que les dossiers du projet sont accessibles (y compris les permissions du bac à sable sur macOS).</li>
+          <li><strong>Les clients ne voient pas la page :</strong> même réseau Wi‑Fi/Ethernet ; utilisez l’IP affichée par l’app, pas <code>localhost</code> depuis un autre appareil.</li>
+          <li><strong>L’OSC n’arrive pas :</strong> port UDP correct (p. ex. 3333 selon la fonction) et pare-feu système.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+          Pour les incidents ou suggestions, écrivez à :
+          <a href="mailto:songuille@icloud.com">songuille@icloud.com</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Accesible</span>
+        <div class="links">
+          <a href="index.html">Accueil</a>
+          <a href="privacy.html">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

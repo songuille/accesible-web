@@ -75,6 +75,97 @@ a:focus-visible {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding-left: 0.75rem;
+  margin-left: 0.25rem;
+  border-left: 1px solid var(--border);
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 8px;
+  font-size: 1.35rem;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.lang-switch a:hover {
+  opacity: 1;
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.lang-switch a[aria-current="page"] {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--accent);
+  pointer-events: none;
+}
+
+/* Landing language chooser (root index) */
+.lang-landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lang-landing .box {
+  text-align: center;
+  max-width: 28rem;
+}
+
+.lang-landing h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.lang-landing p {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.lang-landing .choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.lang-landing .choices a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.lang-landing .choices a:hover {
+  border-color: rgba(91, 141, 239, 0.45);
+  text-decoration: none;
 }
 
 .logo {

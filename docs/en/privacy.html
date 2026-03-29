@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Accesible macOS app.">
+  <title>Privacy — Accesible</title>
+  <link rel="alternate" hreflang="es" href="../es/privacy.html">
+  <link rel="alternate" hreflang="en" href="../en/privacy.html">
+  <link rel="alternate" hreflang="fr" href="../fr/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html">Accesible</a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <div class="lang-switch" role="navigation" aria-label="Language">
+            <a href="../es/privacy.html" hreflang="es" title="Español">🇪🇸</a>
+            <a href="privacy.html" hreflang="en" title="English" aria-current="page">🇬🇧</a>
+            <a href="../fr/privacy.html" hreflang="fr" title="Français">🇫🇷</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap page-hero">
+        <h1>Privacy</h1>
+        <p class="meta">Last updated: <time datetime="2026-03-29">March 29, 2026</time></p>
+      </div>
+
+      <div class="wrap prose">
+        <p>
+          This page describes in general terms how data is handled in relation to the
+          <strong>Accesible</strong> application for macOS. You should review it with legal advice if you publish it as an official policy.
+        </p>
+
+        <h2>Data controller</h2>
+        <p>
+          For questions about privacy and this policy:
+          <a href="mailto:songuille@icloud.com">songuille@icloud.com</a>
+        </p>
+
+        <h2>What Accesible is</h2>
+        <p>
+          Accesible runs on your Mac and provides local services (e.g. HTTP/WebSocket servers)
+          for subtitles, translation, audio description and video description in accessible live performance,
+          integrated with workflows that include <strong>QLab (Figure 53)</strong>.
+        </p>
+
+        <h2>Account and subscription</h2>
+        <p>
+          The app does not use a developer-run email and password sign-in system.
+          Full access may require a <strong>subscription</strong> managed by
+          <strong>Apple</strong> through the in-app purchase system (StoreKit).
+          Apple handles billing data under its own policies; the app checks on the device whether the subscription is active,
+          without the developer receiving your Apple password through this flow.
+        </p>
+
+        <h2>Data on your device</h2>
+        <p>
+          Projects, media folders and settings you choose stay on your Mac (and in locations you authorise).
+          The app may use system mechanisms (e.g. security-scoped bookmarks) to access those folders.
+        </p>
+
+        <h2>Network and third-party services</h2>
+        <p>
+          Some features may require an internet connection (for example, translation services using public APIs).
+          That traffic occurs between your machine and the relevant provider according to how the app is implemented in each version.
+          Clients on the local network connect to servers run by Accesible on your Mac according to your session configuration.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          This page may be updated when the app or applicable law changes.
+          The date at the top indicates the last revision of the text.
+        </p>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Accesible</span>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de l’app Accesible pour macOS.">
+  <title>Confidentialité — Accesible</title>
+  <link rel="alternate" hreflang="es" href="../es/privacy.html">
+  <link rel="alternate" hreflang="en" href="../en/privacy.html">
+  <link rel="alternate" hreflang="fr" href="../fr/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html">Accesible</a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Menu principal">
+            <a href="index.html">Accueil</a>
+            <a href="support.html">Assistance</a>
+            <a href="privacy.html">Confidentialité</a>
+          </nav>
+          <div class="lang-switch" role="navigation" aria-label="Langue">
+            <a href="../es/privacy.html" hreflang="es" title="Español">🇪🇸</a>
+            <a href="../en/privacy.html" hreflang="en" title="English">🇬🇧</a>
+            <a href="privacy.html" hreflang="fr" title="Français" aria-current="page">🇫🇷</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap page-hero">
+        <h1>Confidentialité</h1>
+        <p class="meta">Dernière mise à jour : <time datetime="2026-03-29">29 mars 2026</time></p>
+      </div>
+
+      <div class="wrap prose">
+        <p>
+          Cette page décrit de façon générale le traitement des données lié à l’application
+          <strong>Accesible</strong> pour macOS. Faites-la relire par un conseiller juridique si vous la publiez comme politique officielle.
+        </p>
+
+        <h2>Responsable</h2>
+        <p>
+          Pour toute question sur la confidentialité et cette politique :
+          <a href="mailto:songuille@icloud.com">songuille@icloud.com</a>
+        </p>
+
+        <h2>Qu’est-ce qu’Accesible</h2>
+        <p>
+          Accesible s’exécute sur votre Mac et fournit des services locaux (p. ex. serveurs HTTP/WebSocket)
+          pour sous-titres, traduction, audiodescription et vidéodescription dans le cadre de spectacles accessibles,
+          intégrés à des flux de travail incluant <strong>QLab (Figure 53)</strong>.
+        </p>
+
+        <h2>Compte et abonnement</h2>
+        <p>
+          L’application n’utilise pas de système d’inscription e-mail / mot de passe géré par le développeur.
+          L’accès complet peut être soumis à un <strong>abonnement</strong> géré par
+          <strong>Apple</strong> via le système d’achats intégrés (StoreKit).
+          Apple traite les données de facturation selon sa propre politique ; l’app vérifie sur l’appareil
+          si l’abonnement est actif, sans que le développeur reçoive votre mot de passe Apple par ce biais.
+        </p>
+
+        <h2>Données sur votre machine</h2>
+        <p>
+          Les projets, dossiers médias et réglages que vous choisissez restent sur votre Mac (et dans les emplacements que vous autorisez).
+          L’app peut utiliser les mécanismes du système (p. ex. signets à portée de sécurité) pour accéder à ces dossiers.
+        </p>
+
+        <h2>Réseau et services tiers</h2>
+        <p>
+          Certaines fonctions peuvent nécessiter une connexion internet (par exemple, des services de traduction via des API publiques).
+          Ce trafic transite entre votre machine et le fournisseur concerné selon l’implémentation de l’app dans chaque version.
+          Les clients sur le réseau local se connectent aux serveurs lancés par Accesible sur votre Mac selon la configuration de la session.
+        </p>
+
+        <h2>Modifications</h2>
+        <p>
+          Cette page peut être mise à jour lorsque l’app ou la réglementation applicable change.
+          La date en haut indique la dernière révision du texte.
+        </p>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Accesible</span>
+        <div class="links">
+          <a href="index.html">Accueil</a>
+          <a href="support.html">Assistance</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
