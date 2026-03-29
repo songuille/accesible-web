@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" aria-hidden="true">
-  <!-- Bandeira de Galicia (franxa azul central, simplificada) -->
-  <rect width="30" height="20" fill="#fff"/>
-  <rect y="8" width="30" height="4" fill="#0C40C2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" width="30" height="20" aria-hidden="true">
+  <!-- Bandeira de Galicia: campo branco e banda azul diagonal (↖ a ↘), proporción 2:3 -->
+  <rect width="30" height="20" fill="#ffffff"/>
+  <!-- Banda ao longo da diagonal canto superior esquerdo → inferior dereito -->
+  <g transform="translate(15,10) rotate(33.690067526)">
+    <rect x="-19" y="-2.5" width="38" height="5" fill="#0C40C2"/>
+  </g>
 </svg>
