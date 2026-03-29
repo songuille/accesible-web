@@ -202,6 +202,12 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.lang-landing .footer-disclaimer {
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+  font-size: 0.72rem;
+}
+
 .lang-code-inline {
   display: inline-block;
   min-width: 1.75rem;
@@ -439,6 +445,26 @@ section h2 {
 .site-footer .links {
   display: flex;
   gap: 1.25rem;
+}
+
+.footer-disclaimer {
+  margin: 0.75rem auto 0;
+  padding: 0 1.5rem 1.25rem;
+  max-width: var(--max);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  opacity: 0.9;
+  text-align: center;
+}
+
+.footer-disclaimer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.footer-disclaimer a:hover {
+  color: var(--text);
 }
 
 /* Layout helper */
