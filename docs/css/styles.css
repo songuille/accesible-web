@@ -120,6 +120,16 @@ a:focus-visible {
   pointer-events: none;
 }
 
+/* Euskara / Galego / Català: no hay emoji de bandera estándar */
+.lang-switch a.lang-code {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  width: auto;
+  min-width: 2.35rem;
+  padding: 0 0.4rem;
+}
+
 /* Landing language chooser (root index) */
 .lang-landing {
   min-height: 100vh;
@@ -166,6 +176,17 @@ a:focus-visible {
 .lang-landing .choices a:hover {
   border-color: rgba(91, 141, 239, 0.45);
   text-decoration: none;
+}
+
+.lang-code-inline {
+  display: inline-block;
+  min-width: 1.75rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-right: 0.15rem;
+  opacity: 0.9;
 }
 
 .logo {
