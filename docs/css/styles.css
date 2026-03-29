@@ -136,9 +136,9 @@ a:focus-visible {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-/* Ikurriña (PNG cuadrado del usuario) */
-.lang-switch a.lang-flag-img img[src$="eu.png"],
-.lang-landing-flag[src$="eu.png"] {
+/* Ikurriña (SVG con cruz blanca explícita #FFFFFF) */
+.lang-switch a.lang-flag-img img[src$="eu.svg"],
+.lang-landing-flag[src$="eu.svg"] {
   width: 1.45rem;
   height: 1.45rem;
   object-fit: contain;
