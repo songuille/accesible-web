@@ -299,6 +299,14 @@ a:focus-visible {
   border: 1px solid var(--border);
 }
 
+/* Solo subtítulos: imagen más alta para formato horizontal */
+.card-feature-img img.img-subtitles {
+  height: 16.5rem;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
