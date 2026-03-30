@@ -282,29 +282,28 @@ a:focus-visible {
   font-size: 0.9rem !important;
 }
 
-/* Imagen al pie de la tarjeta Audiodescripción (tras icono, título y texto) */
+/* Tarjetas con imagen al pie: alineación vertical consistente */
+.card-feature-photo {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-feature-img {
   margin: 1.15rem 0 0;
+  margin-top: auto;
+  padding-top: 1.15rem;
   line-height: 0;
 }
 
 .card-feature-img img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 16.5rem;
   object-fit: cover;
-  max-height: 16.5rem;
+  max-height: none;
   object-position: center 22%;
   border-radius: 8px;
   border: 1px solid var(--border);
-}
-
-/* Solo subtítulos: imagen más alta para formato horizontal */
-.card-feature-img img.img-subtitles {
-  height: 16.5rem;
-  max-height: none;
-  object-fit: cover;
-  object-position: center 38%;
 }
 
 .cta-row {
