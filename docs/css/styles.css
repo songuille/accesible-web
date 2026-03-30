@@ -293,7 +293,7 @@ a:focus-visible {
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 11rem;
+  max-height: 16.5rem;
   object-position: center 22%;
   border-radius: 8px;
   border: 1px solid var(--border);
