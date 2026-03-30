@@ -306,6 +306,11 @@ a:focus-visible {
   border: 1px solid var(--border);
 }
 
+/* Subtítulos: desplazar encuadre a la derecha (menos cara a la izquierda) */
+.card-feature-img img[src$="subtitulos.png"] {
+  object-position: 72% 38%;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
