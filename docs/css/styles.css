@@ -120,6 +120,106 @@ a:focus-visible {
   pointer-events: none;
 }
 
+/* Language dropdown (esquina superior derecha) */
+.lang-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.lang-dropdown details {
+  position: relative;
+}
+
+.lang-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  height: 2.35rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(28, 37, 48, 0.45);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+.lang-dropdown-label {
+  white-space: nowrap;
+}
+
+.lang-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-dropdown details[open] summary {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--accent);
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.lang-dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.6rem);
+  min-width: 16rem;
+  background: rgba(15, 20, 25, 0.98);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  z-index: 30;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lang-dropdown details[open] .lang-dropdown-menu {
+  display: block;
+}
+
+.lang-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lang-dropdown-item-label {
+  white-space: nowrap;
+}
+
+.lang-dropdown-item:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.lang-dropdown-item[aria-current="page"] {
+  background: rgba(91, 141, 239, 0.22);
+  color: var(--text);
+  pointer-events: none;
+}
+
+.lang-emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.lang-dropdown-flag {
+  width: 1.55rem;
+  height: 1.1rem;
+  object-fit: contain;
+  border-radius: 3px;
+  display: block;
+}
+
 /* Euskara / Galego / Català: iconos SVG (Unicode no incluye estas banderas como emoji) */
 .lang-switch a.lang-flag-img {
   width: auto;

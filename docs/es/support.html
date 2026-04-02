@@ -11,7 +11,8 @@
   <link rel="alternate" hreflang="eu" href="../eu/support.html">
   <link rel="alternate" hreflang="gl" href="../gl/support.html">
   <link rel="alternate" hreflang="ca" href="../ca/support.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="alternate" hreflang="de" href="../de/support.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
@@ -27,14 +28,22 @@
             <a href="support.html">Soporte</a>
             <a href="privacy.html">Privacidad</a>
           </nav>
-          <div class="lang-switch" role="navigation" aria-label="Idioma">
-            <a href="support.html" hreflang="es" title="Español" aria-current="page">🇪🇸</a>
-            <a href="../en/support.html" hreflang="en" title="English">🇬🇧</a>
-            <a href="../fr/support.html" hreflang="fr" title="Français">🇫🇷</a>
-            <a href="../eu/support.html" hreflang="eu" class="lang-flag-img" title="Euskara"><img src="../assets/flags/eu.svg" alt="" width="28" height="28" decoding="async"></a>
-            <a href="../gl/support.html" hreflang="gl" class="lang-flag-img" title="Galego"><img src="../assets/flags/gl.svg" alt="" width="28" height="19" decoding="async"></a>
-            <a href="../ca/support.html" hreflang="ca" class="lang-flag-img" title="Català"><img src="../assets/flags/ca.svg" alt="" width="28" height="19" decoding="async"></a>
-          </div>
+          <div class="lang-dropdown" role="navigation" aria-label="Language selector">
+  <details>
+    <summary>
+      <span class="lang-emoji" aria-hidden="true">🇪🇸</span> <span class="lang-dropdown-label">Español</span>
+    </summary>
+    <div class="lang-dropdown-menu" role="menu">
+      <a class="lang-dropdown-item" href="support.html" hreflang="es" aria-current="page" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a>
+      <a class="lang-dropdown-item" href="../en/support.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a>
+      <a class="lang-dropdown-item" href="../fr/support.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a>
+      <a class="lang-dropdown-item" href="../de/support.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a>
+      <a class="lang-dropdown-item" href="../eu/support.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a>
+      <a class="lang-dropdown-item" href="../gl/support.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a>
+      <a class="lang-dropdown-item" href="../ca/support.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
+    </div>
+  </details>
+</div>
         </div>
       </div>
     </header>
