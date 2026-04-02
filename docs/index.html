@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Accesible — Accessibility tools for live performance with QLab. Choose your language.">
+  <meta name="description" content="Accesible — Accesibilidad en vivo para macOS.">
   <title>Accesible</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,21 +11,28 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="lang-landing">
-    <div class="box">
-      <h1>Accesible</h1>
-      <p>Euskara · Galego · Català · Español · English · Français · Deutsch</p>
-      <div class="choices">
-        <a href="eu/index.html"><img class="lang-landing-flag" src="assets/flags/eu.svg" alt="" width="28" height="28" decoding="async"> Euskara</a>
-        <a href="gl/index.html"><img class="lang-landing-flag" src="assets/flags/gl.svg" alt="" width="28" height="19" decoding="async"> Galego</a>
-        <a href="ca/index.html"><img class="lang-landing-flag" src="assets/flags/ca.svg" alt="" width="28" height="19" decoding="async"> Català</a>
-        <a href="de/index.html"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
-        <a href="es/index.html"><span aria-hidden="true">🇪🇸</span> Español</a>
-        <a href="en/index.html"><span aria-hidden="true">🇬🇧</span> English</a>
-        <a href="fr/index.html"><span aria-hidden="true">🇫🇷</span> Français</a>
-      </div>
-      <p class="footer-disclaimer">QLab is a trademark of Figure 53. Accesible is an independent product and is not affiliated with, endorsed by, or sponsored by Figure 53.</p>
-    </div>
-  </div>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=en/index.html">
+    <a href="en/index.html">English</a>
+  </noscript>
+
+  <script>
+    (function () {
+      // Idioma guardado por el usuario (si ya eligió uno) o idioma del navegador.
+      // Si no se reconoce, caemos a inglés.
+      var supported = { es: "es", en: "en", fr: "fr", de: "de", eu: "eu", gl: "gl", ca: "ca" };
+      var stored = null;
+      try { stored = localStorage.getItem("accesible_lang"); } catch (e) {}
+
+      var lang = stored;
+      if (!lang) {
+        var nav = (navigator.language || "").toLowerCase();
+        var base = nav.split("-")[0];
+        lang = supported[base] || "en";
+      }
+
+      window.location.replace(lang + "/index.html");
+    })();
+  </script>
 </body>
 </html>

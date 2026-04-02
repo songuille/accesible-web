@@ -115,7 +115,10 @@
       <p class="wrap footer-disclaimer">QLab é unha marca comercial de Figure 53. Accesible é un produto independiente e non está afiliado, apoiado nin patrocinado por Figure 53.</p>
     </footer>
   </div>
-  <script>
+    <script>
+    try { localStorage.setItem("accesible_lang", "gl"); } catch (e) {}
+  </script>
+<script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
