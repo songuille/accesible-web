@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Specialized software for automation, accessibility and technical workflows in live productions.">
-  <title>Stage Apps — Live show apps for theatre and events</title>
+  <meta name="description" content="Accesible — Accessibility tools for live performances with QLab (Figure 53): subtitles, translation, audio description and sign language video.">
+  <title>Accesible — Live accessibility for macOS</title>
   <link rel="alternate" hreflang="es" href="../es/index.html">
   <link rel="alternate" hreflang="en" href="../en/index.html">
   <link rel="alternate" hreflang="fr" href="../fr/index.html">
-  <link rel="alternate" hreflang="de" href="../de/index.html">
   <link rel="alternate" hreflang="eu" href="../eu/index.html">
   <link rel="alternate" hreflang="gl" href="../gl/index.html">
   <link rel="alternate" hreflang="ca" href="../ca/index.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="alternate" hreflang="de" href="../de/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
@@ -21,17 +21,12 @@
   <div class="page">
     <header class="site-header">
       <div class="wrap inner">
-        <a class="logo" href="index.html">Stage Apps</a>
+        <a class="logo" href="index.html">Accesible</a>
         <div class="header-right">
           <nav class="nav" aria-label="Main">
-            <a href="index.html">Home</a>
-            <a href="accesible.html">Accesible</a>
-            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
-            <a href="miditoosc.html">MIDItoOSC</a>
-            <a href="compare.html">Compare</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ</a>
+            <a href="index.html#features">Features</a>
             <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
           </nav>
           <div class="lang-dropdown" role="navigation" aria-label="Language selector">
   <details>
@@ -39,7 +34,13 @@
       <span class="lang-emoji" aria-hidden="true">🇬🇧</span> <span class="lang-dropdown-label">English</span>
     </summary>
     <div class="lang-dropdown-menu" role="menu">
-      <a class="lang-dropdown-item" href="../es/index.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a> <a class="lang-dropdown-item" href="index.html" hreflang="en" aria-current="page" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a> <a class="lang-dropdown-item" href="../fr/index.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a> <a class="lang-dropdown-item" href="../de/index.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a> <a class="lang-dropdown-item" href="../eu/index.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a> <a class="lang-dropdown-item" href="../gl/index.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a> <a class="lang-dropdown-item" href="../ca/index.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
+      <a class="lang-dropdown-item" href="../es/index.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a>
+      <a class="lang-dropdown-item" href="index.html" hreflang="en" aria-current="page" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a>
+      <a class="lang-dropdown-item" href="../fr/index.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a>
+      <a class="lang-dropdown-item" href="../de/index.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a>
+      <a class="lang-dropdown-item" href="../eu/index.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a>
+      <a class="lang-dropdown-item" href="../gl/index.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a>
+      <a class="lang-dropdown-item" href="../ca/index.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
     </div>
   </details>
 </div>
@@ -50,78 +51,88 @@
     <main>
       <section class="hero">
         <div class="wrap">
-          <h1>Live show apps for theatre and events</h1>
-          <p class="tagline">Specialized software for automation, accessibility and technical workflows in live productions.</p>
+          <h1>Live accessibility, integrated with QLab</h1>
+          <p class="tagline">
+            <strong>Accesible</strong> is a macOS app for accessible live performance.
+            It works alongside <strong>QLab (Figure 53)</strong> and offers subtitle servers, translation,
+            audio description and sign language video on your local network.
+          </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#apps">Explore the apps</a>
-            <a class="btn btn-secondary" href="support.html">Technical support</a>
+            <a class="btn btn-primary" href="#" aria-disabled="true">Download on the Mac App Store</a>
+            <a class="btn btn-secondary" href="support.html">Support</a>
           </div>
+          <p class="tagline hero-note">
+            The store link will be updated when the app is published.
+          </p>
         </div>
       </section>
-      <section id="apps">
+
+      <section id="features">
         <div class="wrap">
-          <h2>Our apps</h2>
-          <p class="section-intro">Tools designed for real backstage workflows with QLab, OSC, PJLink and digital mixers.</p>
-          <div class="grid app-grid">
-<article class="card app-card">
-            <h3>Accesible</h3>
-            <p>Live accessibility companion for QLab-based shows.</p>
-            <a class="btn btn-secondary" href="accesible.html">Open app page</a>
-          </article>
-<article class="card app-card">
-            <h3>Shutter PJ-OSC (macOS)</h3>
-            <p>Control PJLink-compatible projector shutter and power by UI buttons or OSC.</p>
-            <a class="btn btn-secondary" href="shutter-pj-osc.html">Open app page</a>
-          </article>
-<article class="card app-card">
-            <h3>Shutter PJLINK (iOS)</h3>
-            <p>Mobile remote controller for PJLink projectors focused on button-based operation.</p>
-            <a class="btn btn-secondary" href="shutter-pjlink-ios.html">Open app page</a>
-          </article>
-<article class="card app-card">
-            <h3>MIDItoOSC</h3>
-            <p>Translate MIDI data from Midas M32 / Behringer X32 into OSC commands for show control.</p>
-            <a class="btn btn-secondary" href="miditoosc.html">Open app page</a>
-          </article>
+          <h2>What’s included</h2>
+          <div class="grid">
+            <article class="card card-feature-photo">
+              <div class="icon" aria-hidden="true">📝</div>
+              <h3>Subtitles</h3>
+              <p>OSC messages and a web page to show text in real time, with styles and advanced commands.</p>
+              <figure class="card-feature-img">
+                <img src="../assets/images/subtitulos.png" alt="Audience member in a theatre following live subtitles on a tablet." width="1024" height="682" loading="lazy" decoding="async">
+              </figure>
+            </article>
+            <article class="card card-feature-photo">
+              <div class="icon" aria-hidden="true">🌐</div>
+              <h3>Translation</h3>
+              <p>Same flow as subtitles; translation to your chosen output language and display on another port.</p>
+              <figure class="card-feature-img">
+                <img src="../assets/images/traduccion.png" alt="Audience member in a theatre following translated text on a tablet screen." width="1376" height="768" loading="lazy" decoding="async">
+              </figure>
+            </article>
+            <article class="card card-feature-photo">
+              <div class="icon" aria-hidden="true">🎵</div>
+              <h3>Audio description</h3>
+              <p>Playback of pre-recorded audio from your project folders, controlled via OSC.</p>
+              <figure class="card-feature-img">
+                <img src="../assets/images/audiodescripcion.png" alt="Audience member in a theatre using a smartphone for live audio description with an earbud." width="682" height="1024" loading="lazy" decoding="async">
+              </figure>
+            </article>
+            <article class="card card-feature-photo">
+              <div class="icon" aria-hidden="true">🎬</div>
+              <h3>Sign language video</h3>
+              <p>MP4 sign language video streaming, sync and OSC controls for the browser client.</p>
+              <figure class="card-feature-img">
+                <img src="../assets/images/video-signado.png" alt="Audience member in a theatre using a smartphone to follow live sign language video." width="682" height="1024" loading="lazy" decoding="async">
+              </figure>
+            </article>
           </div>
         </div>
       </section>
+
       <section>
-        <div class="wrap quick-links-grid">
-          <article class="card">
-            <h3>Quick comparison</h3>
-            <p>Use this table to choose the right tool for each production task.</p>
-            <a href="compare.html">See comparison</a>
-          </article>
-          <article class="card">
-            <h3>Common workflows</h3>
-            <p>Real-world workflows combining projection, accessibility and mixer automation.</p>
-            <a href="use-cases.html">View use cases</a>
-          </article>
-          <article class="card">
-            <h3>Guides and resources</h3>
-            <p>Documentation links and practical setup recommendations.</p>
-            <a href="resources.html">Open resources</a>
-          </article>
+        <div class="wrap">
+          <h2>Projects and QLab</h2>
+          <p style="color:var(--text-muted);max-width:42rem;margin:0;">
+            You can pick your QLab project folder or manage projects in a base location.
+            The app keeps a clear structure for media and configuration.
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap inner">
-        <span>© <span id="y"></span> Stage Apps</span>
+        <span>© <span id="y"></span> Accesible</span>
         <div class="links">
           <a href="support.html">Support</a>
           <a href="privacy.html">Privacy</a>
         </div>
       </div>
-      <p class="wrap footer-disclaimer">QLab is a trademark of Figure 53. This site and these apps are independent and are not affiliated with, endorsed by, or sponsored by Figure 53.</p>
+      <p class="wrap footer-disclaimer">QLab is a trademark of Figure 53. Accesible is an independent product and is not affiliated with, endorsed by, or sponsored by Figure 53.</p>
     </footer>
   </div>
-  <script>
+    <script>
     try { localStorage.setItem("accesible_lang", "en"); } catch (e) {}
   </script>
-  <script>
+<script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>

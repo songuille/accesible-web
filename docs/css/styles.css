@@ -479,54 +479,6 @@ section h2 {
   gap: 1.25rem;
 }
 
-.section-intro {
-  color: var(--text-muted);
-  margin: -0.45rem 0 0.5rem;
-}
-
-.app-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.quick-links-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.app-card p {
-  min-height: 4.5rem;
-  margin-bottom: 0.9rem;
-}
-
-.table-wrap {
-  overflow-x: auto;
-}
-
-.compare-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.compare-table th,
-.compare-table td {
-  text-align: left;
-  padding: 0.75rem 0.85rem;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.95rem;
-}
-
-.compare-table th {
-  background: rgba(91, 141, 239, 0.14);
-  font-weight: 700;
-}
-
-.compare-table tr:last-child td {
-  border-bottom: 0;
-}
-
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
