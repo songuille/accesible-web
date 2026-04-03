@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Accesible — Eines d’accessibilitat per a espectacles en viu amb QLab (Figure 53): subtítols, traducció, audiodescripció i vídeo en llengua de signes.">
-  <title>Accesible — Accessibilitat en viu per a macOS</title>
+  <meta name="description" content="Programari especialitzat per a automatitzacio, accessibilitat i fluxos tecnics en produccions en directe.">
+  <title>Stage Apps — Apps per teatre i espectacles en viu</title>
   <link rel="alternate" hreflang="es" href="../es/index.html">
   <link rel="alternate" hreflang="en" href="../en/index.html">
   <link rel="alternate" hreflang="fr" href="../fr/index.html">
+  <link rel="alternate" hreflang="de" href="../de/index.html">
   <link rel="alternate" hreflang="eu" href="../eu/index.html">
   <link rel="alternate" hreflang="gl" href="../gl/index.html">
   <link rel="alternate" hreflang="ca" href="../ca/index.html">
-    <link rel="alternate" hreflang="de" href="../de/index.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
@@ -21,12 +21,17 @@
   <div class="page">
     <header class="site-header">
       <div class="wrap inner">
-        <a class="logo" href="index.html">Accesible</a>
+        <a class="logo" href="index.html">Stage Apps</a>
         <div class="header-right">
-          <nav class="nav" aria-label="Principal">
-            <a href="index.html#funcions">Funcions</a>
+          <nav class="nav" aria-label="Main">
+            <a href="index.html">Inici</a>
+            <a href="accesible.html">Accesible</a>
+            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+            <a href="miditoosc.html">MIDItoOSC</a>
+            <a href="compare.html">Comparativa</a>
+            <a href="resources.html">Recursos</a>
+            <a href="faq.html">FAQ</a>
             <a href="support.html">Suport</a>
-            <a href="privacy.html">Privacitat</a>
           </nav>
           <div class="lang-dropdown" role="navigation" aria-label="Language selector">
   <details>
@@ -34,13 +39,7 @@
       <img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"> <span class="lang-dropdown-label">Català</span>
     </summary>
     <div class="lang-dropdown-menu" role="menu">
-      <a class="lang-dropdown-item" href="../es/index.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a>
-      <a class="lang-dropdown-item" href="../en/index.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a>
-      <a class="lang-dropdown-item" href="../fr/index.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a>
-      <a class="lang-dropdown-item" href="../de/index.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a>
-      <a class="lang-dropdown-item" href="../eu/index.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a>
-      <a class="lang-dropdown-item" href="../gl/index.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a>
-      <a class="lang-dropdown-item" href="index.html" hreflang="ca" aria-current="page" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
+      <a class="lang-dropdown-item" href="../es/index.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a> <a class="lang-dropdown-item" href="../en/index.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a> <a class="lang-dropdown-item" href="../fr/index.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a> <a class="lang-dropdown-item" href="../de/index.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a> <a class="lang-dropdown-item" href="../eu/index.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a> <a class="lang-dropdown-item" href="../gl/index.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a> <a class="lang-dropdown-item" href="index.html" hreflang="ca" aria-current="page" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
     </div>
   </details>
 </div>
@@ -51,88 +50,78 @@
     <main>
       <section class="hero">
         <div class="wrap">
-          <h1>Accessibilitat en viu, integrada amb QLab</h1>
-          <p class="tagline">
-            <strong>Accesible</strong> és una app per a macOS pensada per a espectacles accessibles.
-            Treballa juntament amb <strong>QLab (Figure 53)</strong> i ofereix servidors de subtítols, traducció,
-            audiodescripció i vídeo en llengua de signes a la xarxa local.
-          </p>
+          <h1>Apps per teatre i espectacles en viu</h1>
+          <p class="tagline">Programari especialitzat per a automatitzacio, accessibilitat i fluxos tecnics en produccions en directe.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#" aria-disabled="true">Descarregar a la Mac App Store</a>
-            <a class="btn btn-secondary" href="support.html">Suport</a>
+            <a class="btn btn-primary" href="#apps">Explorar apps</a>
+            <a class="btn btn-secondary" href="support.html">Suport tecnic</a>
           </div>
-          <p class="tagline hero-note">
-            L’enllaç a la botiga s’actualitzarà quan l’app estigui publicada.
-          </p>
         </div>
       </section>
-
-      <section id="funcions">
+      <section id="apps">
         <div class="wrap">
-          <h2>Què inclou</h2>
-          <div class="grid">
-            <article class="card card-feature-photo">
-              <div class="icon" aria-hidden="true">📝</div>
-              <h3>Subtítols</h3>
-              <p>Missatges OSC i pàgina web per mostrar text en temps real, amb estils i ordres avançades.</p>
-              <figure class="card-feature-img">
-                <img src="../assets/images/subtitulos.png" alt="Espectadora al teatre seguint subtítols en directe en una tauleta." width="1024" height="682" loading="lazy" decoding="async">
-              </figure>
-            </article>
-            <article class="card card-feature-photo">
-              <div class="icon" aria-hidden="true">🌐</div>
-              <h3>Traducció</h3>
-              <p>El mateix flux que els subtítols; traducció a l’idioma de sortida triat i visualització en un altre port.</p>
-              <figure class="card-feature-img">
-                <img src="../assets/images/traduccion.png" alt="Espectadora al teatre seguint la traducció a la pantalla d’una tauleta." width="1376" height="768" loading="lazy" decoding="async">
-              </figure>
-            </article>
-            <article class="card card-feature-photo">
-              <div class="icon" aria-hidden="true">🎵</div>
-              <h3>Audiodescripció</h3>
-              <p>Reproducció d’àudio pregravat des de les carpetes del projecte, controlat per OSC.</p>
-              <figure class="card-feature-img">
-                <img src="../assets/images/audiodescripcion.png" alt="Espectador al teatre amb el mòbil per seguir l’audiodescripció en directe, amb auricular." width="682" height="1024" loading="lazy" decoding="async">
-              </figure>
-            </article>
-            <article class="card card-feature-photo">
-              <div class="icon" aria-hidden="true">🎬</div>
-              <h3>Vídeo en llengua de signes</h3>
-              <p>Streaming de vídeo en llengua de signes (MP4), sincronització i controls OSC per al client al navegador.</p>
-              <figure class="card-feature-img">
-                <img src="../assets/images/video-signado.png" alt="Espectadora al teatre fent servir el mòbil per seguir vídeo en llengua de signes en directe." width="682" height="1024" loading="lazy" decoding="async">
-              </figure>
-            </article>
+          <h2>Les nostres apps</h2>
+          <p class="section-intro">Eines pensades per al flux real de backstage amb QLab, OSC, PJLink i taules digitals.</p>
+          <div class="grid app-grid">
+<article class="card app-card">
+            <h3>Accesible</h3>
+            <p>Companya d accessibilitat en viu per a espectacles basats en QLab.</p>
+            <a class="btn btn-secondary" href="accesible.html">Obrir pagina de l app</a>
+          </article>
+<article class="card app-card">
+            <h3>Shutter PJ-OSC (macOS)</h3>
+            <p>Controla shutter i power de projectors PJLink amb botons o OSC.</p>
+            <a class="btn btn-secondary" href="shutter-pj-osc.html">Obrir pagina de l app</a>
+          </article>
+<article class="card app-card">
+            <h3>Shutter PJLINK (iOS)</h3>
+            <p>Comandament remot mobil per a projectors PJLink centrat en botons.</p>
+            <a class="btn btn-secondary" href="shutter-pjlink-ios.html">Obrir pagina de l app</a>
+          </article>
+<article class="card app-card">
+            <h3>MIDItoOSC</h3>
+            <p>Tradueix dades MIDI de Midas M32 / Behringer X32 a comandes OSC.</p>
+            <a class="btn btn-secondary" href="miditoosc.html">Obrir pagina de l app</a>
+          </article>
           </div>
         </div>
       </section>
-
       <section>
-        <div class="wrap">
-          <h2>Projectes i QLab</h2>
-          <p style="color:var(--text-muted);max-width:42rem;margin:0;">
-            Pots triar la carpeta del teu projecte QLab o gestionar projectes en una ubicació base.
-            L’app manté una estructura clara per a mitjans i configuració.
-          </p>
+        <div class="wrap quick-links-grid">
+          <article class="card">
+            <h3>Comparativa rapida</h3>
+            <p>Fes servir aquesta taula per escollir l eina adequada en cada tasca de produccio.</p>
+            <a href="compare.html">Veure comparativa</a>
+          </article>
+          <article class="card">
+            <h3>Fluxos habituals</h3>
+            <p>Fluxos reals combinant projeccio, accessibilitat i automatitzacio de mixer.</p>
+            <a href="use-cases.html">Veure casos d us</a>
+          </article>
+          <article class="card">
+            <h3>Guies i recursos</h3>
+            <p>Enllacos de documentacio i recomanacions practiques de configuracio.</p>
+            <a href="resources.html">Obrir recursos</a>
+          </article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap inner">
-        <span>© <span id="y"></span> Accesible</span>
+        <span>© <span id="y"></span> Stage Apps</span>
         <div class="links">
           <a href="support.html">Suport</a>
           <a href="privacy.html">Privacitat</a>
         </div>
       </div>
-      <p class="wrap footer-disclaimer">QLab és una marca comercial de Figure 53. Accesible és un producte independent i no està afiliat, avalat ni patrocinat per Figure 53.</p>
+      <p class="wrap footer-disclaimer">QLab es una marca de Figure 53. Aquest lloc i aquestes apps son productes independents i no estan afiliats, avalats ni patrocinats per Figure 53.</p>
     </footer>
   </div>
-    <script>
+  <script>
     try { localStorage.setItem("accesible_lang", "ca"); } catch (e) {}
   </script>
-<script>
+  <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>

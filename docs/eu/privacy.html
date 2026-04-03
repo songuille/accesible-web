@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Accesible macOS aplikaziorako pribatutasun politika.">
-  <title>Pribatutasuna — Accesible</title>
+  <meta name="description" content="Privacy information for Stage Apps products.">
+  <title>Pribatutasuna — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/privacy.html">
   <link rel="alternate" hreflang="en" href="../en/privacy.html">
   <link rel="alternate" hreflang="fr" href="../fr/privacy.html">
+  <link rel="alternate" hreflang="de" href="../de/privacy.html">
   <link rel="alternate" hreflang="eu" href="../eu/privacy.html">
   <link rel="alternate" hreflang="gl" href="../gl/privacy.html">
   <link rel="alternate" hreflang="ca" href="../ca/privacy.html">
-    <link rel="alternate" hreflang="de" href="../de/privacy.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
@@ -21,12 +21,17 @@
   <div class="page">
     <header class="site-header">
       <div class="wrap inner">
-        <a class="logo" href="index.html">Accesible</a>
+        <a class="logo" href="index.html">Stage Apps</a>
         <div class="header-right">
-          <nav class="nav" aria-label="Nabigazioa">
+          <nav class="nav" aria-label="Main">
             <a href="index.html">Hasiera</a>
+            <a href="accesible.html">Accesible</a>
+            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+            <a href="miditoosc.html">MIDItoOSC</a>
+            <a href="compare.html">Konparaketa</a>
+            <a href="resources.html">Baliabideak</a>
+            <a href="faq.html">FAQ</a>
             <a href="support.html">Laguntza</a>
-            <a href="privacy.html">Pribatutasuna</a>
           </nav>
           <div class="lang-dropdown" role="navigation" aria-label="Language selector">
   <details>
@@ -34,13 +39,7 @@
       <img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"> <span class="lang-dropdown-label">Euskara</span>
     </summary>
     <div class="lang-dropdown-menu" role="menu">
-      <a class="lang-dropdown-item" href="../es/privacy.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a>
-      <a class="lang-dropdown-item" href="../en/privacy.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a>
-      <a class="lang-dropdown-item" href="../fr/privacy.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a>
-      <a class="lang-dropdown-item" href="../de/privacy.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a>
-      <a class="lang-dropdown-item" href="privacy.html" hreflang="eu" aria-current="page" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a>
-      <a class="lang-dropdown-item" href="../gl/privacy.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a>
-      <a class="lang-dropdown-item" href="../ca/privacy.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
+      <a class="lang-dropdown-item" href="../es/privacy.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a> <a class="lang-dropdown-item" href="../en/privacy.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a> <a class="lang-dropdown-item" href="../fr/privacy.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a> <a class="lang-dropdown-item" href="../de/privacy.html" hreflang="de" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a> <a class="lang-dropdown-item" href="privacy.html" hreflang="eu" aria-current="page" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a> <a class="lang-dropdown-item" href="../gl/privacy.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a> <a class="lang-dropdown-item" href="../ca/privacy.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a>
     </div>
   </details>
 </div>
@@ -49,75 +48,38 @@
     </header>
 
     <main>
-      <div class="wrap page-hero">
+      <section class="page-hero wrap">
         <h1>Pribatutasuna</h1>
-        <p class="meta">Azken eguneraketa: <time datetime="2026-03-29">2026ko martxoaren 29a</time></p>
-      </div>
-
-      <div class="wrap prose">
-        <p>
-          Orri honek, oro har, <strong>Accesible</strong> macOS aplikazioarekin lotutako datuen tratamendua deskribatzen du.
-          Politika ofizial gisa argitaratzen baduzu, aholku juridikoarekin berrikusi.
-        </p>
-
-        <h2>Arduraduna</h2>
-        <p>
-          Pribatutasunari eta politika honi buruzko kontsultarako:
-          <a href="mailto:songuille@icloud.com">songuille@icloud.com</a>
-        </p>
-
-        <h2>Zer den Accesible</h2>
-        <p>
-          Accesible zure Mac-ean exekutatzen da eta zerbitzu lokalak eskaintzen ditu (adib. HTTP/WebSocket zerbitzariak)
-          azpititulu, itzulpen, audio deskribapen eta zeinu hizkuntzako bideorako ikuskizun irisgarrietan,
-          <strong>QLab (Figure 53)</strong> barne hartzen dituzten lan-fluxuekin integratua.
-        </p>
-
-        <h2>Kontua eta harpidetza</h2>
-        <p>
-          Aplikazioak ez du garatzaileak kudeatutako harpidetza e-posta eta pasahitz sistema erabiltzen.
-          Sarbide osoa <strong>Apple</strong>ren bidez kudeatutako <strong>harpidetza</strong> bati lotuta egon daiteke (StoreKit in-app erosketa sistema).
-          Apple-k fakturazio-datuak bere politikaren arabera tratatzen ditu; aplikazioak gailuan egiaztatzen du harpidetza aktiboa dagoen,
-          garatzaileak zure Apple pasahitza jaso gabe.
-        </p>
-
-        <h2>Zure gailuko datuak</h2>
-        <p>
-          Aukeratzen dituzun proiektuak, multimedia karpetak eta ezarpenak zure Mac-ean gordetzen dira (baimentzen dituzun kokalekuetan).
-          Aplikazioak sistemaren mekanismoak erabil ditzake (adib. segurtasun eremuko laster-markak) karpeta horietara sartzeko.
-        </p>
-
-        <h2>Sarea eta hirugarrenen zerbitzuak</h2>
-        <p>
-          Funtzio batzuek internet behar izan dezakete (adib. API publikoetan oinarritutako itzulpen zerbitzuak).
-          Trafiko hori zure gailua eta hornitzailearen artean gertatzen da, aplikazioaren inplementazioaren arabera bertsio bakoitzean.
-          Sare lokaleko bezeroek Accesible-k Mac-ean exekutatzen dituen zerbitzarietara konektatzen dira saioaren konfigurazioaren arabera.
-        </p>
-
-        <h2>Aldaketak</h2>
-        <p>
-          Orri hau eguneratu daiteke aplikazioa edo aplikagarri den araudia aldatzen denean.
-          Goiko data testuaren azken berrikuspena adierazten du.
-        </p>
-
-      </div>
+        <p class="meta">Policy overview for Stage Apps products.</p>
+      </section>
+      <section>
+        <div class="wrap prose">
+          <p>This page describes general data handling principles for our apps. Review with legal advice before using it as an official legal policy.</p>
+          <h2>Data handling</h2>
+          <p>Projects and configurations are primarily handled on-device. Some app features may communicate with local networks or third-party services based on user configuration.</p>
+          <h2>Subscriptions and billing</h2>
+          <p>Where subscriptions exist, billing and account handling are managed by Apple according to Apple policies.</p>
+          <h2>Contact</h2>
+          <p><a href="mailto:songuille@icloud.com">songuille@icloud.com</a></p>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap inner">
-        <span>© <span id="y"></span> Accesible</span>
+        <span>© <span id="y"></span> Stage Apps</span>
         <div class="links">
-          <a href="index.html">Hasiera</a>
           <a href="support.html">Laguntza</a>
+          <a href="privacy.html">Pribatutasuna</a>
         </div>
       </div>
-      <p class="wrap footer-disclaimer">QLab Figure 53-en marka komertziala da. Accesible produktu independentea da; ez dago Figure 53rekin afiliatuta, babestuta edo finantzatuta.</p>
+      <p class="wrap footer-disclaimer">QLab Figure 53-ren marka da. Webgune hau eta app hauek independenteak dira eta ez daude Figure 53-rekin lotuta edo babestuta.</p>
     </footer>
   </div>
-    <script>
+  <script>
     try { localStorage.setItem("accesible_lang", "eu"); } catch (e) {}
   </script>
-<script>
+  <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
