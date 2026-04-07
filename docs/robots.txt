@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stageapps.org/sitemap.xml
