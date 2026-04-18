@@ -58,8 +58,10 @@
           <p>L’app iPhone propose <strong>deux modes</strong> (sélecteur segmenté en haut) :</p>
           <ul>
             <li><strong>PJ-LINK direct :</strong> le téléphone se connecte à chaque projecteur avec le protocole PJ-LINK sur <strong>TCP port 4352</strong>. Ajoutez l’IP et le mot de passe optionnel, sélectionnez P1…Pn, puis <strong>Ouvrir</strong> / <strong>Fermer</strong>. La liste affiche l’état de connexion et le retour par projecteur.</li>
-            <li><strong>Réacheminement OSC :</strong> les commandes sont envoyées à un Mac sur votre LAN (IP et port OSC réglables). Idéal si un Mac centralise le contrôle pendant que vous déclenchez depuis le téléphone ou la montre.</li>
+            <li><strong>Réacheminement OSC :</strong> les commandes sont envoyées en OSC vers un Mac sur votre LAN (IP et port que vous configurez). Ce Mac doit exécuter <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>, qui reçoit l’OSC et le transmet au PJ-LINK.</li>
           </ul>
+          <h2>Shutter PJ-OSC sur le Mac</h2>
+          <p><strong>Le réacheminement OSC ne fonctionne pas avec « n’importe quel » récepteur sur le Mac.</strong> Installez <a href="shutter-pj-osc.html">Shutter PJ-OSC (macOS)</a>, utilisez le même port OSC que dans Shutter PJLINK et laissez l’app Mac <strong>ouverte</strong> pendant que vous utilisez ce mode depuis l’iPhone ou l’Apple Watch. Si Shutter PJ-OSC est fermé, injoignable ou mal configuré, cette voie échouera ; vous pouvez toujours utiliser le <strong>PJ-LINK direct</strong>, qui parle aux projecteurs sans le Mac.</p>
           <h2>Apple Watch</h2>
           <p>L’app Watch utilise <strong>WatchConnectivity</strong> avec l’iPhone. Vous pouvez basculer entre réacheminement OSC via le Mac et cibles directes (selon la politique active), choisir les projecteurs et appuyer sur <strong>Ouvrir</strong> / <strong>Fermer</strong>. Gardez l’app iPhone installée et à portée pour une livraison fiable.</p>
           <h2>Langues</h2>

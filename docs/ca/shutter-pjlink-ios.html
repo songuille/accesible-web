@@ -58,8 +58,10 @@
           <p>L’app de l’iPhone ofereix <strong>dos modes</strong> (selector segmentat a dalt):</p>
           <ul>
             <li><strong>PJ-LINK directe:</strong> el telèfon es connecta a cada projector amb el protocol PJ-LINK per <strong>TCP port 4352</strong>. Afegeixes IP i contrasenya opcional, tries P1…Pn i uses <strong>Obrir</strong> / <strong>Tancar</strong>. A la llista es veu l’estat de connexió i la resposta per projector.</li>
-            <li><strong>Reenviament OSC:</strong> les ordres van a un Mac a la LAN (IP i port OSC configurables). Encaixa quan un Mac centralitza el control i tu dispares des del mòbil o el rellotge.</li>
+            <li><strong>Reenviament OSC:</strong> les ordres s’envien per OSC a un Mac a la LAN (IP i port que configuris). Aquest Mac ha d’executar <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>, que rep OSC i el passa a PJ-LINK.</li>
           </ul>
+          <h2>Shutter PJ-OSC al Mac</h2>
+          <p><strong>El reenviament OSC no funciona amb “qualsevol” receptor al Mac.</strong> Cal tenir instal·lat <a href="shutter-pj-osc.html">Shutter PJ-OSC (macOS)</a>, fer servir el mateix port OSC que indiquis a Shutter PJLINK i mantenir l’app del Mac <strong>en execució</strong> mentre usis el reenviament des de l’iPhone o l’Apple Watch. Si Shutter PJ-OSC està tancat, no és assolible o està mal configurada, aquesta via fallarà; sempre pots usar <strong>PJ-LINK directe</strong>, que parla amb els projectors sense el Mac.</p>
           <h2>Apple Watch</h2>
           <p>L’app del rellotge usa <strong>WatchConnectivity</strong> amb l’iPhone. Pots alternar entre reenviament OSC cap al Mac i destinacions directes (segons la política activa), triar projectors i prémer <strong>Obrir</strong> / <strong>Tancar</strong>. Mantén l’app de l’iPhone instal·lada i a prop.</p>
           <h2>Idiomes</h2>

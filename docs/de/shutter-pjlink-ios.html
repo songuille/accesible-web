@@ -58,8 +58,10 @@
           <p>Die iPhone-App bietet <strong>zwei Modi</strong> (segmentierte Auswahl oben):</p>
           <ul>
             <li><strong>PJ-LINK direkt:</strong> Das Telefon verbindet sich mit jedem Beamer über das PJ-LINK-Protokoll auf <strong>TCP-Port 4352</strong>. IP und optionales Passwort eintragen, P1…Pn wählen, dann <strong>Öffnen</strong> / <strong>Schließen</strong>. Verbindungs- und Verschlussstatus erscheinen pro Gerät.</li>
-            <li><strong>OSC-Weiterleitung:</strong> Befehle gehen an einen Mac im LAN (konfigurierbare IP und OSC-Port). Praktisch, wenn ein Mac das System bündelt und Sie Verschlüsse vom Handy oder der Uhr auslösen.</li>
+            <li><strong>OSC-Weiterleitung:</strong> Befehle werden per OSC an einen Mac im LAN gesendet (IP und Port nach Ihrer Angabe). Auf diesem Mac muss <a href="shutter-pj-osc.html">Shutter PJ-OSC</a> laufen; es empfängt OSC und steuert PJ-LINK.</li>
           </ul>
+          <h2>Shutter PJ-OSC auf dem Mac</h2>
+          <p><strong>Die OSC-Weiterleitung funktioniert nicht mit einem beliebigen OSC-Dienst.</strong> Installieren Sie <a href="shutter-pj-osc.html">Shutter PJ-OSC (macOS)</a>, tragen Sie denselben OSC-Port ein wie in Shutter PJLINK und halten Sie die Mac-App <strong>gestartet</strong>, solange Sie diesen Weg vom iPhone oder der Apple Watch nutzen. Ist Shutter PJ-OSC beendet, nicht erreichbar oder falsch eingestellt, schlägt diese Variante fehl — <strong>PJ-LINK direkt</strong> spricht weiterhin ohne Mac mit den Beamern.</p>
           <h2>Apple Watch</h2>
           <p>Die Watch-App nutzt <strong>WatchConnectivity</strong> zum iPhone. Routing zwischen OSC-Weiterleitung über den Mac und direkten Zielen lässt sich umschalten (je nach Richtlinie), Projektoren auswählen und <strong>Öffnen</strong> / <strong>Schließen</strong> tippen. iPhone-App installiert und in Reichweite halten.</p>
           <h2>Sprachen</h2>
