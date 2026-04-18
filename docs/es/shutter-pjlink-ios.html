@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mando remoto móvil para proyectores PJLink centrado en operación por botones.">
-  <title>Shutter PJLINK (iOS) — Stage Apps</title>
+  <meta name="description" content="Shutter PJLINK para iPhone y Apple Watch: PJ-LINK directo (TCP 4352) o relé OSC hacia un Mac; abrir/cerrar obturador por botones.">
+  <title>Shutter PJLINK (iOS y watchOS) — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="en" href="../en/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="fr" href="../fr/shutter-pjlink-ios.html">
@@ -49,17 +49,22 @@
 
     <main>
       <section class="page-hero wrap">
-        <h1>Shutter PJLINK (iOS)</h1>
-        <p class="meta">Mando remoto móvil para proyectores PJLink centrado en operación por botones.</p>
+        <h1>Shutter PJLINK</h1>
+        <p class="meta">Compañero para iPhone y Apple Watch para abrir y cerrar el obturador mecánico en proyectores compatibles con PJ-LINK: bien por PJ-LINK directo en red, bien enviando órdenes a través de un relé OSC en tu Mac.</p>
       </section>
       <section>
         <div class="wrap prose">
-          <h2>Características</h2>
+          <h2>Cómo funciona</h2>
+          <p>La app en iPhone ofrece <strong>dos modos</strong> (selector segmentado arriba):</p>
           <ul>
-            <li>Control rápido desde interfaz táctil de iPhone/iPad.</li><li>Misma filosofía de control que Shutter PJ-OSC.</li><li>Sin capa OSC: operación remota pura mediante botones.</li><li>Útil para técnicos que se mueven por el recinto.</li>
+            <li><strong>PJ-LINK directo:</strong> el teléfono se conecta a cada proyector con el protocolo PJ-LINK por <strong>TCP puerto 4352</strong>. Añades IP y contraseña opcional, eliges P1…Pn y usas <strong>Abrir</strong> / <strong>Cerrar</strong>. En la lista ves estado de conexión y respuesta del obturador por proyector.</li>
+            <li><strong>Relé OSC:</strong> las órdenes van a un Mac en tu LAN (IP y puerto OSC configurables). Encaja en montajes donde un Mac centraliza control y tú disparas obturadores desde el móvil o el reloj.</li>
           </ul>
-          <p>Seguimos actualizando detalles de cada app conforme evolucionan.</p>
-          <p><a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a></p>
+          <h2>Apple Watch</h2>
+          <p>La app del reloj usa <strong>WatchConnectivity</strong> con el iPhone. Puedes alternar la ruta entre relé al Mac y destinos directos (según la política activa), elegir proyectores y pulsar <strong>Abrir</strong> / <strong>Cerrar</strong>. Mantén la app del iPhone instalada y cerca para máxima fiabilidad.</p>
+          <h2>Idiomas</h2>
+          <p>El globo en iPhone cambia el idioma de la interfaz; parte de la configuración se refleja en el Watch cuando aplica.</p>
+          <p><a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Casos de uso</a> · <a href="support.html">Soporte</a></p>
         </div>
       </section>
     </main>

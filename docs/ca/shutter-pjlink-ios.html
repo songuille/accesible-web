@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Comandament remot mobil per a projectors PJLink centrat en botons.">
-  <title>Shutter PJLINK (iOS) — Stage Apps</title>
+  <meta name="description" content="Shutter PJLINK per a iPhone i Apple Watch: PJ-LINK directe (TCP 4352) o relé OSC cap a un Mac; obturador amb botons.">
+  <title>Shutter PJLINK (iOS i watchOS) — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="en" href="../en/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="fr" href="../fr/shutter-pjlink-ios.html">
@@ -49,20 +49,22 @@
 
     <main>
       <section class="page-hero wrap">
-        <h1>Shutter PJLINK (iOS)</h1>
-        <p class="meta">Comandament remot mobil per a projectors PJLink centrat en botons.</p>
+        <h1>Shutter PJLINK</h1>
+        <p class="meta">Company per a iPhone i Apple Watch per obrir i tancar l’obturador mecànic en projectors compatibles amb PJ-LINK: per PJ-LINK directe a la xarxa o bé mitjançant un relé OSC al Mac.</p>
       </section>
       <section>
         <div class="wrap prose">
-          <h2>Característiques</h2>
+          <h2>Com funciona</h2>
+          <p>L’app de l’iPhone ofereix <strong>dos modes</strong> (selector segmentat a dalt):</p>
           <ul>
-            <li>Control ràpid des de la interfície tàctil d’iPhone/iPad.</li>
-            <li>La mateixa filosofia de control que Shutter PJ-OSC.</li>
-            <li>Sense capa OSC: control remot només amb botons.</li>
-            <li>Útil per a tècnics que es mouen per la sala.</li>
+            <li><strong>PJ-LINK directe:</strong> el telèfon es connecta a cada projector amb el protocol PJ-LINK per <strong>TCP port 4352</strong>. Afegeixes IP i contrasenya opcional, tries P1…Pn i uses <strong>Obrir</strong> / <strong>Tancar</strong>. A la llista es veu l’estat de connexió i la resposta per projector.</li>
+            <li><strong>Relé OSC:</strong> les ordres van a un Mac a la LAN (IP i port OSC configurables). Encaixa quan un Mac centralitza el control i tu dispares des del mòbil o el rellotge.</li>
           </ul>
-          <p>Anem actualitzant els detalls de cada app de manera continuada.</p>
-          <p><a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d us</a> · <a href="support.html">Suport</a></p>
+          <h2>Apple Watch</h2>
+          <p>L’app del rellotge usa <strong>WatchConnectivity</strong> amb l’iPhone. Pots alternar entre relé al Mac i destinacions directes (segons la política activa), triar projectors i prémer <strong>Obrir</strong> / <strong>Tancar</strong>. Mantén l’app de l’iPhone instal·lada i a prop.</p>
+          <h2>Idiomes</h2>
+          <p>El globus a l’iPhone canvia l’idioma de la interfície; part dels ajustos es reflecteix al Watch quan escau.</p>
+          <p><a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Casos d’ús</a> · <a href="support.html">Suport</a></p>
         </div>
       </section>
     </main>

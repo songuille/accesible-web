@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PJLink proiektoreentzako mugikorreko agintea, botoietan oinarritua.">
-  <title>Shutter PJLINK (iOS) — Stage Apps</title>
+  <meta name="description" content="Shutter PJLINK iPhone eta Apple Watcherako: PJ-LINK zuzenean (TCP 4352) edo Mac-era OSC bidez; zutitzailea botoiekin.">
+  <title>Shutter PJLINK (iOS eta watchOS) — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="en" href="../en/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="fr" href="../fr/shutter-pjlink-ios.html">
@@ -49,20 +49,22 @@
 
     <main>
       <section class="page-hero wrap">
-        <h1>Shutter PJLINK (iOS)</h1>
-        <p class="meta">PJLink proiektoreentzako mugikorreko agintea, botoietan oinarritua.</p>
+        <h1>Shutter PJLINK</h1>
+        <p class="meta">iPhone eta Apple Watch-erako bazkidea, PJ-LINK bateragarriak diren proiektoreetan mekanikoa ixten eta irekitzeko—sarean PJ-LINK zuzenean edo Mac bateko OSC errelaitik pasatuta.</p>
       </section>
       <section>
         <div class="wrap prose">
-          <h2>Ezaugarriak</h2>
+          <h2>Nola dabil</h2>
+          <p>iPhone aplikazioak <strong>bi modu</strong> eskaintzen ditu (goiko segmentua):</p>
           <ul>
-            <li>Kontrol azkarra iPhone/iPad ukipen-interfacetik.</li>
-            <li>Shutter PJ-OSC-rekin filosofia bera.</li>
-            <li>OSC geruza gabe: botoi bidezko urruneko kontrol hutsa.</li>
-            <li>Aretoan mugitzen diren teknikarientzat erabilgarria.</li>
+            <li><strong>PJ-LINK zuzenean:</strong> telefonoak proiektore bakoitzarekin PJ-LINK protokoloaz konektatzen da <strong>TCP 4352</strong> atakan. IPa eta pasahitz aukerakoa gehitzen dituzu, P1…Pn hautatzen duzu eta <strong>Ireki</strong> / <strong>Itxi</strong>. Zerrendan ikusten dira konexioa eta erantzuna proiektoreko.</li>
+            <li><strong>OSC errelai:</strong> aginduak LANeko Mac bati bidaltzen zaizkio (IP eta OSC ataka konfiguragarriak). Mac bat kontrola zentralizatzen duenean eta zu mugikor edo erlojutik abiatzen duzunean egokitzen da.</li>
           </ul>
-          <p>Aplikazio bakoitzaren xehetasunak etengabe eguneratzen ari gara.</p>
-          <p><a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Kasuak ikusi</a> · <a href="support.html">Laguntza</a></p>
+          <h2>Apple Watch</h2>
+          <p>Erlojuaren aplikazioak <strong>WatchConnectivity</strong> erabiltzen du iPhone-rekin. Mac errelaiaren eta helburu zuzenen artean alda dezakezu (politikaren arabera), proiektoreak hautatu eta <strong>Ireki</strong> / <strong>Itxi</strong> sakatu. iPhone aplikazioa instalatuta eta gertu mantendu.</p>
+          <h2>Hizkuntzak</h2>
+          <p>iPhone-ko globoak interfazeko hizkuntzak aldatzen ditu; ezarpen batzuk Watch-era islatzen dira egokitzen denean.</p>
+          <p><a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Kasuak</a> · <a href="support.html">Laguntza</a></p>
         </div>
       </section>
     </main>

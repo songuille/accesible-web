@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mobile remote controller for PJLink projectors focused on button-based operation.">
-  <title>Shutter PJLINK (iOS) — Stage Apps</title>
+  <meta name="description" content="Shutter PJLINK for iPhone and Apple Watch: PJ-LINK direct (TCP 4352) or OSC relay to a Mac; open/close projector shutter with buttons.">
+  <title>Shutter PJLINK (iOS &amp; watchOS) — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="en" href="../en/shutter-pjlink-ios.html">
   <link rel="alternate" hreflang="fr" href="../fr/shutter-pjlink-ios.html">
@@ -49,16 +49,21 @@
 
     <main>
       <section class="page-hero wrap">
-        <h1>Shutter PJLINK (iOS)</h1>
-        <p class="meta">Mobile remote controller for PJLink projectors focused on button-based operation.</p>
+        <h1>Shutter PJLINK</h1>
+        <p class="meta">iPhone and Apple Watch companion to open and close the mechanical shutter on PJLink-compatible projectors—either with direct PJ-LINK over the network or by relaying commands through an OSC service on your Mac.</p>
       </section>
       <section>
         <div class="wrap prose">
-          <h2>Apps</h2>
+          <h2>How it works</h2>
+          <p>The iPhone app offers <strong>two modes</strong> (segmented control at the top):</p>
           <ul>
-            <li>Fast control from iPhone/iPad touch interface.</li><li>Same control philosophy as Shutter PJ-OSC.</li><li>No OSC layer: pure remote operation by buttons.</li><li>Useful for technicians moving around the venue.</li>
+            <li><strong>PJ-LINK direct:</strong> the phone connects to each projector using the PJ-LINK protocol over <strong>TCP port 4352</strong>. Add the projector IP and optional password, select P1…Pn, then use <strong>Open</strong> / <strong>Close</strong>. Per-projector connection state and shutter feedback are shown in the list.</li>
+            <li><strong>OSC relay:</strong> shutter commands are sent to a Mac on your LAN (configurable IP and OSC port). This matches setups where a Mac centralises lighting or show control while you trigger shutters from the phone or Watch.</li>
           </ul>
-          <p>More details are continuously updated as each app evolves.</p>
+          <h2>Apple Watch</h2>
+          <p>The Watch app talks to the iPhone over <strong>WatchConnectivity</strong>. You can switch routing between the Mac relay and direct targets (when that policy is enabled), pick which projectors fire, and tap <strong>Open</strong> / <strong>Close</strong>. Keep the iPhone app installed and in range for reliable delivery.</p>
+          <h2>Languages</h2>
+          <p>Use the globe control on iPhone to cycle interface languages; relevant settings are mirrored to the Watch where applicable.</p>
           <p><a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a></p>
         </div>
       </section>
