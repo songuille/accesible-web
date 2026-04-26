@@ -683,3 +683,13 @@ section h2 {
 .banner-appstore-link {
   display: block;
 }
+
+/* Shutter PJLINK banner: keep full image visible (no crop) */
+.card-feature-img img[src$="shutter-pjlink-banner-1200x720.png"] {
+  height: auto;
+  max-height: 28rem;
+  aspect-ratio: 5 / 3;
+  object-fit: contain;
+  object-position: center center;
+  background: color-mix(in srgb, var(--panel) 86%, white 14%);
+}

@@ -60,6 +60,9 @@
             <li><strong>PJ-LINK direct:</strong> the phone connects to each projector using the PJ-LINK protocol over <strong>TCP port 4352</strong>. Add the projector IP and optional password, select P1…Pn, then use <strong>Open</strong> / <strong>Close</strong>. Per-projector connection state and shutter feedback are shown in the list.</li>
             <li><strong>OSC forwarding:</strong> shutter commands are sent over OSC to a Mac on your LAN (IP and port you configure). That Mac is expected to run <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>, which receives OSC and forwards to PJ-LINK.</li>
           </ul>
+          <figure class="card-feature-img">
+            <a class="banner-appstore-link" href="https://apps.apple.com/us/app/shutter-pjlink/id6761254007?itscg=30200&itsct=apps_box_link&mttnsubad=6761254007" target="_blank" rel="noopener noreferrer" aria-label="Open Shutter PJLINK in App Store"><img src="../assets/images/shutter-pjlink-banner-1200x720.png" alt="Promotional banner for Shutter PJLINK." loading="lazy" decoding="async"></a>
+          </figure>
           <h2>Shutter PJ-OSC on the Mac</h2>
           <p><strong>OSC forwarding does not work with “any” Mac listener.</strong> Install <a href="shutter-pj-osc.html">Shutter PJ-OSC (macOS)</a>, set its OSC listen port to match what you enter in Shutter PJLINK, and keep the Mac app <strong>running</strong> while you use forwarding from iPhone or Watch. If Shutter PJ-OSC is quit, unreachable, or misconfigured, commands sent via this path will fail—you can still rely on <strong>PJ-LINK direct</strong>, which talks to projectors without needing the Mac.</p>
           <h2>Apple Watch</h2>
