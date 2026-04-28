@@ -538,6 +538,28 @@ section h2 {
   margin-bottom: 0.9rem;
 }
 
+.app-card-thumb {
+  display: block;
+  margin: 0.25rem 0 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.app-card-thumb img {
+  display: block;
+  width: 100%;
+  height: 8.5rem;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.2s ease;
+}
+
+.app-card-thumb:hover img {
+  transform: scale(1.01);
+}
+
 .table-wrap {
   overflow-x: auto;
 }
