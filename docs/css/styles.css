@@ -182,14 +182,24 @@ a:focus-visible {
 
 /* Móvil: mantener el desplegable de idioma dentro de pantalla */
 @media (max-width: 640px) {
+  .site-header,
+  .site-header .inner,
+  .header-right,
+  .lang-dropdown details {
+    overflow: visible;
+  }
+
   .lang-dropdown-menu {
-    right: 0;
-    left: auto;
+    position: fixed;
+    right: 0.5rem;
+    left: 0.5rem;
+    top: 4.4rem;
     min-width: 0;
-    width: min(18rem, calc(100vw - 1rem));
-    max-height: min(70vh, 28rem);
+    width: auto;
+    max-height: min(72vh, 30rem);
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 1200;
   }
 }
 
