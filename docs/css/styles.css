@@ -204,6 +204,22 @@ a:focus-visible {
   }
 }
 
+/* Móvil en horizontal (poca altura): forzar también menú dentro de pantalla */
+@media (max-height: 520px) {
+  .lang-dropdown-menu {
+    position: fixed;
+    right: 0.5rem;
+    left: 0.5rem;
+    top: 3.9rem;
+    min-width: 0;
+    width: auto;
+    max-height: calc(100vh - 4.6rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1200;
+  }
+}
+
 .lang-dropdown-item {
   display: flex;
   align-items: center;
