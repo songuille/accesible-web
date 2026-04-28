@@ -180,6 +180,19 @@ a:focus-visible {
   display: block;
 }
 
+/* Móvil: mantener el desplegable de idioma dentro de pantalla */
+@media (max-width: 640px) {
+  .lang-dropdown-menu {
+    right: 0;
+    left: auto;
+    min-width: 0;
+    width: min(18rem, calc(100vw - 1rem));
+    max-height: min(70vh, 28rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
 .lang-dropdown-item {
   display: flex;
   align-items: center;
