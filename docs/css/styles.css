@@ -168,6 +168,7 @@ a:focus-visible {
   right: 0;
   top: calc(100% + 0.6rem);
   min-width: 16rem;
+  max-width: min(92vw, 22rem);
   background: rgba(15, 20, 25, 0.98);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -181,7 +182,7 @@ a:focus-visible {
 }
 
 /* Móvil: mantener el desplegable de idioma dentro de pantalla */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .site-header,
   .site-header .inner,
   .header-right,
