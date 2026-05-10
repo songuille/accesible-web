@@ -421,6 +421,48 @@ a:focus-visible {
   font-size: 0.9rem !important;
 }
 
+.hero-available {
+  margin: -0.5rem auto 1.25rem;
+  max-width: 38rem;
+  text-align: center;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.btn-app-store {
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 1.45rem;
+  text-align: center;
+  line-height: 1.25;
+  max-width: 22rem;
+}
+
+.btn-app-store .btn-app-store-title {
+  font-size: 1rem;
+}
+
+.btn-app-store .btn-app-store-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.93;
+}
+
+.app-card-store-hint {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0 0 0.65rem;
+  line-height: 1.45;
+}
+
+.app-card-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
 /* Tarjetas con imagen al pie: alineación vertical consistente */
 .card-feature-photo {
   display: flex;
