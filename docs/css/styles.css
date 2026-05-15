@@ -626,6 +626,19 @@ section h2 {
   height: auto;
 }
 
+.app-store-banner-section {
+  padding-bottom: 0.5rem;
+}
+
+.app-hero-trial-note {
+  max-width: 960px;
+  margin: 0.75rem auto 0;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
 .stage-with-me-cta-row {
   display: flex;
   flex-wrap: wrap;
