@@ -452,7 +452,7 @@ a:focus-visible {
 .app-card-store-hint {
   font-size: 0.88rem;
   color: var(--text-muted);
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.55rem;
   line-height: 1.45;
 }
 
@@ -567,6 +567,7 @@ section h2 {
 
 .app-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
 }
 
 .quick-links-grid {
@@ -575,14 +576,23 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.app-card p {
+.app-card {
+  height: 100%;
+}
+
+.app-card h3 {
+  line-height: 1.25;
+}
+
+/* Descripción: altura mínima para textos cortos */
+.app-card > p:first-of-type {
   min-height: 4.5rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.65rem;
 }
 
 .app-card-thumb {
   display: block;
-  margin: 0.25rem 0 0.9rem;
+  margin: 0.15rem 0 0.75rem;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -600,6 +610,82 @@ section h2 {
 
 .app-card-thumb:hover img {
   transform: scale(1.01);
+}
+
+/* Alineación horizontal de miniaturas y botones App Store (subgrid) */
+@supports (grid-template-rows: subgrid) {
+  .app-grid {
+    grid-template-rows: auto 1fr auto auto auto;
+  }
+
+  .app-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    gap: 0.45rem 0;
+  }
+
+  .app-card > p:first-of-type {
+    min-height: 0;
+    margin-bottom: 0;
+  }
+
+  .app-card-thumb {
+    margin: 0.2rem 0 0.55rem;
+    align-self: stretch;
+  }
+
+  .app-card-store-hint {
+    margin: 0;
+    align-self: start;
+  }
+
+  .app-card-cta {
+    align-self: start;
+  }
+
+  .app-card-cta .btn-app-store {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Fallback sin subgrid: empujar miniatura y CTA hacia abajo lo máximo posible */
+@supports not (grid-template-rows: subgrid) {
+  .app-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-card h3 {
+    min-height: 2.6em;
+  }
+
+  .app-card > p:first-of-type {
+    flex: 1 1 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .app-card-thumb {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+
+  .app-card-store-hint {
+    flex: 1 1 auto;
+    min-height: 2.6rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .app-card-cta {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+
+  .app-card-cta .btn-app-store {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 /* Banner promocional en página de app (Stage With Me, MIDItoOSC, etc.) */
