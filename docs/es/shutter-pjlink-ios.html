@@ -54,6 +54,15 @@
         <p class="meta">Compañero para iPhone y Apple Watch para abrir y cerrar el obturador mecánico en proyectores compatibles con PJ-LINK: bien por PJ-LINK directo en red, bien mediante reenvío OSC (hacia un servicio en tu Mac).</p>
       </section>
       <section>
+        <div class="wrap">
+          <div class="app-hero-banner" aria-label="Shutter PJLINK en la App Store">
+            <a href="https://apple.co/4ds0FVC" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/shutter-pjlink-banner-1200x720.png" alt="Shutter PJLINK — ya en la App Store" width="1200" height="720" loading="eager" decoding="async">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section>
         <div class="wrap prose">
           <h2>Cómo funciona</h2>
           <p>La app en iPhone ofrece <strong>dos modos</strong> (selector segmentado arriba):</p>
@@ -61,15 +70,17 @@
             <li><strong>PJ-LINK directo:</strong> el teléfono se conecta a cada proyector con el protocolo PJ-LINK por <strong>TCP puerto 4352</strong>. Añades IP y contraseña opcional, eliges P1…Pn y usas <strong>Abrir</strong> / <strong>Cerrar</strong>. En la lista ves estado de conexión y respuesta del obturador por proyector.</li>
             <li><strong>Reenvío OSC:</strong> las órdenes se envían por OSC a un Mac en tu LAN (IP y puerto que configures). Ese Mac debe ejecutar <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>, que recibe OSC y los pasa a PJ-LINK.</li>
           </ul>
-          <figure class="card-feature-img">
-            <a class="banner-appstore-link" href="https://apps.apple.com/us/app/shutter-pjlink/id6761254007?itscg=30200&itsct=apps_box_link&mttnsubad=6761254007" target="_blank" rel="noopener noreferrer" aria-label="Open Shutter PJLINK in App Store"><img src="../assets/images/shutter-pjlink-banner-1200x720.png" alt="Banner promocional de Shutter PJLINK." loading="lazy" decoding="async"></a>
-          </figure>
           <h2>Shutter PJ-OSC en el Mac</h2>
           <p><strong>El reenvío OSC no sirve con “cualquier” oyente en el Mac.</strong> Hay que tener instalado <a href="shutter-pj-osc.html">Shutter PJ-OSC (macOS)</a>, usar el mismo puerto OSC que indiques en Shutter PJLINK y mantener la app del Mac <strong>en ejecución</strong> mientras uses el reenvío desde el iPhone o el Apple Watch. Si Shutter PJ-OSC está cerrado, no alcanzable o mal configurado, esa vía fallará; siempre puedes usar <strong>PJ-LINK directo</strong>, que habla con los proyectores sin necesidad del Mac.</p>
           <h2>Apple Watch</h2>
           <p>La app del reloj usa <strong>WatchConnectivity</strong> con el iPhone. Puedes alternar la ruta entre reenvío OSC al Mac y destinos directos (según la política activa), elegir proyectores y pulsar <strong>Abrir</strong> / <strong>Cerrar</strong>. Mantén la app del iPhone instalada y cerca para máxima fiabilidad.</p>
           <h2>Idiomas</h2>
           <p>El globo en iPhone cambia el idioma de la interfaz; parte de la configuración se refleja en el Watch cuando aplica.</p>
+          <div class="beta-callout">
+            <h3>App Store</h3>
+            <p><strong>Ya disponible</strong> en la App Store para iPhone, iPad y Apple Watch.</p>
+            <p><a class="btn btn-primary" href="https://apple.co/4ds0FVC" target="_blank" rel="noopener noreferrer">Descargar en la App Store</a></p>
+          </div>
           <p><a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Casos de uso</a> · <a href="support.html">Soporte</a></p>
         </div>
       </section>
