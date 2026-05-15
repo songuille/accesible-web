@@ -570,17 +570,22 @@ section h2 {
   align-items: stretch;
 }
 
+.app-grid > .app-card {
+  align-self: stretch;
+}
+
 .quick-links-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Tarjetas home: flex (Firefox + Safari; subgrid falla en Safari) */
+/* Tarjetas home: rejilla interna — miniaturas alineadas, botones al pie */
 .app-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
   height: 100%;
+  min-height: 0;
 }
 
 .app-card h3 {
@@ -589,10 +594,11 @@ section h2 {
 }
 
 .app-card-text {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  align-self: start;
+  width: 100%;
 }
 
 .app-card-text > p {
@@ -603,7 +609,6 @@ section h2 {
 
 .app-card-thumb {
   display: block;
-  flex: 0 0 auto;
   margin: 0.35rem 0 0.6rem;
   border-radius: 10px;
   overflow: hidden;
@@ -624,21 +629,21 @@ section h2 {
   transform: scale(1.01);
 }
 
+/* Hint + botones redondos pegados al borde inferior de la tarjeta */
 .app-card-actions {
-  flex: 1 1 0;
+  align-self: end;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 0;
 }
 
-.app-card-store-hint {
-  flex: 1 1 auto;
+.app-card-actions .app-card-store-hint {
+  flex: none;
   margin-bottom: 0.5rem;
 }
 
 .app-card-cta {
-  flex: 0 0 auto;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .app-card-cta .btn-app-store {
@@ -734,6 +739,12 @@ section h2 {
   /* Home — cinco apps en una fila (sobrescribe la regla de 4 columnas solo aquí) */
   .grid.app-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  /* Safari: altura mínima común para que 1fr y el pie alineen entre columnas */
+  .app-grid > .app-card {
+    min-height: 29rem;
   }
 }
 
