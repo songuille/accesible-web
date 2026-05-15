@@ -1,0 +1,13 @@
+.DS_Store
+**/.DS_Store
+
+# App macOS — solo local, no subir al repo público de la web
+Accesible/
+
+# Xcode user-specific
+**/xcuserdata/
+*.xcuserstate
+
+# Build
+DerivedData/
+build/
