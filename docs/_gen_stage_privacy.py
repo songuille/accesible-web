@@ -24,6 +24,7 @@ CONTENT = {
 <li><strong>No vendemos</strong> tus datos personales ni el contenido de tus ensayos.</li>
 <li><strong>No exigimos</strong> crear una cuenta para usar la app.</li>
 <li><strong>No subimos</strong> tus grabaciones de voz ni tus textos a servidores del desarrollador.</li>
+<li>No conservamos copias de tus guiones ni grabaciones en servidores del desarrollador; no hay periodo de retención en la nube.</li>
 <li>Los datos de ensayo y los archivos de audio se guardan <strong>en tu dispositivo</strong>, salvo que tú decidas compartirlos.</li>
 </ul>
 <h2>Micrófono</h2>
@@ -85,6 +86,7 @@ CONTENT = {
 <li><strong>We do not sell</strong> your personal data or rehearsal content.</li>
 <li><strong>No account</strong> is required.</li>
 <li><strong>We do not upload</strong> recordings or scripts to developer servers.</li>
+<li>We do not keep copies of your scripts or recordings on developer servers; there is no cloud retention period.</li>
 <li>Data stays <strong>on your device</strong> unless you share it.</li>
 </ul>
 <h2>Microphone</h2>
@@ -140,6 +142,7 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <h2>Résumé</h2>
 <ul>
 <li>Pas de vente de données. Pas de compte obligatoire. Pas d'envoi de vos enregistrements vers nos serveurs.</li>
+<li>Nous ne conservons pas de copies de vos textes ni enregistrements sur nos serveurs ; il n'y a pas de période de conservation dans le cloud.</li>
 <li>Données sur l'appareil, sauf partage explicite par vous.</li>
 </ul>
 <h2>Microphone</h2>
@@ -172,6 +175,7 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <h2>Kurzfassung</h2>
 <ul>
 <li>Kein Verkauf von Daten. Kein Konto erforderlich. Keine Uploads Ihrer Aufnahmen auf unsere Server.</li>
+<li>Wir speichern keine Kopien Ihrer Texte oder Aufnahmen auf Entwickler-Servern; es gibt keine Aufbewahrungsfrist in der Cloud.</li>
 <li>Daten auf dem Gerät, sofern Sie nicht teilen.</li>
 </ul>
 <h2>Mikrofon</h2>
@@ -202,6 +206,7 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <h2>Resum</h2>
 <ul>
 <li>No venem dades. No cal compte. No pujem gravacions als nostres servidors.</li>
+<li>No conservem còpies dels teus guions ni gravacions als servidors del desenvolupador; no hi ha període de retenció al núvol.</li>
 <li>Dades al dispositiu llevat que comparteixis explícitament.</li>
 </ul>
 <h2>Micròfon</h2>
@@ -230,6 +235,7 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <h2>Resumo</h2>
 <ul>
 <li>Non vendemos datos. Sen conta obrigatoria. Non subimos gravacións aos nosos servidores.</li>
+<li>Non conservamos copias dos teus guions nin gravacións nos servidores do desenvolvedor; non hai período de retención na nube.</li>
 <li>Datos no dispositivo salvo que compartas.</li>
 </ul>
 <h2>Micrófono</h2>
@@ -258,6 +264,7 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <h2>Laburpena</h2>
 <ul>
 <li>Ez ditugu zure datuak saltzen. Ez da konturik behar. Ez ditugu grabazioak igotzen gure zerbitzarietara.</li>
+<li>Ez gordetzen ditugu zure testu edo grabazioen kopiak garatzailearen zerbitzarietan; ez dago hodeian atxikitzeko eperik.</li>
 <li>Datuak gailuan, zuk partekatzen ez baduzu.</li>
 </ul>
 <h2>Mikrofonoa</h2>
