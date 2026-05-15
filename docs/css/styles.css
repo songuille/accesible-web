@@ -837,6 +837,17 @@ section h2 {
   color: var(--text);
 }
 
+.footer-made-in {
+  margin: 0.35rem auto 0;
+  padding: 0 1.5rem 1rem;
+  max-width: var(--max);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  opacity: 0.72;
+  text-align: center;
+}
+
 /* Layout helper */
 .page {
   display: flex;
