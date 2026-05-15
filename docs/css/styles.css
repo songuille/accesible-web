@@ -602,13 +602,15 @@ section h2 {
   transform: scale(1.01);
 }
 
-/* Stage With Me: banner promocional en página dedicada */
+/* Banner promocional en página de app (Stage With Me, MIDItoOSC, etc.) */
+.app-hero-banner,
 .stage-with-me-hero-banner {
   margin: 0 auto 1.75rem;
   max-width: 960px;
   padding: 0 1rem;
 }
 
+.app-hero-banner a,
 .stage-with-me-hero-banner a {
   display: block;
   line-height: 0;
@@ -617,6 +619,7 @@ section h2 {
   border: 1px solid var(--border);
 }
 
+.app-hero-banner img,
 .stage-with-me-hero-banner img {
   display: block;
   width: 100%;
