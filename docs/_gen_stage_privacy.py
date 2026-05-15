@@ -57,6 +57,9 @@ CONTENT = {
 </ul>
 <h2>Menores</h2>
 <p>Puede usarse por estudiantes bajo supervisión de un adulto. No recopilamos datos de menores en servidores del desarrollador (no hay servicio de cuentas en línea).</p>
+<h2>Eliminación de datos</h2>
+<p>Puedes eliminar textos, sesiones y grabaciones desde la propia app. Si deseas solicitar la eliminación de todos los datos asociados a la aplicación o necesitas ayuda, escríbenos a <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> con el asunto «Eliminación de datos — Stage With Me (Android)». Atenderemos tu solicitud en un plazo razonable.</p>
+<p>Como los datos se almacenan en tu dispositivo y no en nuestros servidores, en la mayoría de los casos la forma más rápida de borrarlos por completo es desinstalar la app o eliminar el contenido desde la app.</p>
 <h2>Cambios</h2>
 <p>Podemos actualizar esta política. La fecha figura al final.</p>
 <h2>Contacto</h2>
@@ -114,6 +117,9 @@ CONTENT = {
 </ul>
 <h2>Children</h2>
 <p>May be used by students under adult supervision. No knowingly collected children’s data on developer servers.</p>
+<h2>Data deletion</h2>
+<p>You can delete scripts, sessions, and recordings in the app. To request deletion of all data associated with the app or if you need assistance, email <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> with the subject line “Data deletion — Stage With Me (Android)”. We will respond within a reasonable time.</p>
+<p>Because data is stored on your device rather than on our servers, uninstalling the app or deleting content in the app is usually the fastest way to remove it completely.</p>
 <h2>Changes</h2>
 <p>We may update this policy; date below.</p>
 <h2>Contact</h2>
@@ -148,6 +154,8 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <p>Microphone ; stockage/fichiers. Révocables dans Paramètres → Applications → Stage With Me.</p>
 <h2>Tiers</h2>
 <p>Google Play pour la distribution. Pas de SDK publicitaires.</p>
+<h2>Suppression des données</h2>
+<p>Vous pouvez supprimer textes, sessions et enregistrements dans l’app. Pour demander la suppression de toutes les données associées à l’application, écrivez à <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> avec l’objet « Suppression des données — Stage With Me (Android) ». Nous traiterons votre demande dans un délai raisonnable.</p>
 <h2>Contact</h2>
 <p><strong>Guillermo Vázquez</strong><br>
 <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> · <a href="support.html">Support</a></p>
@@ -176,6 +184,8 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <p>Teilen über Android — von Ihnen gewählte Drittanbieter-Apps.</p>
 <h2>Android-Berechtigungen</h2>
 <p>Mikrofon; Speicher/Dateien. Widerruf in Einstellungen → Apps → Stage With Me.</p>
+<h2>Datenlöschung</h2>
+<p>Sie können Texte, Sitzungen und Aufnahmen in der App löschen. Um die Löschung aller mit der App verbundenen Daten zu beantragen, schreiben Sie an <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> mit dem Betreff „Datenlöschung — Stage With Me (Android)“. Wir bearbeiten Ihre Anfrage innerhalb einer angemessenen Frist.</p>
 <h2>Kontakt</h2>
 <p><strong>Guillermo Vázquez</strong><br>
 <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> · <a href="support.html">Support</a></p>
@@ -202,6 +212,8 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <p>Textos, àudio i metadades en emmagatzematge local. Pots esborrar-los; en desinstal·lar s'eliminen les dades de l'app.</p>
 <h2>Compartir</h2>
 <p>Compartir via Android; no controlem apps de tercers.</p>
+<h2>Supressió de dades</h2>
+<p>Pots esborrar textos, sessions i gravacions des de l’app. Per sol·licitar l’eliminació de totes les dades associades a l’aplicació, escriu a <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> amb l’assumpte «Supressió de dades — Stage With Me (Android)». Atendrem la sol·licitud en un termini raonable.</p>
 <h2>Contacte</h2>
 <p><strong>Guillermo Vázquez</strong><br>
 <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> · <a href="support.html">Suport</a></p>
@@ -228,6 +240,8 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <p>Textos, audio e metadatos en almacenamento local. Podes borrar; ao desinstalar elimínase a datos da app.</p>
 <h2>Compartir</h2>
 <p>Compartir mediante Android; non controlamos terceiras apps.</p>
+<h2>Eliminación de datos</h2>
+<p>Podes eliminar textos, sesións e gravacións desde a app. Para solicitar a eliminación de todos os datos asociados á aplicación, escribe a <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> co asunto «Eliminación de datos — Stage With Me (Android)». Atenderemos a solicitude nun prazo razoable.</p>
 <h2>Contacto</h2>
 <p><strong>Guillermo Vázquez</strong><br>
 <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> · <a href="support.html">Soporte</a></p>
@@ -254,6 +268,8 @@ for code, name, emoji, title, desc, h1, meta, body, nav_aria, lang_aria, footer_
 <p>Testuak, audio fitxategiak eta metadatuak lokalki. Ezaba ditzakezu aplikaziotik.</p>
 <h2>Partekatzea</h2>
 <p>Android bidez partekatzen duzu; ez ditugu hirugarrenen aplikazioak kontrolatzen.</p>
+<h2>Datuen ezabatzea</h2>
+<p>Testuak, saioak eta grabazioak aplikaziotik ezaba ditzakezu. Aplikazioari lotutako datu guztiak ezabatzeko eskaera egiteko, idatzi <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> helbidera «Datuen ezabatzea — Stage With Me (Android)» gaia jarrita. Eskaera arrazoizko epean erantzungo dugu.</p>
 <h2>Harremana</h2>
 <p><strong>Guillermo Vázquez</strong><br>
 <a href="mailto:songuille@icloud.com">songuille@icloud.com</a> · <a href="support.html">Laguntza</a></p>
