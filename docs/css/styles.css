@@ -696,6 +696,38 @@ section h2 {
   align-items: center;
 }
 
+.store-badge-link {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.store-badge-link:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.store-badge-link img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.app-card-cta .store-badge-link {
+  width: 100%;
+  justify-content: center;
+}
+
+.app-card-cta .store-badge-link img {
+  height: 44px;
+}
+
+.stage-with-me-cta-row .store-badge-link img {
+  height: 44px;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
