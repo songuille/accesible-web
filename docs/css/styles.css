@@ -560,14 +560,16 @@ section h2 {
 
 .app-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: auto auto auto;
   align-items: stretch;
 }
 
 .app-grid > .app-grid-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.65rem 0;
   min-width: 0;
-  height: 100%;
 }
 
 .quick-links-grid {
@@ -576,12 +578,14 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Tarjeta: solo texto descriptivo */
+/* Tarjeta: solo texto descriptivo (misma altura en cada fila del catálogo) */
 .app-card {
+  grid-row: 1;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
   min-height: 0;
+  height: 100%;
 }
 
 .app-card h3 {
@@ -602,9 +606,9 @@ section h2 {
 
 /* Miniatura promocional, fuera de la tarjeta */
 .app-grid-item > .app-card-thumb {
+  grid-row: 2;
   display: block;
-  flex: 0 0 auto;
-  margin-top: 0.75rem;
+  margin-top: 0;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -626,11 +630,11 @@ section h2 {
 
 /* Hint + botones de tienda, fuera de la tarjeta */
 .app-card-actions {
-  flex: 0 0 auto;
+  grid-row: 3;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 0.65rem;
+  margin-top: 0;
   min-width: 0;
 }
 
@@ -781,10 +785,6 @@ section h2 {
   .grid.app-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: stretch;
-  }
-
-  .app-grid > .app-grid-item .app-card {
-    min-height: 0;
   }
 }
 
