@@ -573,10 +573,10 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Tarjetas home: rejilla interna — miniaturas alineadas, botones al pie */
+/* Tarjetas home: texto + miniatura alineados; botones de tienda a la misma altura */
 .app-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
   height: 100%;
   min-height: 0;
 }
@@ -589,20 +589,19 @@ section h2 {
 .app-card-text {
   display: flex;
   flex-direction: column;
-  flex: 0 1 auto;
-  min-height: 0;
+  min-height: 7.25rem;
+  min-width: 0;
   width: 100%;
 }
 
 .app-card-text > p {
   flex: 1 1 auto;
   margin: 0;
-  min-height: 3.25rem;
+  min-height: 4.75rem;
 }
 
 .app-card-thumb {
   display: block;
-  flex: 0 0 auto;
   margin: 0.35rem 0 0.6rem;
   border-radius: 10px;
   overflow: hidden;
@@ -623,20 +622,19 @@ section h2 {
   transform: scale(1.01);
 }
 
-/* Hint + botones redondos pegados al borde inferior de la tarjeta */
+/* Hint + botones: misma línea de inicio en todas las tarjetas de la fila */
 .app-card-actions {
-  align-self: stretch;
+  align-self: start;
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  margin-top: auto;
   min-width: 0;
 }
 
 .app-card-actions .app-card-store-hint {
   flex: none;
   margin-bottom: 0.5rem;
+  min-height: 4.5rem;
 }
 
 .app-card-cta {
@@ -783,9 +781,9 @@ section h2 {
     align-items: stretch;
   }
 
-  /* Safari: altura mínima común para alinear el pie entre columnas */
+  /* Altura mínima común: alinea miniaturas y botones App Store entre columnas */
   .app-grid > .app-card {
-    min-height: 32rem;
+    min-height: 36rem;
   }
 }
 
