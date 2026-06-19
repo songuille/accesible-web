@@ -456,13 +456,6 @@ a:focus-visible {
   line-height: 1.45;
 }
 
-.app-card-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: stretch;
-}
-
 /* Tarjetas con imagen al pie: alineación vertical consistente */
 .card-feature-photo {
   display: flex;
@@ -582,8 +575,8 @@ section h2 {
 
 /* Tarjetas home: rejilla interna — miniaturas alineadas, botones al pie */
 .app-card {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 0;
 }
@@ -596,8 +589,8 @@ section h2 {
 .app-card-text {
   display: flex;
   flex-direction: column;
+  flex: 0 1 auto;
   min-height: 0;
-  align-self: start;
   width: 100%;
 }
 
@@ -609,6 +602,7 @@ section h2 {
 
 .app-card-thumb {
   display: block;
+  flex: 0 0 auto;
   margin: 0.35rem 0 0.6rem;
   border-radius: 10px;
   overflow: hidden;
@@ -631,10 +625,13 @@ section h2 {
 
 /* Hint + botones redondos pegados al borde inferior de la tarjeta */
 .app-card-actions {
-  align-self: end;
+  align-self: stretch;
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
+  margin-top: auto;
+  min-width: 0;
 }
 
 .app-card-actions .app-card-store-hint {
@@ -643,7 +640,12 @@ section h2 {
 }
 
 .app-card-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
   margin-top: 0;
+  min-width: 0;
 }
 
 .app-card-cta .btn-app-store {
@@ -716,12 +718,19 @@ section h2 {
 }
 
 .app-card-cta .store-badge-link {
+  display: flex;
   width: 100%;
+  max-width: 100%;
   justify-content: center;
+  min-width: 0;
 }
 
 .app-card-cta .store-badge-link img {
-  height: 44px;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 40px;
+  object-fit: contain;
 }
 
 .stage-with-me-cta-row .store-badge-link img {
@@ -774,9 +783,9 @@ section h2 {
     align-items: stretch;
   }
 
-  /* Safari: altura mínima común para que 1fr y el pie alineen entre columnas */
+  /* Safari: altura mínima común para alinear el pie entre columnas */
   .app-grid > .app-card {
-    min-height: 29rem;
+    min-height: 32rem;
   }
 }
 
