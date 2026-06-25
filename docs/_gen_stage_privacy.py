@@ -361,13 +361,13 @@ def render_page(code):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=10">
+  <link rel="stylesheet" href="../css/styles.css?v=11">
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="wrap inner">
-        <a class="logo" href="index.html">Stage Apps</a>
+        <a class="logo" href="index.html"><img class="logo-mark" src="../assets/images/stageapps-icon.png" alt="" width="36" height="36" decoding="async"><span class="logo-text">StageApps</span></a>
         <div class="header-right">
           <nav class="nav" aria-label="{t["nav_aria"]}">
             <a href="index.html">{NAV_INDEX[code]}</a>

@@ -366,6 +366,9 @@ a:focus-visible {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
@@ -373,8 +376,23 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.logo-mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  line-height: 1;
+}
+
 .logo:hover {
   text-decoration: none;
+}
+
+.logo:hover .logo-text {
   color: var(--accent);
 }
 
