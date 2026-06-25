@@ -367,7 +367,7 @@ def render_page(code):
   <div class="page">
     <header class="site-header">
       <div class="wrap inner">
-        <a class="logo" href="index.html"><img class="logo-mark" src="../assets/images/stageapps-icon.png" alt="" width="36" height="36" decoding="async"><span class="logo-text">StageApps</span></a>
+        <a class="logo" href="index.html"><img class="logo-mark" src="../assets/images/stageapps-mark.png" alt="" width="36" height="36" decoding="async"><span class="logo-text">StageApps</span></a>
         <div class="header-right">
           <nav class="nav" aria-label="{t["nav_aria"]}">
             <a href="index.html">{NAV_INDEX[code]}</a>
