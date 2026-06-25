@@ -927,7 +927,26 @@ section h2 {
 
 .site-footer .links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
+  align-items: center;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-social:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-social-icon {
+  flex-shrink: 0;
 }
 
 .footer-disclaimer {
