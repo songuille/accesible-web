@@ -11,3 +11,4 @@ Accesible/
 # Build
 DerivedData/
 build/
+docs/__pycache__/
