@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Translate MIDI data from Midas M32 / Behringer X32 into OSC commands for show control.">
+  <meta name="description" content="Translate and mirror MIDI between pro mixers — QLab cues, live output, and cross-desk routing. Version 2.0.3 adds Live mode to clone or translate between different consoles.">
   <title>MIDItoOSC — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/miditoosc.html">
   <link rel="alternate" hreflang="en" href="../en/miditoosc.html">
@@ -55,28 +55,57 @@
     <main>
       <section class="page-hero wrap">
         <h1>MIDItoOSC</h1>
-        <p class="meta">Translate MIDI data from Midas M32 / Behringer X32 into OSC commands for show control.</p>
+        <p class="meta">More powerful and flexible MIDI→OSC for show control — now with Live mode to mirror or translate between mixers in real time.</p>
       </section>
       <section>
         <div class="wrap">
           <div class="app-hero-banner" aria-label="MIDItoOSC on the Mac App Store">
             <a href="https://apple.co/4ftaJ3c" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/images/miditoosc-banner-1200x720.png" alt="MIDItoOSC — available on the Mac App Store" width="1200" height="720" loading="eager" decoding="async">
+              <img src="../assets/images/miditoosc-banner-1200x720.png?v=2" alt="MIDItoOSC — updated and better than ever. See what's new on the Mac App Store" width="1200" height="720" loading="eager" decoding="async">
             </a>
           </div>
         </div>
       </section>
       <section>
         <div class="wrap prose">
+<p><strong>Version 2.0.3</strong> is more powerful and flexible than ever — with independent input and output profiles, smarter cross-desk routing, and a new <strong>Live</strong> mode to mirror or translate your mix to a second desk in real time.</p>
+
+          <h2>What's new in 2.0.3</h2>
+
+          <h3>Live to a second mixer</h3>
+          <p>Mirror your show in real time: send the same control stream to another desk while you work. Use matching profiles for a straight clone, or translate between different consoles (e.g. M32 → DiGiCo, WING → Yamaha) so QLab and live output stay in sync without duplicate cues.</p>
+
+          <h3>More flexible input &amp; output profiles</h3>
+          <p>Choose input and output profiles independently — same desk end-to-end, or mix and match (e.g. control from an M32, send QLab cues as DiGiCo, live to a Roland). Auto still follows your input profile when you want a simple setup.</p>
+
+          <h3>Smarter cross-desk routing</h3>
+          <p>Broader support for faders, mutes and pan across X32/M32, X-Air, WING, DiGiCo, Yamaha DM7/DM3/Rivage and Roland — for both QLab and live output. Routes follow documented mappings; unsupported controls are blocked instead of sending wrong OSC.</p>
+
+          <h3>DiGiCo (QLab)</h3>
+          <p>Aligned with verified QLab templates: channel faders, mutes, pan, DCA, main (Multis) and group mutes — including the <code>{parameter}</code> path format.</p>
+
+          <h3>Roland</h3>
+          <p>M-200i and M-400 outputs use MIDI only (no accidental OSC). Live routing normalises to the M32 hub before conversion.</p>
+
+          <h3>Learning mode</h3>
+          <p>Moved to the top menu for quicker access when calibrating a new desk.</p>
+
+          <h3>Interface</h3>
+          <p>Redesigned sidebar fader — taller, vertical cap with grip lines, closer to a real desk channel fader.</p>
+
+          <h3>Under the hood</h3>
+          <p>Yamaha and live-routing fixes, stricter OSC encoding, and broader automated checks across profile combinations.</p>
+
           <h2>Key features</h2>
           <ul>
-            <li>Select MIDI source and mixer profile (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum).</li>
-            <li>Convert incoming MIDI to clean one-line OSC text (path + arguments), ready to copy, drag, or send.</li>
+            <li><strong>Live mode:</strong> clone or translate your mix to a second desk in real time — same console or different brands.</li>
+            <li>Independent MIDI input and output profiles (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum, Roland).</li>
+            <li>Convert incoming MIDI to clean one-line OSC (path + arguments), ready to copy, drag, or send to QLab.</li>
             <li>Send to QLab per row or in batches (selected lines, grouped or ungrouped) with Stable/Fast batch modes.</li>
-            <li>Optional MIDI Learn (24-step calibration) plus sidebar fine editing for detected controls; in OSC source mode it recognizes any mixer parameter (pan, EQ, compressor, etc.).</li>
+            <li>Optional MIDI Learn (24-step calibration) plus sidebar fine editing; in OSC source mode it recognizes any mixer parameter (pan, EQ, compressor, etc.).</li>
           </ul>
           <p>Built for fast show programming: clear MIDI/OSC monitor, keyboard shortcuts, and profile-aware routing for real console workflows.</p>
-          <p><strong>Profile compatibility:</strong> MIDItoOSC is production-validated with <strong>Midas M32 / Behringer X32</strong> and <strong>Behringer WING</strong>. Additional profiles (<strong>X Air, Yamaha DM7/DM3/Rivage, and DiGiCo SD/Quantum</strong>) are provided as extended compatibility and may require adjustment depending on firmware or system configuration. For these setups, use <strong>MIDI Learn</strong> (guided 24-step calibration) to confirm and adapt the profile to your console.</p>
+          <p><strong>Profile compatibility:</strong> MIDItoOSC is production-validated with <strong>Midas M32 / Behringer X32</strong> and <strong>Behringer WING</strong>. Additional profiles (<strong>X Air, Yamaha DM7/DM3/Rivage, DiGiCo SD/Quantum and Roland</strong>) are provided as extended compatibility and may require adjustment depending on firmware or system configuration. For these setups, use <strong>MIDI Learn</strong> (guided 24-step calibration) to confirm and adapt the profile to your console.</p>
           <div class="beta-callout">
             <h3>Mac App Store &amp; TestFlight</h3>
             <p><strong>Available now</strong> on the Mac App Store (macOS).</p>

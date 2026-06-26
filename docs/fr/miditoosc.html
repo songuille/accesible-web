@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Traduit les donnees MIDI de Midas M32 / Behringer X32 en commandes OSC.">
+  <meta name="description" content="Traduisez et dupliquez le MIDI entre consoles pro — cues QLab, sortie live et routage inter-pupitres. La version 2.0.3 ajoute le mode Live pour cloner ou traduire entre consoles differentes.">
   <title>MIDItoOSC — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/miditoosc.html">
   <link rel="alternate" hreflang="en" href="../en/miditoosc.html">
@@ -55,28 +55,57 @@
     <main>
       <section class="page-hero wrap">
         <h1>MIDItoOSC</h1>
-        <p class="meta">Traduit les donnees MIDI de Midas M32 / Behringer X32 en commandes OSC.</p>
+        <p class="meta">MIDI vers OSC plus puissant et flexible — avec le mode Live pour dupliquer ou traduire entre pupitres en temps reel.</p>
       </section>
       <section>
         <div class="wrap">
           <div class="app-hero-banner" aria-label="MIDItoOSC sur le Mac App Store">
             <a href="https://apple.co/4ftaJ3c" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/images/miditoosc-banner-1200x720.png" alt="MIDItoOSC — disponible sur le Mac App Store" width="1200" height="720" loading="eager" decoding="async">
+              <img src="../assets/images/miditoosc-banner-1200x720.png?v=2" alt="MIDItoOSC — mis à jour et meilleur que jamais. Nouveautés sur le Mac App Store" width="1200" height="720" loading="eager" decoding="async">
             </a>
           </div>
         </div>
       </section>
       <section>
         <div class="wrap prose">
-          <h2>Fonctionnalités clés</h2>
+<p>La <strong>version 2.0.3</strong> est plus puissante et flexible que jamais — profils d'entree et de sortie independants, routage inter-pupitres plus intelligent, et un nouveau mode <strong>Live</strong> pour dupliquer ou traduire votre mix vers une seconde console en temps reel.</p>
+
+          <h2>Nouveautes de la 2.0.3</h2>
+
+          <h3>Live vers une seconde console</h3>
+          <p>Dupliquez votre show en temps reel : envoyez le meme flux de controle vers un autre pupitre pendant que vous travaillez. Profils identiques pour un clone direct, ou traduction entre consoles differentes (ex. M32 → DiGiCo, WING → Yamaha) pour garder QLab et la sortie live synchronises sans cues dupliques.</p>
+
+          <h3>Profils d'entree et de sortie plus flexibles</h3>
+          <p>Choisissez les profils d'entree et de sortie independamment — meme pupitre de bout en bout, ou combinaisons (ex. controle depuis une M32, cues QLab en DiGiCo, live vers Roland). Auto suit toujours votre profil d'entree pour une configuration simple.</p>
+
+          <h3>Routage inter-pupitres plus intelligent</h3>
+          <p>Support elargi des faders, mutes et panoramiques sur X32/M32, X-Air, WING, DiGiCo, Yamaha DM7/DM3/Rivage et Roland — pour QLab et la sortie live. Les routes suivent des mappings documentes ; les controles non pris en charge sont bloques plutot que d'envoyer un OSC incorrect.</p>
+
+          <h3>DiGiCo (QLab)</h3>
+          <p>Aligne avec les modeles QLab verifies : faders de canal, mutes, pan, DCA, main (Multis) et mutes de groupe — y compris le format de chemin <code>{parameter}</code>.</p>
+
+          <h3>Roland</h3>
+          <p>Les sorties M-200i et M-400 utilisent uniquement le MIDI (pas d'OSC accidentel). Le routage live normalise vers le hub M32 avant conversion.</p>
+
+          <h3>Mode d'apprentissage</h3>
+          <p>Deplace dans le menu principal pour un acces plus rapide lors de la calibration d'un nouveau pupitre.</p>
+
+          <h3>Interface</h3>
+          <p>Fader lateral repense — plus haut, capuchon vertical avec lignes de grip, plus proche d'un vrai fader de canal.</p>
+
+          <h3>Sous le capot</h3>
+          <p>Corrections Yamaha et routage live, encodage OSC plus strict, et verifications automatiques elargies entre combinaisons de profils.</p>
+
+          <h2>Fonctionnalites cles</h2>
           <ul>
-            <li>Sélection de la source MIDI et du profil console (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum).</li>
-            <li>Conversion du MIDI entrant en OSC propre sur une seule ligne (chemin + arguments), prêt à copier, glisser ou envoyer.</li>
-            <li>Envoi vers QLab ligne par ligne ou par lots (lignes sélectionnées, groupées ou non) avec modes Stable/Rapide.</li>
-            <li>Apprentissage MIDI optionnel (calibration en 24 étapes) et édition fine dans la barre latérale pour les contrôles détectés ; en mode source OSC, il reconnaît tout paramètre de la console (pan, EQ, compresseur, etc.).</li>
+            <li><strong>Mode Live :</strong> clonez ou traduisez votre mix vers une seconde console en temps reel — meme marque ou consoles differentes.</li>
+            <li>Profils MIDI d'entree et de sortie independants (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum, Roland).</li>
+            <li>Conversion du MIDI entrant en OSC propre sur une ligne (chemin + arguments), pret a copier, glisser ou envoyer a QLab.</li>
+            <li>Envoi a QLab ligne par ligne ou par lots (lignes selectionnees, groupees ou non) avec modes Stable/Rapide.</li>
+            <li>MIDI Learn optionnel (calibration en 24 etapes) et edition fine dans la barre laterale ; en mode source OSC, reconnait tout parametre du pupitre (pan, EQ, compresseur, etc.).</li>
           </ul>
-          <p>Conçu pour la programmation rapide de spectacles : moniteur MIDI/OSC lisible, raccourcis clavier et routage adapté au profil réel de la console.</p>
-          <p><strong>Compatibilité des profils :</strong> MIDItoOSC est validé en conditions réelles avec <strong>Midas M32 / Behringer X32</strong> et <strong>Behringer WING</strong>. Les profils additionnels (<strong>X Air, Yamaha DM7/DM3/Rivage et DiGiCo SD/Quantum</strong>) sont proposés en compatibilité étendue et peuvent nécessiter des ajustements selon le firmware ou la configuration du système. Dans ces cas, utilisez <strong>MIDI Learn</strong> (calibration guidée en 24 étapes) pour confirmer et adapter le profil à votre console.</p>
+          <p>Concu pour programmer des shows rapidement : moniteur MIDI/OSC clair, raccourcis clavier et routage adapte aux workflows de console reels.</p>
+          <p><strong>Compatibilite des profils :</strong> MIDItoOSC est valide en production avec <strong>Midas M32 / Behringer X32</strong> et <strong>Behringer WING</strong>. Les profils supplementaires (<strong>X Air, Yamaha DM7/DM3/Rivage, DiGiCo SD/Quantum et Roland</strong>) sont proposes en compatibilite etendue et peuvent necessiter des ajustements selon le firmware ou la configuration. Utilisez <strong>MIDI Learn</strong> (calibration guidee en 24 etapes) pour confirmer et adapter le profil a votre console.</p>
           <div class="beta-callout">
             <h3>Mac App Store et TestFlight</h3>
             <p><strong>Disponible maintenant</strong> sur le Mac App Store (macOS).</p>
@@ -89,7 +118,7 @@
           <video controls preload="metadata" playsinline poster="../assets/videos/miditoosc-demo-poster.jpg" style="width:100%;max-width:960px;height:auto;border-radius:12px;">
             <source src="../assets/videos/miditoosc-demo.mp4" type="video/mp4">
           </video>
-          <p><a href="compare.html">Voir comparatif</a> · <a href="use-cases.html">Voir cas d usage</a> · <a href="support.html">Support</a></p>
+          <p><a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d'usage</a> · <a href="support.html">Assistance</a></p>
         </div>
       </section>
     </main>

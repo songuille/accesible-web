@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Midas M32 / Behringer X32 MIDI datuak OSC agindu bihurtzen ditu.">
+  <meta name="description" content="Itzuli eta islatu MIDI mesa profesionalen artean — QLab cue-ak, zuzeneko irteera eta mesen arteko bideraketa. 2.0.3 bertsioak Live modua gehitzen du mesa desberdinen artean klonatzeko edo itzultzeko.">
   <title>MIDItoOSC — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/miditoosc.html">
   <link rel="alternate" hreflang="en" href="../en/miditoosc.html">
@@ -55,28 +55,57 @@
     <main>
       <section class="page-hero wrap">
         <h1>MIDItoOSC</h1>
-        <p class="meta">Midas M32 / Behringer X32 MIDI datuak OSC agindu bihurtzen ditu.</p>
+        <p class="meta">MIDI→OSC boteretsuagoa eta malguagoa — orain Live moduarekin mesen artean denbora errealean islatzeko edo itzultzeko.</p>
       </section>
       <section>
         <div class="wrap">
           <div class="app-hero-banner" aria-label="MIDItoOSC Mac App Store-an">
             <a href="https://apple.co/4ftaJ3c" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/images/miditoosc-banner-1200x720.png" alt="MIDItoOSC — Mac App Store-n eskuragarri" width="1200" height="720" loading="eager" decoding="async">
+              <img src="../assets/images/miditoosc-banner-1200x720.png?v=2" alt="MIDItoOSC — eguneratuta eta inoiz baino hobea. Berrikuntzak Mac App Store-n" width="1200" height="720" loading="eager" decoding="async">
             </a>
           </div>
         </div>
       </section>
       <section>
         <div class="wrap prose">
+<p><strong>2.0.3 bertsioa</strong> inoiz baino boteretsuagoa eta malguagoa da — sarrera eta irteerako profil independenteak, mesen arteko bideraketa adimentsuagoa eta <strong>Live</strong> modu berria zure mixa bigarren mesa batera denbora errealean islatzeko edo itzultzeko.</p>
+
+          <h2>2.0.3 bertsioaren berrikuntzak</h2>
+
+          <h3>Live bigarren mesa batera</h3>
+          <p>Islatu zure showa denbora errealean: bidali kontrol fluxu bera beste mesa batera lanean zauden bitartean. Profil bat datozen klon zuzen baterako, edo itzuli mesa desberdinen artean (adib. M32 → DiGiCo, WING → Yamaha) QLab eta zuzeneko irteera sinkronizatuta mantentzeko cue bikoiztu gabe.</p>
+
+          <h3>Sarrera eta irteerako profil malguagoak</h3>
+          <p>Aukeratu sarrera eta irteerako profilak modu independentean — mesa bera muturretik muturrera, edo konbinatu (adib. M32-tik kontrola, QLab cue-ak DiGiCo gisa, live Roland-era). Auto-k sarrerako profila jarraitzen du konfigurazio sinplea nahi duzunean.</p>
+
+          <h3>Mesen arteko bideraketa adimentsuagoa</h3>
+          <p>Fader, mute eta pan euskarri zabalagoa X32/M32, X-Air, WING, DiGiCo, Yamaha DM7/DM3/Rivage eta Roland-en — QLab eta zuzeneko irteerarako. Ibilbideek mapak dokumentatuak jarraitzen dituzte; onartzen ez diren kontrolak blokeatzen dira OSC okerra bidali beharrean.</p>
+
+          <h3>DiGiCo (QLab)</h3>
+          <p>QLab txantiloi egiaitutuekin lerrokatuta: kanaleko fader-ak, mute-ak, pan, DCA, main (Multis) eta talde mute-ak — <code>{parameter}</code> bide formatua barne.</p>
+
+          <h3>Roland</h3>
+          <p>M-200i eta M-400 irteerek MIDI soilik erabiltzen dute (OSC ustekabekorik gabe). Live bideraketak M32 hub-era normalizatzen du bihurketa baino lehen.</p>
+
+          <h3>Ikasketa modua</h3>
+          <p>Goiko menura eraman da mesa berria kalibratzean sarbide azkarragoa lortzeko.</p>
+
+          <h3>Interfazea</h3>
+          <p>Alboko barra fader berridiseinatua — luzeagoa, tapa bertikala heldu lerroekin, kanal fader benetako hurbilago.</p>
+
+          <h3>Barnean</h3>
+          <p>Yamaha eta live bideraketa konponketak, OSC kodifikazio zorrotzagoa eta profil konbinazioen arteko egiaztapen automatiko zabalagoak.</p>
+
           <h2>Ezaugarri nagusiak</h2>
           <ul>
-            <li>MIDI iturria eta mahai-profila aukeratzea (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum).</li>
-            <li>Sarrerako MIDIa OSC garbi bihurtzea lerro bakarrean (ibilbidea + argumentuak), kopiatu, arrastatu edo bidaltzeko prest.</li>
-            <li>QLab-era bidalketa lerroz lerro edo sortatan (hautatutako lerroak, taldekatuta edo gabe), Egonkor/Azkar moduekin.</li>
-            <li>Aukerako MIDI ikaskuntza (24 urratseko kalibrazioa) eta alboko panelaren doikuntza fina detektatutako kontroletarako; OSC iturri moduan, mahaiko edozein parametro ezagutzen du (pan, EQ, konpresorea, etab.).</li>
+            <li><strong>Live modua:</strong> klonatu edo itzuli zure mixa bigarren mesa batera denbora errealean — mesa bera edo marka desberdinak.</li>
+            <li>MIDI sarrera eta irteerako profil independenteak (Auto, M32/X32, X Air, Yamaha DM7/DM3/Rivage, WING, DiGiCo SD/Quantum, Roland).</li>
+            <li>Sarrerako MIDI OSC garbi batera bihurtu (bide + argumentuak), kopiatzeko, arrastatzeko edo QLab-era bidaltzeko prest.</li>
+            <li>QLab-era bidalketa errenkada bakoitzeko edo multzoka (hautatutako lerroak, taldekatuak edo taldekatu gabe) Egonkor/Arin moduekin.</li>
+            <li>MIDI Learn aukerakoa (24 urratseko kalibrazioa) eta alboko barran edizio fina; OSC iturri moduan mesaren edozein parametro ezagutzen du (pan, EQ, konpresorea, etab.).</li>
           </ul>
-          <p>Ikuskizunak azkar programatzeko egina: MIDI/OSC monitore argia, teklatuko lasterbideak eta kontsolaren profil errealera egokitutako bideratzea.</p>
-          <p><strong>Profilen bateragarritasuna:</strong> MIDItoOSC ekoizpen-fluxuan balidatuta dago <strong>Midas M32 / Behringer X32</strong> eta <strong>Behringer WING</strong> kontsolekin. Gainerako profilak (<strong>X Air, Yamaha DM7/DM3/Rivage eta DiGiCo SD/Quantum</strong>) bateragarritasun hedatua bezala eskaintzen dira, eta firmwarearen edo sistemaren konfigurazioaren arabera doikuntzak behar izan ditzakete. Kasu horietan, erabili <strong>MIDI Learn</strong> (24 urratseko kalibrazio gidatua) profila zure kontsolara baieztatu eta egokitzeko.</p>
+          <p>Showak azkar programatzeko diseinatuta: MIDI/OSC monitor argia, teklatuko lasterbideak eta kontsola benetako workflow-etarako profilaren arabera bideraketa.</p>
+          <p><strong>Profilen bateragarritasuna:</strong> MIDItoOSC <strong>Midas M32 / Behringer X32</strong> eta <strong>Behringer WING</strong>-ekin ekoizpenean balioztatuta dago. Profil gehigarriak (<strong>X Air, Yamaha DM7/DM3/Rivage, DiGiCo SD/Quantum eta Roland</strong>) bateragarritasun hedatu gisa eskaintzen dira eta firmware edo sistemaren konfigurazioaren arabera doikuntza behar dezakete. Kasu horietan, erabili <strong>MIDI Learn</strong> (24 urratseko kalibrazio gidatua) profila zure kontsolara egokitzeko.</p>
           <div class="beta-callout">
             <h3>Mac App Store eta TestFlight</h3>
             <p><strong>Dagoeneko eskuragarri</strong> Mac App Store-n (macOS).</p>
@@ -89,7 +118,7 @@
           <video controls preload="metadata" playsinline poster="../assets/videos/miditoosc-demo-poster.jpg" style="width:100%;max-width:960px;height:auto;border-radius:12px;">
             <source src="../assets/videos/miditoosc-demo.mp4" type="video/mp4">
           </video>
-          <p><a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Kasuak ikusi</a> · <a href="support.html">Laguntza</a></p>
+          <p><a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a></p>
         </div>
       </section>
     </main>
