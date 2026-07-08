@@ -56,6 +56,8 @@ T = {
         "closing": "Whether you are preparing a show, adjusting stage boxes, or updating DAW sends, M32 / X32 Easy Routing keeps routing clear, fast, and reliable.",
         "store_h3": "App Store",
         "store_p": "Coming soon on the Mac App Store (macOS).",
+        "h_demo": "Demo video",
+        "demo_p": "See how routing edits in the app are reflected in M32-Edit on the same network.",
         "links": '<a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a>',
         "card": "Visual matrix routing for Midas M32 and Behringer X32. Map inputs and outputs in seconds with a tap-to-assign workflow.",
         "card_hint": "<strong>Coming soon</strong> on the App Store.",
@@ -85,6 +87,8 @@ T = {
         "closing": "Tanto para preparar un show como para ajustar stageboxes o actualizar envíos hacia DAW, M32 / X32 Easy Routing mantiene el routing claro, rápido y fiable.",
         "store_h3": "App Store",
         "store_p": "Próximamente en la Mac App Store (macOS).",
+        "h_demo": "Vídeo demo",
+        "demo_p": "Mira cómo los cambios de routing en la app se reflejan en M32-Edit en la misma red.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a>',
         "card": "Routing visual en modo parrilla para Midas M32 y Behringer X32. Mapea entradas y salidas en segundos con toques rápidos.",
         "card_hint": "<strong>Próximamente</strong> en App Store.",
@@ -114,6 +118,8 @@ T = {
         "closing": "Pour préparer un spectacle, ajuster des stageboxes ou mettre à jour des envois DAW, M32 / X32 Easy Routing garde le routage clair, rapide et fiable.",
         "store_h3": "App Store",
         "store_p": "Bientôt sur le Mac App Store (macOS).",
+        "h_demo": "Vidéo de démonstration",
+        "demo_p": "Voyez comment les modifications de routage dans l'app se reflètent dans M32-Edit sur le même réseau.",
         "links": '<a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d\'usage</a> · <a href="support.html">Assistance</a>',
         "card": "Routage visuel en matrice pour Midas M32 et Behringer X32. Affectez entrées et sorties en quelques secondes.",
         "card_hint": "<strong>Bientôt</strong> sur l'App Store.",
@@ -143,6 +149,8 @@ T = {
         "closing": "Ob Show-Vorbereitung, Stagebox-Anpassung oder DAW-Sends: M32 / X32 Easy Routing hält Routing klar, schnell und zuverlässig.",
         "store_h3": "App Store",
         "store_p": "Demnächst im Mac App Store (macOS).",
+        "h_demo": "Demo-Video",
+        "demo_p": "Sehen Sie, wie Routing-Änderungen in der App in M32-Edit im selben Netzwerk übernommen werden.",
         "links": '<a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a>',
         "card": "Visuelles Matrix-Routing für Midas M32 und Behringer X32. Eingänge und Ausgänge in Sekunden per Antippen zuweisen.",
         "card_hint": "<strong>Demnächst</strong> im App Store.",
@@ -172,6 +180,8 @@ T = {
         "closing": "Tant per preparar un espectacle com per ajustar stageboxes o actualitzar enviaments cap a DAW, M32 / X32 Easy Routing manté el routing clar, ràpid i fiable.",
         "store_h3": "App Store",
         "store_p": "Pròximament a la Mac App Store (macOS).",
+        "h_demo": "Vídeo demo",
+        "demo_p": "Mira com els canvis de routing a l'app es reflecteixen a M32-Edit a la mateixa xarxa.",
         "links": '<a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d\'ús</a> · <a href="support.html">Suport</a>',
         "card": "Routing visual en mode graella per a Midas M32 i Behringer X32. Assigna entrades i sortides en segons amb tocs ràpids.",
         "card_hint": "<strong>Pròximament</strong> a l'App Store.",
@@ -201,6 +211,8 @@ T = {
         "closing": "Tanto para preparar un show como para axustar stageboxes ou actualizar envíos cara DAW, M32 / X32 Easy Routing mantén o routing claro, rápido e fiable.",
         "store_h3": "App Store",
         "store_p": "Próximamente na Mac App Store (macOS).",
+        "h_demo": "Vídeo demo",
+        "demo_p": "Mira como os cambios de routing na app se reflicten en M32-Edit na mesma rede.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Axuda</a>',
         "card": "Routing visual en modo grella para Midas M32 e Behringer X32. Asigna entradas e saídas en segundos con toques rápidos.",
         "card_hint": "<strong>Próximamente</strong> na App Store.",
@@ -230,6 +242,8 @@ T = {
         "closing": "Ikuskizuna prestatzeko, stagebox-ak doitzeko edo DAW bidalketak eguneratzeko, M32 / X32 Easy Routing-ek routinga argi, azkar eta fidagarri mantentzen du.",
         "store_h3": "App Store",
         "store_p": "Laster Mac App Store-n (macOS).",
+        "h_demo": "Demo bideoa",
+        "demo_p": "Ikusi nola islatzen diren app-eko routing aldaketak M32-Edit-en sare berean.",
         "links": '<a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a>',
         "card": "Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala. Sarrerak eta irteerak segundo gutxitan esleitu.",
         "card_hint": "<strong>Laster</strong> App Store-n.",
@@ -354,6 +368,11 @@ def render_page(code: str) -> str:
             <h3>{t['store_h3']}</h3>
             <p><strong>{t['store_p']}</strong></p>
           </div>
+          <h2>{t['h_demo']}</h2>
+          <p>{t['demo_p']}</p>
+          <video controls preload="metadata" playsinline poster="../assets/videos/easy-routing-demo-poster.jpg" style="width:100%;max-width:960px;height:auto;border-radius:12px;">
+            <source src="../assets/videos/easy-routing-demo.mp4" type="video/mp4">
+          </video>
           <p>{t['links']}</p>
         </div>
       </section>
