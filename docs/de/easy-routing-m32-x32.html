@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Visuelles Matrix-Routing für Midas M32 und Behringer X32.">
+  <meta name="description" content="Visuelles Matrix-Routing für Midas M32 und Behringer X32: Eingänge und Ausgänge in Sekunden zuweisen.">
   <title>M32 / X32 Easy Routing — Stage Apps</title>
   <link rel="alternate" hreflang="es" href="../es/easy-routing-m32-x32.html">
   <link rel="alternate" hreflang="en" href="../en/easy-routing-m32-x32.html">
   <link rel="alternate" hreflang="fr" href="../fr/easy-routing-m32-x32.html">
   <link rel="alternate" hreflang="de" href="../de/easy-routing-m32-x32.html">
-  <link rel="alternate" hreflang="eu" href="../eu/easy-routing-m32-x32.html">
-  <link rel="alternate" hreflang="gl" href="../gl/easy-routing-m32-x32.html">
   <link rel="alternate" hreflang="ca" href="../ca/easy-routing-m32-x32.html">
+  <link rel="alternate" hreflang="gl" href="../gl/easy-routing-m32-x32.html">
+  <link rel="alternate" hreflang="eu" href="../eu/easy-routing-m32-x32.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=14">
+  <link rel="stylesheet" href="../css/styles.css?v=15">
 </head>
 <body>
   <div class="page">
@@ -27,31 +27,90 @@
         <a class="logo" href="index.html"><img class="logo-mark" src="/assets/images/stageapps-mark.png?v=3" alt="" width="36" height="36" decoding="async"><span class="logo-text">StageApps</span></a>
         <div class="header-right">
           <nav class="nav" aria-label="Haupt">
-            <a href="index.html">Start</a><a href="accesible.html">Accesible</a><a href="shutter-pj-osc.html">Shutter PJ-OSC</a><a href="shutter-pjlink-ios.html">Shutter PJLINK</a><a href="miditoosc.html">MIDItoOSC</a><a href="stage-with-me.html">Stage With Me</a><a href="compare.html">Vergleich</a><a href="resources.html">Ressourcen</a><a href="faq.html">FAQ</a><a href="support.html">Support</a>
+            <a href="index.html">Start</a>
+            <a href="accesible.html">Accesible</a>
+            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+            <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
+            <a href="miditoosc.html">MIDItoOSC</a>
+            <a href="easy-routing-m32-x32.html">Easy Routing</a>
+            <a href="stage-with-me.html">Stage With Me</a>
+            <a href="compare.html">Vergleich</a>
+            <a href="resources.html">Ressourcen</a>
+            <a href="faq.html">FAQ</a>
+            <a href="support.html">Support</a>
           </nav>
           <div class="lang-dropdown" role="navigation" aria-label="Sprachauswahl">
-  <details><summary><span class="lang-emoji" aria-hidden="true">🇩🇪</span> <span class="lang-dropdown-label">Deutsch</span></summary><div class="lang-dropdown-menu" role="menu"><a class="lang-dropdown-item" href="../es/easy-routing-m32-x32.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a> <a class="lang-dropdown-item" href="../en/easy-routing-m32-x32.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a> <a class="lang-dropdown-item" href="../fr/easy-routing-m32-x32.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a> <a class="lang-dropdown-item" href="easy-routing-m32-x32.html" hreflang="de" aria-current="page" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a> <a class="lang-dropdown-item" href="../eu/easy-routing-m32-x32.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a> <a class="lang-dropdown-item" href="../gl/easy-routing-m32-x32.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a> <a class="lang-dropdown-item" href="../ca/easy-routing-m32-x32.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a></div></details>
+  <details>
+    <summary>
+      <span class="lang-emoji" aria-hidden="true">🇩🇪</span> <span class="lang-dropdown-label">Deutsch</span>
+    </summary>
+    <div class="lang-dropdown-menu" role="menu">
+      <a class="lang-dropdown-item" href="../es/easy-routing-m32-x32.html" hreflang="es" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇪🇸</span><span class="lang-dropdown-item-label">Español</span></a> <a class="lang-dropdown-item" href="../en/easy-routing-m32-x32.html" hreflang="en" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇬🇧</span><span class="lang-dropdown-item-label">English</span></a> <a class="lang-dropdown-item" href="../fr/easy-routing-m32-x32.html" hreflang="fr" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇫🇷</span><span class="lang-dropdown-item-label">Français</span></a> <a class="lang-dropdown-item" href="../de/easy-routing-m32-x32.html" hreflang="de" aria-current="page" role="menuitem"><span class="lang-emoji" aria-hidden="true">🇩🇪</span><span class="lang-dropdown-item-label">Deutsch</span></a> <a class="lang-dropdown-item" href="../ca/easy-routing-m32-x32.html" hreflang="ca" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/ca.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Català</span></a> <a class="lang-dropdown-item" href="../gl/easy-routing-m32-x32.html" hreflang="gl" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/gl.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Galego</span></a> <a class="lang-dropdown-item" href="../eu/easy-routing-m32-x32.html" hreflang="eu" role="menuitem"><img class="lang-dropdown-flag" src="../assets/flags/eu.svg" alt="" decoding="async"><span class="lang-dropdown-item-label">Euskara</span></a>
+    </div>
+  </details>
 </div>
         </div>
       </div>
     </header>
+
     <main>
-      <section class="page-hero wrap"><h1>M32 / X32 Easy Routing</h1><p class="meta">Visuelles Matrix-Routing für Midas M32 und Behringer X32.</p></section>
+      <section class="page-hero wrap">
+        <h1>M32 / X32 Easy Routing</h1>
+        <p class="meta">Schnelles visuelles Matrix-Routing für Midas M32 und Behringer X32.</p>
+      </section>
       <section>
         <div class="wrap">
-          <div class="app-hero-banner" aria-label="M32 / X32 Easy Routing app icon">
-            <img src="../assets/images/m32-x32-easy-routing-1024.png?v=1" alt="M32 / X32 Easy Routing app icon" width="1024" height="1024" loading="eager" decoding="async">
+          <div class="app-hero-banner" aria-label="App-Symbol M32 / X32 Easy Routing">
+            <img src="../assets/images/m32-x32-easy-routing-1024.png?v=1" alt="M32 / X32 Easy Routing — visuelle Routing-App" width="1024" height="1024" loading="eager" decoding="async">
           </div>
         </div>
       </section>
-      <section><div class="wrap prose"><p><strong>Demnachst im App Store.</strong></p>
-        <p>Visual matrix routing for M32/X32: map inputs and outputs in seconds, tap to assign or set OFF, and manage Local, AES50, AUX, and USB paths.</p>
-        <ul><li>Visual matrix routing for Inputs and Outputs.</li><li>Quick tap-to-assign / tap-again-to-OFF workflow.</li><li>Routing across Local, AES50, AUX, and USB/Card paths.</li><li>Dedicated Card tab for USB/DAW routing.</li><li>Built-in desk sync, network discovery, and direct OSC connection support.</li></ul>
-      </div></section>
+      <section>
+        <div class="wrap prose">
+          <p><strong>Demnächst im App Store.</strong></p>
+          <h2>Was die App macht</h2>
+          <p>M32 / X32 Easy Routing bietet eine schnelle, visuelle Steuerung des Konsolen-Routings mit einem Raster-Workflow. Weisen Sie Eingänge und Ausgänge in Sekunden zu: Zelle antippen zum Zuweisen, erneut antippen für OFF, und das Signalbild auf einen Blick sehen. Verwalten Sie Local-, AES50-, AUX- und USB-Card-Pfade in einer übersichtlichen Oberfläche.</p>
+          <h2>Kurzer App-Store-Text</h2>
+          <p>Visuelles Matrix-Routing für M32/X32: Eingänge und Ausgänge in Sekunden zuweisen, antippen zum Zuweisen oder OFF, und Local, AES50, AUX sowie USB verwalten.</p>
+          <h2>Hauptfunktionen</h2>
+          <ul>
+            <li>Visuelles Matrix-Routing für Eingänge und Ausgänge.</li>
+            <li>Schneller Workflow: antippen zum Zuweisen / erneut antippen für OFF.</li>
+            <li>Routing über Local, AES50, AUX und USB/Card.</li>
+            <li>Eigener Card-Tab für USB/DAW-Routing.</li>
+            <li>Eingebaute Pult-Synchronisation zum Lesen und Aktualisieren des aktuellen Routings.</li>
+            <li>Netzwerkerkennung und direkte OSC-Verbindung.</li>
+            <li>Mehrsprachige Oberfläche.</li>
+          </ul>
+          <p>Ob Show-Vorbereitung, Stagebox-Anpassung oder DAW-Sends: M32 / X32 Easy Routing hält Routing klar, schnell und zuverlässig.</p>
+          <div class="beta-callout">
+            <h3>App Store</h3>
+            <p><strong>Demnächst im Mac App Store (macOS).</strong></p>
+          </div>
+          <p><a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a></p>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="wrap inner"><span>© <span id="y"></span> Stage Apps</span><div class="links"><a href="support.html">Support</a><a href="privacy.html">Datenschutz</a><a class="footer-social" href="https://instagram.com/stage.apps" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img class="footer-social-icon" src="/assets/icons/instagram.svg" alt="" width="18" height="18" decoding="async"><span>Instagram</span></a><a class="footer-social" href="https://www.tiktok.com/@stageapps" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img class="footer-social-icon" src="/assets/icons/tiktok.svg" alt="" width="18" height="18" decoding="async"><span>TikTok</span></a></div></div><p class="wrap footer-disclaimer">QLab ist eine Marke von Figure 53. Diese Website und diese Apps sind unabhängig und nicht mit Figure 53 verbunden, von ihr unterstützt oder gesponsert.</p><p class="wrap footer-made-in">Unabhängige Software · Santiago de Compostela</p></footer>
+
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <span>© <span id="y"></span> Stage Apps</span>
+        <div class="links">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Datenschutz</a>
+          <a class="footer-social" href="https://instagram.com/stage.apps" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img class="footer-social-icon" src="/assets/icons/instagram.svg" alt="" width="18" height="18" decoding="async"><span>Instagram</span></a>
+          <a class="footer-social" href="https://www.tiktok.com/@stageapps" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img class="footer-social-icon" src="/assets/icons/tiktok.svg" alt="" width="18" height="18" decoding="async"><span>TikTok</span></a>
+        </div>
+      </div>
+      <p class="wrap footer-disclaimer">QLab ist eine Marke von Figure 53. Diese Website und diese Apps sind unabhängig und nicht mit Figure 53 verbunden, von ihr unterstützt oder gesponsert.</p>
+      <p class="wrap footer-made-in">Unabhängige Software · Santiago de Compostela</p>
+    </footer>
   </div>
-  <script>try { localStorage.setItem("accesible_lang", "de"); } catch (e) {}</script>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    try { localStorage.setItem("accesible_lang", "de"); } catch (e) {}
+  </script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
