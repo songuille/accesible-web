@@ -578,14 +578,14 @@ section h2 {
 
 .app-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   align-items: stretch;
 }
 
 .app-grid > .app-grid-item {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 5;
   gap: 0.65rem 0;
   min-width: 0;
 }
@@ -646,7 +646,7 @@ section h2 {
   transform: scale(1.01);
 }
 
-/* Hint + botones de tienda, fuera de la tarjeta */
+/* Hint de tienda, fuera de la tarjeta */
 .app-card-actions {
   grid-row: 3;
   width: 100%;
@@ -658,10 +658,21 @@ section h2 {
 
 .app-card-actions .app-card-store-hint {
   flex: none;
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
-.app-card-cta {
+/* Fila compartida: badge oficial de App Store alineado entre tarjetas */
+.app-card-badge-row {
+  grid-row: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 0;
+  width: 100%;
+}
+
+.app-card-cta-secondary {
+  grid-row: 5;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -670,7 +681,7 @@ section h2 {
   min-width: 0;
 }
 
-.app-card-cta .btn-app-store {
+.app-card-cta-secondary .btn-app-store {
   width: 100%;
   max-width: none;
 }
@@ -739,7 +750,9 @@ section h2 {
   width: auto;
 }
 
-.app-card-cta .store-badge-link {
+.app-card-badge-row .store-badge-link,
+.app-card-cta .store-badge-link,
+.app-card-cta-secondary .store-badge-link {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -747,7 +760,9 @@ section h2 {
   min-width: 0;
 }
 
-.app-card-cta .store-badge-link img {
+.app-card-badge-row .store-badge-link img,
+.app-card-cta .store-badge-link img,
+.app-card-cta-secondary .store-badge-link img {
   display: block;
   width: auto;
   max-width: 100%;

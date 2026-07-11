@@ -474,10 +474,12 @@ def update_index_card(code: str) -> None:
             </a>
             <div class="app-card-actions">
               <p class="app-card-store-hint">{t['card_hint']}</p>
-              <div class="app-card-cta">
-              {store_badge_html(t['badge_aria'], inline=True)}
-              <a class="btn btn-secondary" href="easy-routing-m32-x32.html">{t['card_more']}</a>
             </div>
+            <div class="app-card-badge-row">
+              {store_badge_html(t['badge_aria'], inline=True)}
+            </div>
+            <div class="app-card-cta-secondary">
+              <a class="btn btn-secondary" href="easy-routing-m32-x32.html">{t['card_more']}</a>
             </div>
           </div>
 """
