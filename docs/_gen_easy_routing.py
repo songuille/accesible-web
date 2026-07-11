@@ -6,6 +6,7 @@ import re
 LANGS = ["es", "en", "fr", "de", "ca", "gl", "eu"]
 FILE = "easy-routing-m32-x32.html"
 APP_STORE = "https://apps.apple.com/us/app/easy-routing-m32-x32/id6786801861?mt=12"
+BADGE_WHITE = "../assets/images/download-on-the-app-store-en-us-white.svg"
 
 LABELS = {
     "es": "Español", "en": "English", "fr": "Français", "de": "Deutsch",
@@ -69,6 +70,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Available now on the Mac App Store (macOS).",
         "store_btn": "Download on the App Store",
+        "badge_aria": "Download Easy Routing on the App Store",
         "h_demo": "Demo video",
         "demo_p": "See how routing edits in the app are reflected in M32-Edit on the same network.",
         "links": '<a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a>',
@@ -103,6 +105,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Ya disponible en la Mac App Store (macOS).",
         "store_btn": "Descargar en la App Store",
+        "badge_aria": "Descargar Easy Routing en la App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira cómo los cambios de routing en la app se reflejan en M32-Edit en la misma red.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a>',
@@ -137,6 +140,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Déjà disponible sur le Mac App Store (macOS).",
         "store_btn": "Télécharger sur l'App Store",
+        "badge_aria": "Télécharger Easy Routing sur l'App Store",
         "h_demo": "Vidéo de démonstration",
         "demo_p": "Voyez comment les modifications de routage dans l'app se reflètent dans M32-Edit sur le même réseau.",
         "links": '<a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d\'usage</a> · <a href="support.html">Assistance</a>',
@@ -171,6 +175,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Jetzt im Mac App Store (macOS) verfügbar.",
         "store_btn": "Im App Store laden",
+        "badge_aria": "Easy Routing im App Store laden",
         "h_demo": "Demo-Video",
         "demo_p": "Sehen Sie, wie Routing-Änderungen in der App in M32-Edit im selben Netzwerk übernommen werden.",
         "links": '<a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a>',
@@ -205,6 +210,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Ja disponible a la Mac App Store (macOS).",
         "store_btn": "Descarregar a l'App Store",
+        "badge_aria": "Descarregar Easy Routing a l'App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira com els canvis de routing a l'app es reflecteixen a M32-Edit a la mateixa xarxa.",
         "links": '<a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d\'ús</a> · <a href="support.html">Suport</a>',
@@ -239,6 +245,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Xa dispoñible na Mac App Store (macOS).",
         "store_btn": "Descargar na App Store",
+        "badge_aria": "Descargar Easy Routing na App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira como os cambios de routing na app se reflicten en M32-Edit na mesma rede.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Axuda</a>',
@@ -273,6 +280,7 @@ T = {
         "store_h3": "App Store",
         "store_p": "Mac App Store-n eskuragarri (macOS).",
         "store_btn": "Deskargatu App Store-n",
+        "badge_aria": "Deskargatu Easy Routing App Store-n",
         "h_demo": "Demo bideoa",
         "demo_p": "Ikusi nola islatzen diren app-eko routing aldaketak M32-Edit-en sare berean.",
         "links": '<a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a>',
@@ -315,6 +323,18 @@ def summary_inner(code: str) -> str:
         f'<span class="lang-emoji" aria-hidden="true">{EMOJIS[code]}</span> '
         f'<span class="lang-dropdown-label">{LABELS[code]}</span>'
     )
+
+
+def store_badge_html(aria: str, inline: bool = False) -> str:
+    img = (
+        f'<img src="{BADGE_WHITE}" alt="Download on the App Store" width="120" height="40" '
+        f'loading="lazy" decoding="async">'
+    )
+    link = (
+        f'<a class="store-badge-link" href="{APP_STORE}" target="_blank" rel="noopener noreferrer" '
+        f'aria-label="{aria}">{img}</a>'
+    )
+    return link if inline else f"<p>{link}</p>"
 
 
 def render_page(code: str) -> str:
@@ -402,7 +422,7 @@ def render_page(code: str) -> str:
           <div class="beta-callout">
             <h3>{t['store_h3']}</h3>
             <p><strong>{t['store_p']}</strong></p>
-            <p><a class="btn btn-primary" href="{APP_STORE}" target="_blank" rel="noopener noreferrer">{t['store_btn']}</a></p>
+            {store_badge_html(t['badge_aria'])}
           </div>
           <h2>{t['h_demo']}</h2>
           <p>{t['demo_p']}</p>
@@ -455,7 +475,7 @@ def update_index_card(code: str) -> None:
             <div class="app-card-actions">
               <p class="app-card-store-hint">{t['card_hint']}</p>
               <div class="app-card-cta">
-              <a class="btn btn-primary btn-app-store" href="{APP_STORE}" target="_blank" rel="noopener noreferrer"><span class="btn-app-store-title">{t['card_store_title']}</span><span class="btn-app-store-sub">{t['card_store_sub']}</span></a>
+              {store_badge_html(t['badge_aria'], inline=True)}
               <a class="btn btn-secondary" href="easy-routing-m32-x32.html">{t['card_more']}</a>
             </div>
             </div>
