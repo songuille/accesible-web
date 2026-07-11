@@ -5,7 +5,7 @@ import re
 
 LANGS = ["es", "en", "fr", "de", "ca", "gl", "eu"]
 FILE = "easy-routing-m32-x32.html"
-APP_STORE = "https://apps.apple.com/us/app/easy-routing-m32-x32/id6786801861?mt=12"
+APP_STORE = "https://apple.co/4eXQev2"
 BADGE_WHITE = "../assets/images/download-on-the-app-store-en-us-white.svg"
 
 LABELS = {
