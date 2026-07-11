@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Generate easy-routing-m32-x32.html for all locales."""
 from pathlib import Path
+import re
 
 LANGS = ["es", "en", "fr", "de", "ca", "gl", "eu"]
 FILE = "easy-routing-m32-x32.html"
+APP_STORE = "https://apps.apple.com/us/app/easy-routing-m32-x32/id6786801861?mt=12"
 
 LABELS = {
     "es": "Español", "en": "English", "fr": "Français", "de": "Deutsch",
@@ -32,13 +34,23 @@ FOOTER = {
     "eu": ("Laguntza", "Pribatutasuna", "QLab Figure 53-ren marka da. Gune hau eta app hauek independenteak dira eta ez daude Figure 53-rekin afiliatuta, onartuta edo babestuta.", "Software independente · Santiago de Compostela"),
 }
 
+COMPARE_ROW = {
+    "en": ("M32 / X32 Easy Routing", "Visual M32/X32 input and output routing", "OSC", "macOS"),
+    "es": ("M32 / X32 Easy Routing", "Routing visual de entradas y salidas M32/X32", "OSC", "macOS"),
+    "fr": ("M32 / X32 Easy Routing", "Routage visuel entrées/sorties M32/X32", "OSC", "macOS"),
+    "de": ("M32 / X32 Easy Routing", "Visuelles M32/X32 Ein-/Ausgangs-Routing", "OSC", "macOS"),
+    "ca": ("M32 / X32 Easy Routing", "Routing visual d'entrades i sortides M32/X32", "OSC", "macOS"),
+    "gl": ("M32 / X32 Easy Routing", "Routing visual de entradas e saídas M32/X32", "OSC", "macOS"),
+    "eu": ("M32 / X32 Easy Routing", "M32/X32 sarrera eta irteera routing bisuala", "OSC", "macOS"),
+}
+
 T = {
     "en": {
         "desc": "Easy visual matrix routing for Midas M32 and Behringer X32: map inputs and outputs in seconds with a fast grid workflow.",
         "hero": "Fast visual matrix routing for Midas M32 and Behringer X32 consoles.",
-        "banner_aria": "M32 / X32 Easy Routing app icon",
-        "banner_alt": "M32 / X32 Easy Routing — visual matrix routing app",
-        "soon": "Coming soon on the App Store.",
+        "banner_aria": "M32 / X32 Easy Routing on the Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — available on the Mac App Store",
+        "lead": "Available now on the Mac App Store (macOS).",
         "h_what": "What it does",
         "intro": "M32 / X32 Easy Routing gives you a fast, visual way to manage console routing with a grid-based workflow. Route inputs and outputs in seconds using a clear matrix: tap a cell to assign a source, tap again to set it to OFF, and see your signal layout at a glance. Manage Local, AES50, AUX, and USB Card paths from one streamlined workspace.",
         "h_promo": "App Store promo (short)",
@@ -55,21 +67,24 @@ T = {
         ],
         "closing": "Whether you are preparing a show, adjusting stage boxes, or updating DAW sends, M32 / X32 Easy Routing keeps routing clear, fast, and reliable.",
         "store_h3": "App Store",
-        "store_p": "Coming soon on the Mac App Store (macOS).",
+        "store_p": "Available now on the Mac App Store (macOS).",
+        "store_btn": "Download on the App Store",
         "h_demo": "Demo video",
         "demo_p": "See how routing edits in the app are reflected in M32-Edit on the same network.",
         "links": '<a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a>',
         "card": "Visual matrix routing for Midas M32 and Behringer X32. Map inputs and outputs in seconds with a tap-to-assign workflow.",
-        "card_hint": "<strong>Coming soon</strong> on the App Store.",
-        "card_aria": "Open M32 / X32 Easy Routing details",
+        "card_hint": "<strong>Available on the App Store</strong> for Mac.",
+        "card_aria": "Open M32 / X32 Easy Routing on the Mac App Store",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Download Easy Routing",
         "card_more": "Learn more",
     },
     "es": {
         "desc": "Routing visual en parrilla para Midas M32 y Behringer X32: mapea entradas y salidas en segundos.",
         "hero": "Routing visual en modo parrilla para mesas Midas M32 y Behringer X32.",
-        "banner_aria": "Icono de la app M32 / X32 Easy Routing",
-        "banner_alt": "M32 / X32 Easy Routing — app de routing visual en matriz",
-        "soon": "Próximamente en App Store.",
+        "banner_aria": "M32 / X32 Easy Routing en la Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — disponible en la Mac App Store",
+        "lead": "Ya disponible en la Mac App Store (macOS).",
         "h_what": "Qué hace",
         "intro": "M32 / X32 Easy Routing te ofrece una forma rápida y visual de gestionar el routing de la consola con un flujo en modo parrilla. Enruta entradas y salidas en segundos con una matriz clara: toca una celda para asignar una fuente, vuelve a tocar para poner OFF y visualiza el flujo de señal de un vistazo. Gestiona rutas Local, AES50, AUX y USB Card desde un único espacio de trabajo.",
         "h_promo": "Texto promocional corto",
@@ -86,21 +101,24 @@ T = {
         ],
         "closing": "Tanto para preparar un show como para ajustar stageboxes o actualizar envíos hacia DAW, M32 / X32 Easy Routing mantiene el routing claro, rápido y fiable.",
         "store_h3": "App Store",
-        "store_p": "Próximamente en la Mac App Store (macOS).",
+        "store_p": "Ya disponible en la Mac App Store (macOS).",
+        "store_btn": "Descargar en la App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira cómo los cambios de routing en la app se reflejan en M32-Edit en la misma red.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a>',
         "card": "Routing visual en modo parrilla para Midas M32 y Behringer X32. Mapea entradas y salidas en segundos con toques rápidos.",
-        "card_hint": "<strong>Próximamente</strong> en App Store.",
-        "card_aria": "Abrir detalles de M32 / X32 Easy Routing",
+        "card_hint": "<strong>Ya en la App Store</strong> para Mac.",
+        "card_aria": "Abrir M32 / X32 Easy Routing en la Mac App Store",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Descargar Easy Routing",
         "card_more": "Ver más",
     },
     "fr": {
         "desc": "Routage visuel en matrice pour Midas M32 et Behringer X32 : affectez entrées et sorties en quelques secondes.",
         "hero": "Routage visuel en grille pour consoles Midas M32 et Behringer X32.",
-        "banner_aria": "Icône de l'app M32 / X32 Easy Routing",
-        "banner_alt": "M32 / X32 Easy Routing — application de routage visuel",
-        "soon": "Bientôt sur l'App Store.",
+        "banner_aria": "M32 / X32 Easy Routing sur le Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — disponible sur le Mac App Store",
+        "lead": "Déjà disponible sur le Mac App Store (macOS).",
         "h_what": "Ce qu'elle fait",
         "intro": "M32 / X32 Easy Routing offre une gestion rapide et visuelle du routage console grâce à une grille intuitive. Affectez entrées et sorties en quelques secondes : touchez une cellule pour assigner une source, retouchez pour passer en OFF, et visualisez votre signal d'un coup d'œil. Gérez les chemins Local, AES50, AUX et USB Card depuis un espace de travail unifié.",
         "h_promo": "Texte promotionnel court",
@@ -117,21 +135,24 @@ T = {
         ],
         "closing": "Pour préparer un spectacle, ajuster des stageboxes ou mettre à jour des envois DAW, M32 / X32 Easy Routing garde le routage clair, rapide et fiable.",
         "store_h3": "App Store",
-        "store_p": "Bientôt sur le Mac App Store (macOS).",
+        "store_p": "Déjà disponible sur le Mac App Store (macOS).",
+        "store_btn": "Télécharger sur l'App Store",
         "h_demo": "Vidéo de démonstration",
         "demo_p": "Voyez comment les modifications de routage dans l'app se reflètent dans M32-Edit sur le même réseau.",
         "links": '<a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d\'usage</a> · <a href="support.html">Assistance</a>',
         "card": "Routage visuel en matrice pour Midas M32 et Behringer X32. Affectez entrées et sorties en quelques secondes.",
-        "card_hint": "<strong>Bientôt</strong> sur l'App Store.",
-        "card_aria": "Ouvrir les détails de M32 / X32 Easy Routing",
+        "card_hint": "<strong>Déjà sur l'App Store</strong> pour Mac.",
+        "card_aria": "Ouvrir M32 / X32 Easy Routing sur le Mac App Store",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Télécharger Easy Routing",
         "card_more": "En savoir plus",
     },
     "de": {
         "desc": "Visuelles Matrix-Routing für Midas M32 und Behringer X32: Eingänge und Ausgänge in Sekunden zuweisen.",
         "hero": "Schnelles visuelles Matrix-Routing für Midas M32 und Behringer X32.",
-        "banner_aria": "App-Symbol M32 / X32 Easy Routing",
-        "banner_alt": "M32 / X32 Easy Routing — visuelle Routing-App",
-        "soon": "Demnächst im App Store.",
+        "banner_aria": "M32 / X32 Easy Routing im Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — jetzt im Mac App Store",
+        "lead": "Jetzt im Mac App Store (macOS) verfügbar.",
         "h_what": "Was die App macht",
         "intro": "M32 / X32 Easy Routing bietet eine schnelle, visuelle Steuerung des Konsolen-Routings mit einem Raster-Workflow. Weisen Sie Eingänge und Ausgänge in Sekunden zu: Zelle antippen zum Zuweisen, erneut antippen für OFF, und das Signalbild auf einen Blick sehen. Verwalten Sie Local-, AES50-, AUX- und USB-Card-Pfade in einer übersichtlichen Oberfläche.",
         "h_promo": "Kurzer App-Store-Text",
@@ -148,21 +169,24 @@ T = {
         ],
         "closing": "Ob Show-Vorbereitung, Stagebox-Anpassung oder DAW-Sends: M32 / X32 Easy Routing hält Routing klar, schnell und zuverlässig.",
         "store_h3": "App Store",
-        "store_p": "Demnächst im Mac App Store (macOS).",
+        "store_p": "Jetzt im Mac App Store (macOS) verfügbar.",
+        "store_btn": "Im App Store laden",
         "h_demo": "Demo-Video",
         "demo_p": "Sehen Sie, wie Routing-Änderungen in der App in M32-Edit im selben Netzwerk übernommen werden.",
         "links": '<a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a>',
         "card": "Visuelles Matrix-Routing für Midas M32 und Behringer X32. Eingänge und Ausgänge in Sekunden per Antippen zuweisen.",
-        "card_hint": "<strong>Demnächst</strong> im App Store.",
-        "card_aria": "Details zu M32 / X32 Easy Routing öffnen",
+        "card_hint": "<strong>Jetzt im App Store</strong> für Mac.",
+        "card_aria": "M32 / X32 Easy Routing im Mac App Store öffnen",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Easy Routing laden",
         "card_more": "Mehr erfahren",
     },
     "ca": {
         "desc": "Routing visual en graella per Midas M32 i Behringer X32: assigna entrades i sortides en segons.",
         "hero": "Routing visual en mode graella per a consoles Midas M32 i Behringer X32.",
-        "banner_aria": "Icona de l'app M32 / X32 Easy Routing",
-        "banner_alt": "M32 / X32 Easy Routing — app de routing visual en matriu",
-        "soon": "Pròximament a l'App Store.",
+        "banner_aria": "M32 / X32 Easy Routing a la Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — disponible a la Mac App Store",
+        "lead": "Ja disponible a la Mac App Store (macOS).",
         "h_what": "Què fa",
         "intro": "M32 / X32 Easy Routing ofereix una manera ràpida i visual de gestionar el routing de consola amb un flux en graella. Encamina entrades i sortides en segons amb una matriu clara: toca una cel·la per assignar una font, torna a tocar per posar OFF i visualitza el flux de senyal d'un cop d'ull. Gestiona rutes Local, AES50, AUX i USB Card des d'un únic espai de treball.",
         "h_promo": "Text promocional curt",
@@ -179,21 +203,24 @@ T = {
         ],
         "closing": "Tant per preparar un espectacle com per ajustar stageboxes o actualitzar enviaments cap a DAW, M32 / X32 Easy Routing manté el routing clar, ràpid i fiable.",
         "store_h3": "App Store",
-        "store_p": "Pròximament a la Mac App Store (macOS).",
+        "store_p": "Ja disponible a la Mac App Store (macOS).",
+        "store_btn": "Descarregar a l'App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira com els canvis de routing a l'app es reflecteixen a M32-Edit a la mateixa xarxa.",
         "links": '<a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d\'ús</a> · <a href="support.html">Suport</a>',
         "card": "Routing visual en mode graella per a Midas M32 i Behringer X32. Assigna entrades i sortides en segons amb tocs ràpids.",
-        "card_hint": "<strong>Pròximament</strong> a l'App Store.",
-        "card_aria": "Obrir detalls de M32 / X32 Easy Routing",
+        "card_hint": "<strong>Ja a l'App Store</strong> per a Mac.",
+        "card_aria": "Obrir M32 / X32 Easy Routing a la Mac App Store",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Descarregar Easy Routing",
         "card_more": "Veure més",
     },
     "gl": {
         "desc": "Routing visual en grella para Midas M32 e Behringer X32: asigna entradas e saídas en segundos.",
         "hero": "Routing visual en modo grella para mesas Midas M32 e Behringer X32.",
-        "banner_aria": "Icona da app M32 / X32 Easy Routing",
-        "banner_alt": "M32 / X32 Easy Routing — app de routing visual en matriz",
-        "soon": "Próximamente na App Store.",
+        "banner_aria": "M32 / X32 Easy Routing na Mac App Store",
+        "banner_alt": "M32 / X32 Easy Routing — dispoñible na Mac App Store",
+        "lead": "Xa dispoñible na Mac App Store (macOS).",
         "h_what": "Que fai",
         "intro": "M32 / X32 Easy Routing ofrece unha forma rápida e visual de xestionar o routing da consola cun fluxo en grella. Encamiña entradas e saídas en segundos cunha matriz clara: toca unha cela para asignar unha fonte, volve tocar para poñer OFF e visualiza o fluxo de sinal dunha ollada. Xestiona rutas Local, AES50, AUX e USB Card desde un único espazo de traballo.",
         "h_promo": "Texto promocional curto",
@@ -210,21 +237,24 @@ T = {
         ],
         "closing": "Tanto para preparar un show como para axustar stageboxes ou actualizar envíos cara DAW, M32 / X32 Easy Routing mantén o routing claro, rápido e fiable.",
         "store_h3": "App Store",
-        "store_p": "Próximamente na Mac App Store (macOS).",
+        "store_p": "Xa dispoñible na Mac App Store (macOS).",
+        "store_btn": "Descargar na App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira como os cambios de routing na app se reflicten en M32-Edit na mesma rede.",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Axuda</a>',
         "card": "Routing visual en modo grella para Midas M32 e Behringer X32. Asigna entradas e saídas en segundos con toques rápidos.",
-        "card_hint": "<strong>Próximamente</strong> na App Store.",
-        "card_aria": "Abrir detalles de M32 / X32 Easy Routing",
+        "card_hint": "<strong>Xa na App Store</strong> para Mac.",
+        "card_aria": "Abrir M32 / X32 Easy Routing na Mac App Store",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Descargar Easy Routing",
         "card_more": "Ver máis",
     },
     "eu": {
         "desc": "Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala: sarrerak eta irteerak segundo gutxitan esleitu.",
         "hero": "M32/X32-rako matrize bidezko routing bisual azkarra.",
-        "banner_aria": "M32 / X32 Easy Routing app-aren ikonoa",
-        "banner_alt": "M32 / X32 Easy Routing — routing bisualeko app-a",
-        "soon": "Laster App Store-n.",
+        "banner_aria": "M32 / X32 Easy Routing Mac App Store-n",
+        "banner_alt": "M32 / X32 Easy Routing — Mac App Store-n eskuragarri",
+        "lead": "Mac App Store-n eskuragarri (macOS).",
         "h_what": "Zer egiten duen",
         "intro": "M32 / X32 Easy Routing-ek kontsolaren routinga modu azkar eta bisualean kudeatzeko aukera ematen du, sareta bidezko lan-fluxuarekin. Sarrerak eta irteerak segundo gutxitan esleitu: gelaxka sakatu iturria esleitzeko, berriro sakatu OFF jartzeko, eta seinalearen antolaketa begiratu batean ikusi. Kudeatu Local, AES50, AUX eta USB Card ibilbideak lan-eremu bakar batetik.",
         "h_promo": "Testu promozional laburra",
@@ -241,13 +271,16 @@ T = {
         ],
         "closing": "Ikuskizuna prestatzeko, stagebox-ak doitzeko edo DAW bidalketak eguneratzeko, M32 / X32 Easy Routing-ek routinga argi, azkar eta fidagarri mantentzen du.",
         "store_h3": "App Store",
-        "store_p": "Laster Mac App Store-n (macOS).",
+        "store_p": "Mac App Store-n eskuragarri (macOS).",
+        "store_btn": "Deskargatu App Store-n",
         "h_demo": "Demo bideoa",
         "demo_p": "Ikusi nola islatzen diren app-eko routing aldaketak M32-Edit-en sare berean.",
         "links": '<a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a>',
         "card": "Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala. Sarrerak eta irteerak segundo gutxitan esleitu.",
-        "card_hint": "<strong>Laster</strong> App Store-n.",
-        "card_aria": "Ireki M32 / X32 Easy Routing xehetasunak",
+        "card_hint": "<strong>App Store-n eskuragarri</strong> Mac-erako.",
+        "card_aria": "Ireki M32 / X32 Easy Routing Mac App Store-n",
+        "card_store_title": "Mac App Store",
+        "card_store_sub": "Deskargatu Easy Routing",
         "card_more": "Gehiago ikusi",
     },
 }
@@ -348,13 +381,15 @@ def render_page(code: str) -> str:
       <section>
         <div class="wrap">
           <div class="app-hero-banner" aria-label="{t['banner_aria']}">
-            <img src="../assets/images/m32-x32-easy-routing-1024.png?v=1" alt="{t['banner_alt']}" width="1024" height="1024" loading="eager" decoding="async">
+            <a href="{APP_STORE}" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/m32-x32-easy-routing-banner-1200x720.png?v=1" alt="{t['banner_alt']}" width="1200" height="720" loading="eager" decoding="async">
+            </a>
           </div>
         </div>
       </section>
       <section>
         <div class="wrap prose">
-          <p><strong>{t['soon']}</strong></p>
+          <p><strong>{t['lead']}</strong></p>
           <h2>{t['h_what']}</h2>
           <p>{t['intro']}</p>
           <h2>{t['h_promo']}</h2>
@@ -367,6 +402,7 @@ def render_page(code: str) -> str:
           <div class="beta-callout">
             <h3>{t['store_h3']}</h3>
             <p><strong>{t['store_p']}</strong></p>
+            <p><a class="btn btn-primary" href="{APP_STORE}" target="_blank" rel="noopener noreferrer">{t['store_btn']}</a></p>
           </div>
           <h2>{t['h_demo']}</h2>
           <p>{t['demo_p']}</p>
@@ -403,41 +439,51 @@ def render_page(code: str) -> str:
 
 
 def update_index_card(code: str) -> None:
-    import re
     p = Path(__file__).parent / code / "index.html"
     t = T[code]
     text = p.read_text(encoding="utf-8")
-    chunks = text.split('<div class="app-grid-item">')
-    rebuilt = [chunks[0]]
-    for chunk in chunks[1:]:
-        if "<h3>M32 / X32 Easy Routing</h3>" in chunk:
-            chunk = re.sub(
-                r"(<h3>M32 / X32 Easy Routing</h3>\s*<p>)[^<]*(</p>)",
-                lambda m: f"{m.group(1)}{t['card']}{m.group(2)}",
-                chunk,
-                count=1,
-            )
-            chunk = re.sub(
-                r'(<p class="app-card-store-hint">).*?(</p>\s*<div class="app-card-cta">\s*<a class="btn btn-secondary" href="easy-routing-m32-x32\.html">)[^<]*(</a>)',
-                lambda m: f'{m.group(1)}{t["card_hint"]}{m.group(2)}{t["card_more"]}{m.group(3)}',
-                chunk,
-                count=1,
-                flags=re.DOTALL,
-            )
-            chunk = re.sub(
-                r'aria-label="[^"]*"(\s*href="easy-routing-m32-x32\.html")',
-                f'aria-label="{t["card_aria"]}"\\1',
-                chunk,
-                count=1,
-            )
-            chunk = re.sub(
-                r'alt="M32 / X32 Easy Routing[^"]*"',
-                f'alt="{t["banner_alt"]}"',
-                chunk,
-                count=1,
-            )
-        rebuilt.append(chunk)
-    p.write_text('<div class="app-grid-item">'.join(rebuilt), encoding="utf-8")
+    block = f"""<div class="app-grid-item">
+            <article class="card app-card">
+            <div class="app-card-text">
+              <h3>M32 / X32 Easy Routing</h3>
+              <p>{t['card']}</p>
+            </div>
+            </article>
+            <a class="app-card-thumb" href="easy-routing-m32-x32.html" aria-label="{t['card_aria']}">
+              <img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt="{t['banner_alt']}" loading="lazy" decoding="async">
+            </a>
+            <div class="app-card-actions">
+              <p class="app-card-store-hint">{t['card_hint']}</p>
+              <div class="app-card-cta">
+              <a class="btn btn-primary btn-app-store" href="{APP_STORE}" target="_blank" rel="noopener noreferrer"><span class="btn-app-store-title">{t['card_store_title']}</span><span class="btn-app-store-sub">{t['card_store_sub']}</span></a>
+              <a class="btn btn-secondary" href="easy-routing-m32-x32.html">{t['card_more']}</a>
+            </div>
+            </div>
+          </div>
+"""
+    text = re.sub(
+        r'<div class="app-grid-item">\s*<article class="card app-card">\s*<div class="app-card-text">\s*<h3>M32 / X32 Easy Routing</h3>.*?(?=<div class="app-grid-item">\s*<article class="card app-card">\s*<div class="app-card-text">\s*<h3>Stage With Me)',
+        block,
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+    p.write_text(text, encoding="utf-8")
+
+
+def update_compare(code: str) -> None:
+    p = Path(__file__).parent / code / "compare.html"
+    text = p.read_text(encoding="utf-8")
+    if "M32 / X32 Easy Routing" in text:
+        return
+    name, best, proto, platform = COMPARE_ROW[code]
+    row = f'                <tr><td>{name}</td><td>{best}</td><td>{proto}</td><td>{platform}</td></tr>\n'
+    text = text.replace(
+        '                <tr><td>MIDItoOSC</td>',
+        row + '                <tr><td>MIDItoOSC</td>',
+        1,
+    )
+    p.write_text(text, encoding="utf-8")
 
 
 if __name__ == "__main__":
@@ -445,4 +491,5 @@ if __name__ == "__main__":
     for code in LANGS:
         (root / code / FILE).write_text(render_page(code), encoding="utf-8")
         update_index_card(code)
+        update_compare(code)
         print("wrote", code)
