@@ -373,6 +373,7 @@ def render_page(code: str) -> str:
             <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
             <a href="miditoosc.html">MIDItoOSC</a>
             <a href="easy-routing-m32-x32.html">Easy Routing</a>
+            <a href="m32-patch.html">M32 Patch</a>
             <a href="stage-with-me.html">Stage With Me</a>
             <a href="compare.html">{nav_compare}</a>
             <a href="resources.html">{nav_resources}</a>
