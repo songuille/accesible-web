@@ -93,15 +93,15 @@ COMPARE_ROW = {
 
 T = {
     "en": {
-        "desc": "M32 Patch is the iOS companion to Easy Routing for Midas M32 and Behringer X32: visual matrix routing on iPhone and iPad.",
-        "hero": "Visual matrix routing for M32/X32 — the iOS version of Easy Routing for Mac.",
+        "desc": "M32 Patch is an independent iPhone and iPad app for visual matrix routing on Midas M32 and Behringer X32 — the same kind of workflow as Easy Routing on Mac.",
+        "hero": "Independent iOS app for visual M32/X32 matrix routing on iPhone and iPad.",
         "banner_aria": "M32 Patch on the App Store",
         "banner_alt": "M32 Patch — available on the App Store for iPhone and iPad",
         "lead": "Available now on the App Store for iPhone and iPad.",
         "h_what": "What it does",
-        "intro": "M32 Patch brings the same fast, grid-based routing workflow from <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS) to your pocket. Map inputs and outputs in seconds: tap a cell to assign a source, tap again for OFF, and manage Local, AES50, AUX, and USB Card paths over OSC on the same network as your console.",
+        "intro": "M32 Patch is a standalone app: it does not require <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> on the Mac. Both apps offer the same style of fast, grid-based routing for M32/X32 over OSC. Map inputs and outputs in seconds: tap a cell to assign a source, tap again for OFF, and manage Local, AES50, AUX, and USB Card paths on the same network as your console.",
         "h_promo": "App Store promo (short)",
-        "promo": "iOS companion to Easy Routing: visual M32/X32 matrix routing on iPhone and iPad — tap to assign or set OFF, Local / AES50 / AUX / USB.",
+        "promo": "Independent iOS app for visual M32/X32 matrix routing on iPhone and iPad — tap to assign or set OFF, Local / AES50 / AUX / USB.",
         "h_features": "Key features",
         "features": [
             "Visual matrix routing for Inputs and Outputs on iPhone and iPad.",
@@ -109,29 +109,29 @@ T = {
             "Routing across Local, AES50, AUX, and USB/Card paths.",
             "Network discovery and direct OSC connection to the desk.",
             "Built for live shows, stage boxes, and fast patch changes on the floor.",
-            "Companion to the Mac app Easy Routing when you need a larger workspace.",
+            "Independent from Easy Routing on Mac — same idea, separate apps for each platform.",
         ],
-        "closing": "Use M32 Patch on stage with your phone or tablet, and keep <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> on the Mac for deeper editing when you need it.",
+        "closing": "Choose <strong>M32 Patch</strong> for iPhone/iPad, or <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> for Mac — each works on its own.",
         "store_h3": "App Store",
         "store_p": "Available now on the App Store for iPhone and iPad.",
         "badge_aria": "Download M32 Patch on the App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">See comparison</a> · <a href="support.html">Support</a>',
-        "card": "iOS companion to Easy Routing: visual matrix routing for Midas M32 and Behringer X32 on iPhone and iPad.",
+        "card": "Independent iOS app for visual matrix routing on Midas M32 and Behringer X32 — same idea as Easy Routing on Mac, separate apps.",
         "card_hint": "<strong>Available on the App Store</strong> for iPhone and iPad.",
         "card_aria": "Open M32 Patch on the App Store",
         "card_more": "Learn more",
         "title_h3": "M32 Patch (iOS)",
     },
     "es": {
-        "desc": "M32 Patch es la versión iOS de Easy Routing para Midas M32 y Behringer X32: routing visual en parrilla en iPhone e iPad.",
-        "hero": "Routing visual en parrilla para M32/X32 — la versión iOS de Easy Routing para Mac.",
+        "desc": "M32 Patch es una app independiente para iPhone e iPad con routing visual en parrilla para Midas M32 y Behringer X32 — el mismo tipo de flujo que Easy Routing en Mac.",
+        "hero": "App independiente para iOS: routing visual M32/X32 en iPhone e iPad.",
         "banner_aria": "M32 Patch en la App Store",
         "banner_alt": "M32 Patch — disponible en la App Store para iPhone e iPad",
         "lead": "Ya disponible en la App Store para iPhone e iPad.",
         "h_what": "Qué hace",
-        "intro": "M32 Patch lleva a tu bolsillo el mismo flujo rápido en parrilla de <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS). Mapea entradas y salidas en segundos: toca una celda para asignar, otra vez para OFF, y gestiona rutas Local, AES50, AUX y USB Card por OSC en la misma red que tu consola.",
+        "intro": "M32 Patch es una app <strong>independiente</strong>: no necesita <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> en el Mac. Ambas ofrecen el mismo estilo de routing rápido en parrilla para M32/X32 por OSC. Mapea entradas y salidas en segundos: toca una celda para asignar, otra vez para OFF, y gestiona rutas Local, AES50, AUX y USB Card en la misma red que tu consola.",
         "h_promo": "Texto promocional corto",
-        "promo": "Compañera iOS de Easy Routing: routing visual M32/X32 en iPhone e iPad — toca para asignar u OFF, Local / AES50 / AUX / USB.",
+        "promo": "App independiente para iOS: routing visual M32/X32 en iPhone e iPad — toca para asignar u OFF, Local / AES50 / AUX / USB.",
         "h_features": "Características clave",
         "features": [
             "Routing visual en parrilla para entradas y salidas en iPhone e iPad.",
@@ -139,29 +139,29 @@ T = {
             "Routing en rutas Local, AES50, AUX y USB/Card.",
             "Descubrimiento por red y conexión OSC directa a la mesa.",
             "Pensada para shows en vivo, stageboxes y cambios de patch en el suelo.",
-            "Complemento de Easy Routing en Mac cuando necesitas un espacio de trabajo mayor.",
+            "Independiente de Easy Routing en Mac: misma idea, apps separadas por plataforma.",
         ],
-        "closing": "Usa M32 Patch en escenario con el teléfono o tablet, y mantén <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> en el Mac para ediciones más amplias cuando haga falta.",
+        "closing": "Elige <strong>M32 Patch</strong> para iPhone/iPad, o <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> para Mac — cada una funciona por su cuenta.",
         "store_h3": "App Store",
         "store_p": "Ya disponible en la App Store para iPhone e iPad.",
         "badge_aria": "Descargar M32 Patch en la App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Ver comparativa</a> · <a href="support.html">Soporte</a>',
-        "card": "Compañera iOS de Easy Routing: routing visual en parrilla para Midas M32 y Behringer X32 en iPhone e iPad.",
+        "card": "App independiente para iOS: routing visual en parrilla para Midas M32 y Behringer X32 — misma idea que Easy Routing en Mac, apps separadas.",
         "card_hint": "<strong>Ya en la App Store</strong> para iPhone e iPad.",
         "card_aria": "Abrir M32 Patch en la App Store",
         "card_more": "Ver más",
         "title_h3": "M32 Patch (iOS)",
     },
     "fr": {
-        "desc": "M32 Patch est la version iOS d'Easy Routing pour Midas M32 et Behringer X32 : routage matriciel visuel sur iPhone et iPad.",
-        "hero": "Routage matriciel M32/X32 — la version iOS d'Easy Routing pour Mac.",
+        "desc": "M32 Patch est une app indépendante pour iPhone et iPad : routage matriciel visuel pour Midas M32 et Behringer X32 — le même type de flux qu'Easy Routing sur Mac.",
+        "hero": "App iOS indépendante : routage visuel M32/X32 sur iPhone et iPad.",
         "banner_aria": "M32 Patch sur l'App Store",
         "banner_alt": "M32 Patch — disponible sur l'App Store pour iPhone et iPad",
         "lead": "Disponible dès maintenant sur l'App Store pour iPhone et iPad.",
         "h_what": "Ce qu'elle fait",
-        "intro": "M32 Patch reprend le flux grille rapide de <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS) sur iPhone et iPad. Affectez entrées et sorties en quelques secondes : touchez une cellule pour assigner, retouchez pour OFF, et gérez Local, AES50, AUX et USB Card en OSC sur le même réseau que la console.",
+        "intro": "M32 Patch est une app <strong>indépendante</strong> : elle n'a pas besoin d'<a href=\"easy-routing-m32-x32.html\">Easy Routing</a> sur Mac. Les deux proposent le même style de routage rapide en grille pour M32/X32 via OSC. Affectez entrées et sorties en quelques secondes : touchez une cellule pour assigner, retouchez pour OFF, et gérez Local, AES50, AUX et USB Card sur le même réseau que la console.",
         "h_promo": "Promo App Store (court)",
-        "promo": "Compagnon iOS d'Easy Routing : routage matriciel M32/X32 sur iPhone et iPad — touchez pour assigner ou OFF, Local / AES50 / AUX / USB.",
+        "promo": "App iOS indépendante : routage matriciel M32/X32 sur iPhone et iPad — touchez pour assigner ou OFF, Local / AES50 / AUX / USB.",
         "h_features": "Fonctions clés",
         "features": [
             "Routage matriciel visuel des entrées et sorties sur iPhone et iPad.",
@@ -169,29 +169,29 @@ T = {
             "Chemins Local, AES50, AUX et USB/Card.",
             "Découverte réseau et connexion OSC directe à la console.",
             "Pensée pour le live, les stageboxes et les changements de patch sur le plateau.",
-            "Complément d'Easy Routing sur Mac pour un espace de travail plus large.",
+            "Indépendante d'Easy Routing sur Mac : même idée, apps séparées par plateforme.",
         ],
-        "closing": "Utilisez M32 Patch sur scène avec le téléphone ou la tablette, et gardez <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> sur Mac pour des éditions plus poussées.",
+        "closing": "Choisissez <strong>M32 Patch</strong> pour iPhone/iPad, ou <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> pour Mac — chacune fonctionne seule.",
         "store_h3": "App Store",
         "store_p": "Disponible dès maintenant sur l'App Store pour iPhone et iPad.",
         "badge_aria": "Télécharger M32 Patch sur l'App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparatif</a> · <a href="support.html">Support</a>',
-        "card": "Compagnon iOS d'Easy Routing : routage matriciel pour Midas M32 et Behringer X32 sur iPhone et iPad.",
+        "card": "App iOS indépendante : routage matriciel pour Midas M32 et Behringer X32 — même idée qu'Easy Routing sur Mac, apps séparées.",
         "card_hint": "<strong>Disponible sur l'App Store</strong> pour iPhone et iPad.",
         "card_aria": "Ouvrir M32 Patch sur l'App Store",
         "card_more": "En savoir plus",
         "title_h3": "M32 Patch (iOS)",
     },
     "de": {
-        "desc": "M32 Patch ist die iOS-Version von Easy Routing für Midas M32 und Behringer X32: visuelles Matrix-Routing auf iPhone und iPad.",
-        "hero": "Visuelles M32/X32-Matrix-Routing — die iOS-Version von Easy Routing für Mac.",
+        "desc": "M32 Patch ist eine eigenständige iPhone-/iPad-App für visuelles Matrix-Routing auf Midas M32 und Behringer X32 — derselbe Workflow-Typ wie Easy Routing auf dem Mac.",
+        "hero": "Eigenständige iOS-App: visuelles M32/X32-Routing auf iPhone und iPad.",
         "banner_aria": "M32 Patch im App Store",
         "banner_alt": "M32 Patch — im App Store für iPhone und iPad verfügbar",
         "lead": "Jetzt im App Store für iPhone und iPad verfügbar.",
         "h_what": "Was sie macht",
-        "intro": "M32 Patch bringt den schnellen Raster-Workflow von <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS) auf iPhone und iPad. Ein-/Ausgänge in Sekunden zuweisen: Zelle tippen zum Assign, nochmal für OFF; Local, AES50, AUX und USB Card per OSC im gleichen Netz wie die Konsole.",
+        "intro": "M32 Patch ist eine <strong>eigenständige</strong> App: sie braucht <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> auf dem Mac nicht. Beide bieten denselben schnellen Raster-Workflow für M32/X32 per OSC. Ein-/Ausgänge in Sekunden zuweisen: Zelle tippen zum Assign, nochmal für OFF; Local, AES50, AUX und USB Card im gleichen Netz wie die Konsole.",
         "h_promo": "App-Store-Promo (kurz)",
-        "promo": "iOS-Begleiter zu Easy Routing: visuelles M32/X32-Routing auf iPhone und iPad — tippen zum Zuweisen oder OFF, Local / AES50 / AUX / USB.",
+        "promo": "Eigenständige iOS-App: visuelles M32/X32-Routing auf iPhone und iPad — tippen zum Zuweisen oder OFF, Local / AES50 / AUX / USB.",
         "h_features": "Wichtige Funktionen",
         "features": [
             "Visuelles Matrix-Routing für Ein- und Ausgänge auf iPhone und iPad.",
@@ -199,29 +199,29 @@ T = {
             "Routing über Local, AES50, AUX und USB/Card.",
             "Netzwerk-Discovery und direkte OSC-Verbindung zur Konsole.",
             "Für Live-Shows, Stageboxes und schnelle Patch-Änderungen auf der Bühne.",
-            "Ergänzung zu Easy Routing auf dem Mac für größere Arbeitsflächen.",
+            "Unabhängig von Easy Routing auf dem Mac — gleiche Idee, getrennte Apps je Plattform.",
         ],
-        "closing": "Nutzen Sie M32 Patch auf der Bühne mit Telefon oder Tablet und behalten Sie <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> auf dem Mac für tiefere Edits.",
+        "closing": "Wählen Sie <strong>M32 Patch</strong> für iPhone/iPad oder <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> für Mac — jede App funktioniert allein.",
         "store_h3": "App Store",
         "store_p": "Jetzt im App Store für iPhone und iPad verfügbar.",
         "badge_aria": "M32 Patch im App Store laden",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Vergleich</a> · <a href="support.html">Support</a>',
-        "card": "iOS-Begleiter zu Easy Routing: visuelles Matrix-Routing für Midas M32 und Behringer X32 auf iPhone und iPad.",
+        "card": "Eigenständige iOS-App: visuelles Matrix-Routing für Midas M32 und Behringer X32 — gleiche Idee wie Easy Routing auf dem Mac, getrennte Apps.",
         "card_hint": "<strong>Im App Store</strong> für iPhone und iPad.",
         "card_aria": "M32 Patch im App Store öffnen",
         "card_more": "Mehr erfahren",
         "title_h3": "M32 Patch (iOS)",
     },
     "ca": {
-        "desc": "M32 Patch és la versió iOS d'Easy Routing per a Midas M32 i Behringer X32: routing visual en graella a iPhone i iPad.",
-        "hero": "Routing visual en graella per a M32/X32 — la versió iOS d'Easy Routing per a Mac.",
+        "desc": "M32 Patch és una app independent per a iPhone i iPad amb routing visual en graella per a Midas M32 i Behringer X32 — el mateix tipus de flux qu'Easy Routing al Mac.",
+        "hero": "App independent per a iOS: routing visual M32/X32 a iPhone i iPad.",
         "banner_aria": "M32 Patch a l'App Store",
         "banner_alt": "M32 Patch — disponible a l'App Store per a iPhone i iPad",
         "lead": "Ja disponible a l'App Store per a iPhone i iPad.",
         "h_what": "Què fa",
-        "intro": "M32 Patch porta a la butxaca el mateix flux ràpid en graella de <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS). Mapeja entrades i sortides en segons: toca una cel·la per assignar, una altra vegada per OFF, i gestiona Local, AES50, AUX i USB Card per OSC a la mateixa xarxa que la consola.",
+        "intro": "M32 Patch és una app <strong>independent</strong>: no necessita <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> al Mac. Totes dues ofereixen el mateix estil de routing ràpid en graella per a M32/X32 via OSC. Mapeja entrades i sortides en segons: toca una cel·la per assignar, una altra vegada per OFF, i gestiona Local, AES50, AUX i USB Card a la mateixa xarxa que la consola.",
         "h_promo": "Text promocional curt",
-        "promo": "Company iOS d'Easy Routing: routing visual M32/X32 a iPhone i iPad — toca per assignar o OFF, Local / AES50 / AUX / USB.",
+        "promo": "App independent per a iOS: routing visual M32/X32 a iPhone i iPad — toca per assignar o OFF, Local / AES50 / AUX / USB.",
         "h_features": "Característiques clau",
         "features": [
             "Routing visual en graella per a entrades i sortides a iPhone i iPad.",
@@ -229,29 +229,29 @@ T = {
             "Routing en rutes Local, AES50, AUX i USB/Card.",
             "Descobriment per xarxa i connexió OSC directa a la taula.",
             "Pensada per a shows en viu, stageboxes i canvis de patch a terra.",
-            "Complement d'Easy Routing al Mac quan cal un espai de treball més gran.",
+            "Independent d'Easy Routing al Mac: mateixa idea, apps separades per plataforma.",
         ],
-        "closing": "Usa M32 Patch a l'escenari amb el telèfon o la tablet, i mantén <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> al Mac per a edicions més àmplies.",
+        "closing": "Tria <strong>M32 Patch</strong> per a iPhone/iPad, o <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> per al Mac — cadascuna funciona sola.",
         "store_h3": "App Store",
         "store_p": "Ja disponible a l'App Store per a iPhone i iPad.",
         "badge_aria": "Descarregar M32 Patch a l'App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparativa</a> · <a href="support.html">Suport</a>',
-        "card": "Company iOS d'Easy Routing: routing visual en graella per a Midas M32 i Behringer X32 a iPhone i iPad.",
+        "card": "App independent per a iOS: routing visual en graella per a Midas M32 i Behringer X32 — mateixa idea qu'Easy Routing al Mac, apps separades.",
         "card_hint": "<strong>Ja a l'App Store</strong> per a iPhone i iPad.",
         "card_aria": "Obrir M32 Patch a l'App Store",
         "card_more": "Veure més",
         "title_h3": "M32 Patch (iOS)",
     },
     "gl": {
-        "desc": "M32 Patch é a versión iOS de Easy Routing para Midas M32 e Behringer X32: routing visual en grella en iPhone e iPad.",
-        "hero": "Routing visual en grella para M32/X32 — a versión iOS de Easy Routing para Mac.",
+        "desc": "M32 Patch é unha app independente para iPhone e iPad con routing visual en grella para Midas M32 e Behringer X32 — o mesmo tipo de fluxo que Easy Routing no Mac.",
+        "hero": "App independente para iOS: routing visual M32/X32 en iPhone e iPad.",
         "banner_aria": "M32 Patch na App Store",
         "banner_alt": "M32 Patch — dispoñible na App Store para iPhone e iPad",
         "lead": "Xa dispoñible na App Store para iPhone e iPad.",
         "h_what": "Que fai",
-        "intro": "M32 Patch leva ao peto o mesmo fluxo rápido en grella de <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS). Mapea entradas e saídas en segundos: toca unha cela para asignar, outra vez para OFF, e xestiona Local, AES50, AUX e USB Card por OSC na mesma rede que a consola.",
+        "intro": "M32 Patch é unha app <strong>independente</strong>: non precisa <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> no Mac. Ambas ofrecen o mesmo estilo de routing rápido en grella para M32/X32 por OSC. Mapea entradas e saídas en segundos: toca unha cela para asignar, outra vez para OFF, e xestiona Local, AES50, AUX e USB Card na mesma rede que a consola.",
         "h_promo": "Texto promocional curto",
-        "promo": "Compañeira iOS de Easy Routing: routing visual M32/X32 en iPhone e iPad — toca para asignar ou OFF, Local / AES50 / AUX / USB.",
+        "promo": "App independente para iOS: routing visual M32/X32 en iPhone e iPad — toca para asignar ou OFF, Local / AES50 / AUX / USB.",
         "h_features": "Características clave",
         "features": [
             "Routing visual en grella para entradas e saídas en iPhone e iPad.",
@@ -259,29 +259,29 @@ T = {
             "Routing en rutas Local, AES50, AUX e USB/Card.",
             "Descubrimento por rede e conexión OSC directa á mesa.",
             "Pensada para shows en vivo, stageboxes e cambios de patch no chan.",
-            "Complemento de Easy Routing no Mac cando precisas un espazo de traballo maior.",
+            "Independiente de Easy Routing no Mac: mesma idea, apps separadas por plataforma.",
         ],
-        "closing": "Usa M32 Patch no escenario co teléfono ou tablet, e mantén <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> no Mac para edicións máis amplas.",
+        "closing": "Escolle <strong>M32 Patch</strong> para iPhone/iPad, ou <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> para Mac — cada unha funciona por si soa.",
         "store_h3": "App Store",
         "store_p": "Xa dispoñible na App Store para iPhone e iPad.",
         "badge_aria": "Descargar M32 Patch na App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparativa</a> · <a href="support.html">Soporte</a>',
-        "card": "Compañeira iOS de Easy Routing: routing visual en grella para Midas M32 e Behringer X32 en iPhone e iPad.",
+        "card": "App independente para iOS: routing visual en grella para Midas M32 e Behringer X32 — mesma idea que Easy Routing no Mac, apps separadas.",
         "card_hint": "<strong>Xa na App Store</strong> para iPhone e iPad.",
         "card_aria": "Abrir M32 Patch na App Store",
         "card_more": "Ver máis",
         "title_h3": "M32 Patch (iOS)",
     },
     "eu": {
-        "desc": "M32 Patch Easy Routing-en iOS bertsioa da Midas M32 eta Behringer X32rako: matrize bidezko routing bisuala iPhone eta iPad-en.",
-        "hero": "M32/X32 routing bisuala — Easy Routing Mac-entzako iOS bertsioa.",
+        "desc": "M32 Patch iPhone eta iPad-erako app independentea da: matrize routing bisuala Midas M32 eta Behringer X32rako — Easy Routing Mac-ekoaren fluxu mota bera.",
+        "hero": "iOS app independentea: M32/X32 routing bisuala iPhone eta iPad-en.",
         "banner_aria": "M32 Patch App Store-n",
         "banner_alt": "M32 Patch — App Store-n eskuragarri iPhone eta iPad-erako",
         "lead": "App Store-n eskuragarri iPhone eta iPad-erako.",
         "h_what": "Zer egiten du",
-        "intro": "M32 Patch-ek <a href=\"easy-routing-m32-x32.html\">M32 / X32 Easy Routing</a> (macOS) fluxu azkarra poltsikoraino ekartzen du. Sarrerak eta irteerak segundo gutxitan mapatu: ukitu gelaxka bat esleitzeko, berriro OFF jartzeko, eta kudeatu Local, AES50, AUX eta USB Card OSC bidez kontsolaren sare berean.",
+        "intro": "M32 Patch <strong>independentea</strong> da: ez du <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> Mac-ean behar. Biek M32/X32rako matrize fluxu azkar bera eskaintzen dute OSC bidez. Sarrerak eta irteerak segundo gutxitan mapatu: ukitu gelaxka bat esleitzeko, berriro OFF jartzeko, eta kudeatu Local, AES50, AUX eta USB Card kontsolaren sare berean.",
         "h_promo": "App Store promo laburra",
-        "promo": "Easy Routing-en iOS laguna: M32/X32 routing bisuala iPhone eta iPad-en — ukitu esleitzeko edo OFF, Local / AES50 / AUX / USB.",
+        "promo": "iOS app independentea: M32/X32 routing bisuala iPhone eta iPad-en — ukitu esleitzeko edo OFF, Local / AES50 / AUX / USB.",
         "h_features": "Ezaugarri nagusiak",
         "features": [
             "Sarrera eta irteeretarako matrize routing bisuala iPhone eta iPad-en.",
@@ -289,14 +289,14 @@ T = {
             "Local, AES50, AUX eta USB/Card bideak.",
             "Sare aurkikuntza eta OSC konexio zuzena mesara.",
             "Zuzeneko showetarako, stageboxetarako eta oholtzako patch aldaketetarako.",
-            "Easy Routing Mac-eko osagarria lan-eremu handiagoa behar denean.",
+            "Easy Routing Mac-etik independentea — ideia bera, plataforma bakoitzerako app bereiziak.",
         ],
-        "closing": "Erabili M32 Patch oholtzan telefono edo tabletarekin, eta mantendu <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> Mac-ean edizio sakonagoetarako.",
+        "closing": "Aukeratu <strong>M32 Patch</strong> iPhone/iPad-erako, edo <a href=\"easy-routing-m32-x32.html\">Easy Routing</a> Mac-erako — bakoitza bere kasa funtzionatzen du.",
         "store_h3": "App Store",
         "store_p": "App Store-n eskuragarri iPhone eta iPad-erako.",
         "badge_aria": "Deskargatu M32 Patch App Store-n",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Konparaketa</a> · <a href="support.html">Laguntza</a>',
-        "card": "Easy Routing-en iOS laguna: matrize routing bisuala Midas M32 eta Behringer X32rako iPhone eta iPad-en.",
+        "card": "iOS app independentea: matrize routing bisuala Midas M32 eta Behringer X32rako — Easy Routing Mac-ekoaren ideia bera, app bereiziak.",
         "card_hint": "<strong>App Store-n eskuragarri</strong> iPhone eta iPad-erako.",
         "card_aria": "Ireki M32 Patch App Store-n",
         "card_more": "Gehiago ikusi",
@@ -306,13 +306,13 @@ T = {
 
 # Short note injected into Easy Routing pages (after lead / first strong paragraph).
 IOS_NOTE = {
-    "en": '<p><strong>Also on iOS:</strong> <a href="m32-patch.html">M32 Patch</a> is the iPhone and iPad companion with the same visual routing workflow — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "es": '<p><strong>También en iOS:</strong> <a href="m32-patch.html">M32 Patch</a> es la compañera para iPhone e iPad con el mismo flujo de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "fr": '<p><strong>Aussi sur iOS :</strong> <a href="m32-patch.html">M32 Patch</a> est le compagnon iPhone et iPad avec le même flux de routage visuel — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "de": '<p><strong>Auch auf iOS:</strong> <a href="m32-patch.html">M32 Patch</a> ist die iPhone-/iPad-Begleit-App mit demselben visuellen Routing — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "ca": '<p><strong>També a iOS:</strong> <a href="m32-patch.html">M32 Patch</a> és la companya per a iPhone i iPad amb el mateix flux de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "gl": '<p><strong>Tamén en iOS:</strong> <a href="m32-patch.html">M32 Patch</a> é a compañeira para iPhone e iPad co mesmo fluxo de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
-    "eu": '<p><strong>iOS-en ere:</strong> <a href="m32-patch.html">M32 Patch</a> iPhone eta iPad-eko laguna da routing bisual berarekin — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "en": '<p><strong>Also on iOS:</strong> <a href="m32-patch.html">M32 Patch</a> is an independent iPhone and iPad app with the same style of visual routing — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "es": '<p><strong>También en iOS:</strong> <a href="m32-patch.html">M32 Patch</a> es una app independiente para iPhone e iPad con el mismo estilo de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "fr": '<p><strong>Aussi sur iOS :</strong> <a href="m32-patch.html">M32 Patch</a> est une app indépendante pour iPhone et iPad avec le même style de routage visuel — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "de": '<p><strong>Auch auf iOS:</strong> <a href="m32-patch.html">M32 Patch</a> ist eine eigenständige iPhone-/iPad-App mit demselben visuellen Routing-Stil — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "ca": '<p><strong>També a iOS:</strong> <a href="m32-patch.html">M32 Patch</a> és una app independent per a iPhone i iPad amb el mateix estil de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "gl": '<p><strong>Tamén en iOS:</strong> <a href="m32-patch.html">M32 Patch</a> é unha app independente para iPhone e iPad co mesmo estilo de routing visual — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
+    "eu": '<p><strong>iOS-en ere:</strong> <a href="m32-patch.html">M32 Patch</a> iPhone eta iPad-erako app independentea da, routing bisual estilo berarekin — <a href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer">App Store</a>.</p>',
 }
 
 
@@ -481,8 +481,6 @@ def insert_index_card(code: str) -> None:
     p = ROOT / code / "index.html"
     t = T[code]
     text = p.read_text(encoding="utf-8")
-    if "m32-patch.html" in text and "M32 Patch (iOS)" in text:
-        return
     block = f"""<div class="app-grid-item">
             <article class="card app-card">
             <div class="app-card-text">
@@ -504,16 +502,27 @@ def insert_index_card(code: str) -> None:
             </div>
           </div>
 """
-    # Insert after Easy Routing card, before Stage With Me.
-    pattern = (
-        r'(</div>\s*)'
-        r'(<div class="app-grid-item">\s*<article class="card app-card">\s*'
-        r'<div class="app-card-text">\s*<h3>Stage With Me)'
+    # Replace existing card if present; otherwise insert before Stage With Me.
+    card_re = re.compile(
+        r'<div class="app-grid-item">\s*<article class="card app-card">\s*'
+        r'<div class="app-card-text">\s*<h3>M32 Patch \(iOS\)</h3>.*?'
+        r'(?=<div class="app-grid-item">\s*<article class="card app-card">\s*'
+        r'<div class="app-card-text">\s*<h3>Stage With Me)',
+        re.DOTALL,
     )
-    updated, n = re.subn(pattern, r"\1" + block + r"\2", text, count=1, flags=re.DOTALL)
-    if n != 1:
-        raise SystemExit(f"Could not insert M32 Patch card in {p}")
-    # Bump CSS cache on index.
+    if card_re.search(text):
+        updated, n = card_re.subn(block, text, count=1)
+        if n != 1:
+            raise SystemExit(f"Could not replace M32 Patch card in {p}")
+    else:
+        pattern = (
+            r'(</div>\s*)'
+            r'(<div class="app-grid-item">\s*<article class="card app-card">\s*'
+            r'<div class="app-card-text">\s*<h3>Stage With Me)'
+        )
+        updated, n = re.subn(pattern, r"\1" + block + r"\2", text, count=1, flags=re.DOTALL)
+        if n != 1:
+            raise SystemExit(f"Could not insert M32 Patch card in {p}")
     updated = updated.replace("styles.css?v=16", "styles.css?v=17").replace(
         "styles.css?v=15", "styles.css?v=17"
     )
@@ -567,35 +576,30 @@ def update_easy_routing_crosslink(code: str) -> None:
         return
     text = p.read_text(encoding="utf-8")
     note = IOS_NOTE[code]
-    if "m32-patch.html" in text and "apple.co/44TAL9z" in text:
-        # Ensure nav also has the link.
-        needle = '<a href="easy-routing-m32-x32.html">Easy Routing</a>'
-        if 'href="m32-patch.html">M32 Patch</a>' not in text.split("<main>", 1)[0]:
-            if needle in text:
-                text = text.replace(
-                    needle,
-                    needle + '\n            <a href="m32-patch.html">M32 Patch</a>',
-                    1,
-                )
-                p.write_text(text, encoding="utf-8")
-        return
-    # Insert after the lead availability paragraph, before the first real heading.
-    updated, n = re.subn(
-        r'(<p><strong>[^<]*</strong></p>\s*)(<h2>[^<]+</h2>)',
-        r"\1" + note + "\n          \\2",
-        text,
-        count=1,
+    # Replace any existing iOS note that points at M32 Patch.
+    note_re = re.compile(
+        r'<p><strong>(?:Also on iOS|También en iOS|Aussi sur iOS\s*:|Auch auf iOS|També a iOS|Tamén en iOS|iOS-en ere)[:：]?</strong>[\s\S]*?</p>\s*',
     )
-    if n != 1:
-        raise SystemExit(f"Could not insert iOS note in {p}")
+    if note_re.search(text):
+        text = note_re.sub(note + "\n          ", text, count=1)
+    else:
+        updated, n = re.subn(
+            r'(<p><strong>[^<]*</strong></p>\s*)(<h2>[^<]+</h2>)',
+            r"\1" + note + "\n          \\2",
+            text,
+            count=1,
+        )
+        if n != 1:
+            raise SystemExit(f"Could not insert iOS note in {p}")
+        text = updated
     needle = '<a href="easy-routing-m32-x32.html">Easy Routing</a>'
-    if 'href="m32-patch.html">M32 Patch</a>' not in updated.split("<main>", 1)[0]:
-        updated = updated.replace(
+    if 'href="m32-patch.html">M32 Patch</a>' not in text.split("<main>", 1)[0]:
+        text = text.replace(
             needle,
             needle + '\n            <a href="m32-patch.html">M32 Patch</a>',
             1,
         )
-    p.write_text(updated, encoding="utf-8")
+    p.write_text(text, encoding="utf-8")
 
 
 if __name__ == "__main__":
