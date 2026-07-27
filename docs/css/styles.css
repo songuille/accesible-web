@@ -577,9 +577,10 @@ section h2 {
 }
 
 .app-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: auto;
   align-items: stretch;
+  gap: 1.35rem 1.15rem;
 }
 
 .app-grid > .app-grid-item {
@@ -588,6 +589,7 @@ section h2 {
   grid-row: span 5;
   gap: 0.65rem 0;
   min-width: 0;
+  overflow: hidden;
 }
 
 .quick-links-grid {
@@ -604,11 +606,15 @@ section h2 {
   flex-direction: column;
   min-height: 0;
   height: 100%;
+  padding: 1.15rem 1.1rem;
+  overflow: hidden;
 }
 
 .app-card h3 {
   line-height: 1.25;
   margin-bottom: 0.5rem;
+  font-size: 1.02rem;
+  overflow-wrap: anywhere;
 }
 
 .app-card-text {
@@ -620,6 +626,7 @@ section h2 {
 
 .app-card-text > p {
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Miniatura promocional, fuera de la tarjeta */
@@ -659,6 +666,7 @@ section h2 {
 .app-card-actions .app-card-store-hint {
   flex: none;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Fila compartida: badge oficial de App Store alineado entre tarjetas */
@@ -814,11 +822,16 @@ section h2 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  /* Home — siete apps en una fila (sobrescribe la regla de 4 columnas solo aquí) */
+  /* Home — catálogo de apps: no forzar 7 columnas (se montaban a ~100px) */
   .grid.app-grid {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     align-items: stretch;
   }
+}
+
+/* Más aire para el catálogo de apps (7 fichas) */
+#apps .wrap {
+  max-width: min(1180px, 96vw);
 }
 
 .card {
