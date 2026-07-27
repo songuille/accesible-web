@@ -590,7 +590,7 @@ section h2 {
   grid-row: span 5;
   gap: 0.55rem 0;
   min-width: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .quick-links-grid {
@@ -678,10 +678,11 @@ section h2 {
 .app-card-badge-row {
   grid-row: 4;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  min-height: 0;
+  min-height: 40px;
   width: 100%;
+  overflow: visible;
 }
 
 .app-card-cta-secondary {
@@ -748,7 +749,7 @@ section h2 {
   display: inline-flex;
   line-height: 0;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: visible;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
@@ -866,9 +867,13 @@ section h2 {
     height: 6.75rem;
   }
 
+  #apps .app-card-badge-row {
+    min-height: 40px;
+  }
+
   #apps .app-card-badge-row .store-badge-link img,
   #apps .app-card-cta-secondary .store-badge-link img {
-    height: 32px;
+    height: 40px;
   }
 
   #apps .app-card-cta-secondary .btn {
