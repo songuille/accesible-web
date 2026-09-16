@@ -73,6 +73,8 @@ T = {
         "badge_aria": "Download Easy Routing on the App Store",
         "h_demo": "Demo video",
         "demo_p": "See how routing edits in the app are reflected in M32-Edit on the same network.",
+        "demo_title": "Easy Routing demo video",
+        "demo_open": "Open video in Google Drive",
         "links": '<a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a>',
         "card": "Visual matrix routing for Midas M32 and Behringer X32. Map inputs and outputs in seconds with a tap-to-assign workflow.",
         "card_hint": "<strong>Available on the App Store</strong> for Mac.",
@@ -108,6 +110,8 @@ T = {
         "badge_aria": "Descargar Easy Routing en la App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira cómo los cambios de routing en la app se reflejan en M32-Edit en la misma red.",
+        "demo_title": "Vídeo demo de Easy Routing",
+        "demo_open": "Abrir vídeo en Google Drive",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a>',
         "card": "Routing visual en modo parrilla para Midas M32 y Behringer X32. Mapea entradas y salidas en segundos con toques rápidos.",
         "card_hint": "<strong>Ya en la App Store</strong> para Mac.",
@@ -143,6 +147,8 @@ T = {
         "badge_aria": "Télécharger Easy Routing sur l'App Store",
         "h_demo": "Vidéo de démonstration",
         "demo_p": "Voyez comment les modifications de routage dans l'app se reflètent dans M32-Edit sur le même réseau.",
+        "demo_title": "Vidéo démo Easy Routing",
+        "demo_open": "Ouvrir la vidéo dans Google Drive",
         "links": '<a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d\'usage</a> · <a href="support.html">Assistance</a>',
         "card": "Routage visuel en matrice pour Midas M32 et Behringer X32. Affectez entrées et sorties en quelques secondes.",
         "card_hint": "<strong>Déjà sur l'App Store</strong> pour Mac.",
@@ -178,6 +184,8 @@ T = {
         "badge_aria": "Easy Routing im App Store laden",
         "h_demo": "Demo-Video",
         "demo_p": "Sehen Sie, wie Routing-Änderungen in der App in M32-Edit im selben Netzwerk übernommen werden.",
+        "demo_title": "Easy Routing Demovideo",
+        "demo_open": "Video in Google Drive öffnen",
         "links": '<a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a>',
         "card": "Visuelles Matrix-Routing für Midas M32 und Behringer X32. Eingänge und Ausgänge in Sekunden per Antippen zuweisen.",
         "card_hint": "<strong>Jetzt im App Store</strong> für Mac.",
@@ -213,6 +221,8 @@ T = {
         "badge_aria": "Descarregar Easy Routing a l'App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira com els canvis de routing a l'app es reflecteixen a M32-Edit a la mateixa xarxa.",
+        "demo_title": "Vídeo demo d’Easy Routing",
+        "demo_open": "Obrir el vídeo a Google Drive",
         "links": '<a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d\'ús</a> · <a href="support.html">Suport</a>',
         "card": "Routing visual en mode graella per a Midas M32 i Behringer X32. Assigna entrades i sortides en segons amb tocs ràpids.",
         "card_hint": "<strong>Ja a l'App Store</strong> per a Mac.",
@@ -248,6 +258,8 @@ T = {
         "badge_aria": "Descargar Easy Routing na App Store",
         "h_demo": "Vídeo demo",
         "demo_p": "Mira como os cambios de routing na app se reflicten en M32-Edit na mesma rede.",
+        "demo_title": "Vídeo demo de Easy Routing",
+        "demo_open": "Abrir vídeo en Google Drive",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Axuda</a>',
         "card": "Routing visual en modo grella para Midas M32 e Behringer X32. Asigna entradas e saídas en segundos con toques rápidos.",
         "card_hint": "<strong>Xa na App Store</strong> para Mac.",
@@ -283,6 +295,8 @@ T = {
         "badge_aria": "Deskargatu Easy Routing App Store-n",
         "h_demo": "Demo bideoa",
         "demo_p": "Ikusi nola islatzen diren app-eko routing aldaketak M32-Edit-en sare berean.",
+        "demo_title": "Easy Routing demo bideoa",
+        "demo_open": "Ireki bideoa Google Drive-n",
         "links": '<a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a>',
         "card": "Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala. Sarrerak eta irteerak segundo gutxitan esleitu.",
         "card_hint": "<strong>App Store-n eskuragarri</strong> Mac-erako.",
@@ -358,7 +372,7 @@ def render_page(code: str) -> str:
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=15">
+  <link rel="stylesheet" href="../css/styles.css?v=16">
 </head>
 <body>
   <div class="page">
@@ -427,9 +441,10 @@ def render_page(code: str) -> str:
           </div>
           <h2>{t['h_demo']}</h2>
           <p>{t['demo_p']}</p>
-          <video controls preload="metadata" playsinline poster="../assets/videos/easy-routing-demo-poster.jpg" style="width:100%;max-width:960px;height:auto;border-radius:12px;">
-            <source src="../assets/videos/easy-routing-demo.mp4" type="video/mp4">
-          </video>
+          <div class="drive-video-frame" id="video">
+            <iframe src="https://drive.google.com/file/d/1BgWuSbfkSe3WN20XFx702muc2cYQ6XOF/preview" title="{t['demo_title']}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <p style="margin-top:0.75rem"><a href="https://drive.google.com/file/d/1BgWuSbfkSe3WN20XFx702muc2cYQ6XOF/view?usp=share_link" target="_blank" rel="noopener noreferrer">{t['demo_open']}</a></p>
           <p>{t['links']}</p>
         </div>
       </section>
