@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=15">
+  <link rel="stylesheet" href="../css/styles.css?v=16">
 </head>
 <body>
   <div class="page">
@@ -61,12 +61,22 @@
       </section>
       <section>
         <div class="wrap prose">
+          <h2 id="apps-resources">Ressources par app</h2>
+          <p class="meta" style="margin-top:-0.35rem;margin-bottom:1rem">Guides et démos des produits Stage Apps. D’autres ressources seront ajoutées ici au fur et à mesure.</p>
+
           <div class="beta-callout" id="accesible-guide">
-            <h2 style="margin-top:0">Accesible — guide de configuration (PDF)</h2>
-            <p>Instructions et exemples d’utilisation : configuration avec QLab, sous-titres, traduction, audiodescription et vidéo en langue des signes.</p>
-            <p style="margin-top:0.85rem"><a class="btn btn-primary" href="../assets/docs/accesible-instructions-and-usage.pdf" target="_blank" rel="noopener noreferrer">Télécharger le guide PDF</a></p>
-            <p style="margin-top:0.85rem"><a class="btn btn-secondary" href="accesible.html#video">Voir la vidéo de démonstration</a></p>
+            <h3 style="margin-top:0">Accesible</h3>
+            <p>Guide de configuration (PDF) et vidéo de démonstration : cues réseau QLab, sous-titres, traduction, audiodescription et vidéo LSF.</p>
+            <p style="margin-top:0.85rem;display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center">
+              <a class="btn btn-primary" href="../assets/docs/accesible-instructions-and-usage.pdf" target="_blank" rel="noopener noreferrer">Télécharger le guide PDF</a>
+              <a class="btn btn-secondary" href="https://drive.google.com/file/d/1WXl2eLtQdYhjHiqhl11g0nwIorx_v1ST/view?usp=share_link" target="_blank" rel="noopener noreferrer">Ouvrir la vidéo dans Drive</a>
+              <a class="btn btn-secondary" href="accesible.html">Page Accesible</a>
+            </p>
+            <div class="drive-video-frame" id="accesible-video">
+              <iframe src="https://drive.google.com/file/d/1WXl2eLtQdYhjHiqhl11g0nwIorx_v1ST/preview" title="Vidéo de démonstration Accesible" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
           </div>
+
           <h2>Liste de contrôle rapide</h2>
           <ul>
             <li>Attribuez des IP fixes aux projecteurs et à la console lorsque c’est possible.</li>
