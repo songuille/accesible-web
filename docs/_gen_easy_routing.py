@@ -74,7 +74,7 @@ T = {
         "h_demo": "Demo video",
         "demo_p": "How to fix locked channels for routing with the Easy Routing app.",
         "demo_title": "Easy Routing demo video",
-        "demo_open": "Open video in Google Drive",
+        "demo_open": "Watch on YouTube",
         "links": '<a href="compare.html">See comparison</a> · <a href="use-cases.html">View use cases</a> · <a href="support.html">Support</a>',
         "card": "Visual matrix routing for Midas M32 and Behringer X32. Map inputs and outputs in seconds with a tap-to-assign workflow.",
         "card_hint": "<strong>Available on the App Store</strong> for Mac.",
@@ -111,7 +111,7 @@ T = {
         "h_demo": "Vídeo demo",
         "demo_p": "Cómo solucionar el bug de canales bloqueados para el routing con la app Easy Routing.",
         "demo_title": "Vídeo demo de Easy Routing",
-        "demo_open": "Abrir vídeo en Google Drive",
+        "demo_open": "Ver en YouTube",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a>',
         "card": "Routing visual en modo parrilla para Midas M32 y Behringer X32. Mapea entradas y salidas en segundos con toques rápidos.",
         "card_hint": "<strong>Ya en la App Store</strong> para Mac.",
@@ -148,7 +148,7 @@ T = {
         "h_demo": "Vidéo de démonstration",
         "demo_p": "Comment résoudre le bug des canaux bloqués pour le routage avec l’app Easy Routing.",
         "demo_title": "Vidéo démo Easy Routing",
-        "demo_open": "Ouvrir la vidéo dans Google Drive",
+        "demo_open": "Voir sur YouTube",
         "links": '<a href="compare.html">Voir le comparatif</a> · <a href="use-cases.html">Voir les cas d\'usage</a> · <a href="support.html">Assistance</a>',
         "card": "Routage visuel en matrice pour Midas M32 et Behringer X32. Affectez entrées et sorties en quelques secondes.",
         "card_hint": "<strong>Déjà sur l'App Store</strong> pour Mac.",
@@ -185,7 +185,7 @@ T = {
         "h_demo": "Demo-Video",
         "demo_p": "So beheben Sie gesperrte Kanäle beim Routing mit der Easy-Routing-App.",
         "demo_title": "Easy Routing Demovideo",
-        "demo_open": "Video in Google Drive öffnen",
+        "demo_open": "Auf YouTube ansehen",
         "links": '<a href="compare.html">Vergleich ansehen</a> · <a href="use-cases.html">Anwendungsfälle</a> · <a href="support.html">Support</a>',
         "card": "Visuelles Matrix-Routing für Midas M32 und Behringer X32. Eingänge und Ausgänge in Sekunden per Antippen zuweisen.",
         "card_hint": "<strong>Jetzt im App Store</strong> für Mac.",
@@ -222,7 +222,7 @@ T = {
         "h_demo": "Vídeo demo",
         "demo_p": "Com solucionar el bug de canals bloquejats per al routing amb l’app Easy Routing.",
         "demo_title": "Vídeo demo d’Easy Routing",
-        "demo_open": "Obrir el vídeo a Google Drive",
+        "demo_open": "Veure a YouTube",
         "links": '<a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d\'ús</a> · <a href="support.html">Suport</a>',
         "card": "Routing visual en mode graella per a Midas M32 i Behringer X32. Assigna entrades i sortides en segons amb tocs ràpids.",
         "card_hint": "<strong>Ja a l'App Store</strong> per a Mac.",
@@ -259,7 +259,7 @@ T = {
         "h_demo": "Vídeo demo",
         "demo_p": "Como solucionar o bug de canles bloqueadas para o routing coa app Easy Routing.",
         "demo_title": "Vídeo demo de Easy Routing",
-        "demo_open": "Abrir vídeo en Google Drive",
+        "demo_open": "Ver en YouTube",
         "links": '<a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Axuda</a>',
         "card": "Routing visual en modo grella para Midas M32 e Behringer X32. Asigna entradas e saídas en segundos con toques rápidos.",
         "card_hint": "<strong>Xa na App Store</strong> para Mac.",
@@ -296,7 +296,7 @@ T = {
         "h_demo": "Demo bideoa",
         "demo_p": "Nola konpondu kanal blokeatuen bug-a routing-erako Easy Routing apparekin.",
         "demo_title": "Easy Routing demo bideoa",
-        "demo_open": "Ireki bideoa Google Drive-n",
+        "demo_open": "Ikusi YouTube-n",
         "links": '<a href="compare.html">Konparaketa ikusi</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a>',
         "card": "Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala. Sarrerak eta irteerak segundo gutxitan esleitu.",
         "card_hint": "<strong>App Store-n eskuragarri</strong> Mac-erako.",
@@ -442,9 +442,9 @@ def render_page(code: str) -> str:
           <h2>{t['h_demo']}</h2>
           <p>{t['demo_p']}</p>
           <div class="drive-video-frame" id="video">
-            <iframe src="https://drive.google.com/file/d/1BgWuSbfkSe3WN20XFx702muc2cYQ6XOF/preview" title="{t['demo_title']}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe src="https://www.youtube.com/embed/3QmC9ZDqLDo" title="{t['demo_title']}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
-          <p style="margin-top:0.75rem"><a href="https://drive.google.com/file/d/1BgWuSbfkSe3WN20XFx702muc2cYQ6XOF/view?usp=share_link" target="_blank" rel="noopener noreferrer">{t['demo_open']}</a></p>
+          <p style="margin-top:0.75rem"><a href="https://youtu.be/3QmC9ZDqLDo" target="_blank" rel="noopener noreferrer">{t['demo_open']}</a></p>
           <p>{t['links']}</p>
         </div>
       </section>
