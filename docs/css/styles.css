@@ -695,34 +695,35 @@ section h2 {
   min-width: 0;
 }
 
-/* Miniatura YouTube compacta (enlace externo, sin embed) */
+/* Miniatura YouTube: mismo tamaño que .app-card-thumb (enlace externo, sin embed) */
 .app-card-video {
   grid-row: 6;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 0.15rem;
-  padding: 0.35rem 0.4rem;
-  border-radius: 8px;
+  display: block;
+  position: relative;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
   text-decoration: none;
-  color: var(--text-muted);
+  color: #fff;
   min-width: 0;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .app-card-video:hover {
   border-color: rgba(255, 0, 51, 0.45);
-  color: var(--text);
+}
+
+.app-card-video:hover .app-card-video-thumb img {
+  transform: scale(1.01);
 }
 
 .app-card-video-thumb {
   position: relative;
-  flex: 0 0 auto;
-  width: 4.6rem;
-  aspect-ratio: 16 / 9;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
   overflow: hidden;
   background: #0b1220;
 }
@@ -730,8 +731,23 @@ section h2 {
 .app-card-video-thumb img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 7.75rem;
   object-fit: cover;
+  object-position: center center;
+  transition: transform 0.2s ease;
+}
+
+.app-card-video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: rgba(255, 0, 51, 0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
 
 .app-card-video-thumb::before {
@@ -742,30 +758,24 @@ section h2 {
   top: 50%;
   width: 0;
   height: 0;
-  transform: translate(-35%, -50%);
+  transform: translate(-30%, -50%);
   border-style: solid;
-  border-width: 0.28rem 0 0.28rem 0.45rem;
+  border-width: 0.42rem 0 0.42rem 0.7rem;
   border-color: transparent transparent transparent #fff;
   pointer-events: none;
 }
 
-.app-card-video-thumb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 1.35rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  background: rgba(255, 0, 51, 0.92);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-  pointer-events: none;
-}
-
 .app-card-video-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0.45rem 0.55rem 0.4rem;
   font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.2;
+  background: linear-gradient(to top, rgba(8, 12, 22, 0.88), transparent);
   overflow-wrap: anywhere;
 }
 
@@ -943,6 +953,10 @@ section h2 {
   }
 
   #apps .app-grid-item > .app-card-thumb img {
+    height: 6.75rem;
+  }
+
+  #apps .app-card-video-thumb img {
     height: 6.75rem;
   }
 
