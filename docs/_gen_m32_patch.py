@@ -116,6 +116,10 @@ T = {
         "store_p": "Available now on the App Store for iPhone and iPad.",
         "badge_aria": "Download M32 Patch on the App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">See comparison</a> · <a href="support.html">Support</a>',
+        "h_demo": "Demo video",
+        "demo_p": "Visual matrix routing for M32/X32 on iPhone and iPad — same idea as Easy Routing on Mac, as a standalone iOS app.",
+        "demo_title": "M32 Patch demo video",
+        "demo_open": "Watch on YouTube",
         "card": "Independent iOS app for visual matrix routing on Midas M32 and Behringer X32 — same idea as Easy Routing on Mac, separate apps.",
         "card_hint": "<strong>Available on the App Store</strong> for iPhone and iPad.",
         "card_aria": "Open M32 Patch on the App Store",
@@ -146,6 +150,10 @@ T = {
         "store_p": "Ya disponible en la App Store para iPhone e iPad.",
         "badge_aria": "Descargar M32 Patch en la App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Ver comparativa</a> · <a href="support.html">Soporte</a>',
+        "h_demo": "Vídeo de demostración",
+        "demo_p": "Routing visual M32/X32 en iPhone e iPad — misma idea que Easy Routing en Mac, como app independiente para iOS.",
+        "demo_title": "Vídeo demo de M32 Patch",
+        "demo_open": "Ver en YouTube",
         "card": "App independiente para iOS: routing visual en parrilla para Midas M32 y Behringer X32 — misma idea que Easy Routing en Mac, apps separadas.",
         "card_hint": "<strong>Ya en la App Store</strong> para iPhone e iPad.",
         "card_aria": "Abrir M32 Patch en la App Store",
@@ -176,6 +184,10 @@ T = {
         "store_p": "Disponible dès maintenant sur l'App Store pour iPhone et iPad.",
         "badge_aria": "Télécharger M32 Patch sur l'App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparatif</a> · <a href="support.html">Support</a>',
+        "h_demo": "Vidéo de démonstration",
+        "demo_p": "Routage matriciel M32/X32 sur iPhone et iPad — même idée qu’Easy Routing sur Mac, en app iOS indépendante.",
+        "demo_title": "Vidéo démo M32 Patch",
+        "demo_open": "Voir sur YouTube",
         "card": "App iOS indépendante : routage matriciel pour Midas M32 et Behringer X32 — même idée qu'Easy Routing sur Mac, apps séparées.",
         "card_hint": "<strong>Disponible sur l'App Store</strong> pour iPhone et iPad.",
         "card_aria": "Ouvrir M32 Patch sur l'App Store",
@@ -206,6 +218,10 @@ T = {
         "store_p": "Jetzt im App Store für iPhone und iPad verfügbar.",
         "badge_aria": "M32 Patch im App Store laden",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Vergleich</a> · <a href="support.html">Support</a>',
+        "h_demo": "Demovideo",
+        "demo_p": "Visuelles Matrix-Routing für M32/X32 auf iPhone und iPad — gleiche Idee wie Easy Routing auf dem Mac, als eigenständige iOS-App.",
+        "demo_title": "M32 Patch Demovideo",
+        "demo_open": "Auf YouTube ansehen",
         "card": "Eigenständige iOS-App: visuelles Matrix-Routing für Midas M32 und Behringer X32 — gleiche Idee wie Easy Routing auf dem Mac, getrennte Apps.",
         "card_hint": "<strong>Im App Store</strong> für iPhone und iPad.",
         "card_aria": "M32 Patch im App Store öffnen",
@@ -236,6 +252,10 @@ T = {
         "store_p": "Ja disponible a l'App Store per a iPhone i iPad.",
         "badge_aria": "Descarregar M32 Patch a l'App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparativa</a> · <a href="support.html">Suport</a>',
+        "h_demo": "Vídeo de demostració",
+        "demo_p": "Routing visual M32/X32 a iPhone i iPad — mateixa idea qu’Easy Routing al Mac, com a app independent per a iOS.",
+        "demo_title": "Vídeo demo de M32 Patch",
+        "demo_open": "Veure a YouTube",
         "card": "App independent per a iOS: routing visual en graella per a Midas M32 i Behringer X32 — mateixa idea qu'Easy Routing al Mac, apps separades.",
         "card_hint": "<strong>Ja a l'App Store</strong> per a iPhone i iPad.",
         "card_aria": "Obrir M32 Patch a l'App Store",
@@ -266,6 +286,10 @@ T = {
         "store_p": "Xa dispoñible na App Store para iPhone e iPad.",
         "badge_aria": "Descargar M32 Patch na App Store",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Comparativa</a> · <a href="support.html">Soporte</a>',
+        "h_demo": "Vídeo de demostración",
+        "demo_p": "Routing visual M32/X32 en iPhone e iPad — mesma idea que Easy Routing no Mac, como app independente para iOS.",
+        "demo_title": "Vídeo demo de M32 Patch",
+        "demo_open": "Ver en YouTube",
         "card": "App independente para iOS: routing visual en grella para Midas M32 e Behringer X32 — mesma idea que Easy Routing no Mac, apps separadas.",
         "card_hint": "<strong>Xa na App Store</strong> para iPhone e iPad.",
         "card_aria": "Abrir M32 Patch na App Store",
@@ -296,6 +320,10 @@ T = {
         "store_p": "App Store-n eskuragarri iPhone eta iPad-erako.",
         "badge_aria": "Deskargatu M32 Patch App Store-n",
         "links": '<a href="easy-routing-m32-x32.html">Easy Routing (Mac)</a> · <a href="compare.html">Konparaketa</a> · <a href="support.html">Laguntza</a>',
+        "h_demo": "Demostrazio bideoa",
+        "demo_p": "M32/X32 routing bisuala iPhone eta iPad-ean — Easy Routing Mac-ekoaren ideia bera, iOS app independente gisa.",
+        "demo_title": "M32 Patch demo bideoa",
+        "demo_open": "Ikusi YouTube-n",
         "card": "iOS app independentea: matrize routing bisuala Midas M32 eta Behringer X32rako — Easy Routing Mac-ekoaren ideia bera, app bereiziak.",
         "card_hint": "<strong>App Store-n eskuragarri</strong> iPhone eta iPad-erako.",
         "card_aria": "Ireki M32 Patch App Store-n",
@@ -447,6 +475,14 @@ def render_page(code: str) -> str:
             <p><strong>{t['store_p']}</strong></p>
             {store_badge_html(t['badge_aria'])}
           </div>
+          <div class="beta-callout" id="video" style="margin-top:1.25rem">
+            <h2 style="margin-top:0">{t['h_demo']}</h2>
+            <p>{t['demo_p']}</p>
+            <div class="drive-video-frame">
+              <iframe src="https://www.youtube.com/embed/F1m7BdGkXe8" title="{t['demo_title']}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <p style="margin-top:0.75rem"><a href="https://youtu.be/F1m7BdGkXe8" target="_blank" rel="noopener noreferrer">{t['demo_open']}</a></p>
+          </div>
           <p>{t['links']}</p>
         </div>
       </section>
@@ -525,7 +561,7 @@ def insert_index_card(code: str) -> None:
         if n != 1:
             raise SystemExit(f"Could not insert M32 Patch card in {p}")
     updated = updated.replace("styles.css?v=16", "styles.css?v=17").replace(
-        "styles.css?v=15", "styles.css?v=17"
+        "styles.css?v=16", "styles.css?v=17"
     )
     p.write_text(updated, encoding="utf-8")
 
