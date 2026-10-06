@@ -19,6 +19,7 @@
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
   <link rel="stylesheet" href="../css/styles.css?v=23">
+  <link rel="stylesheet" href="../css/home-carousel.css?v=5">
 </head>
 <body>
   <div class="page">
@@ -65,178 +66,63 @@
           </div>
         </div>
       </section>
-      <section id="apps">
+      <section id="apps" class="apps-orbit">
         <div class="wrap">
           <h2>Our apps</h2>
-          <p class="section-intro">Tools designed for real backstage workflows with QLab, OSC, PJLink and digital mixers.</p>
-          <div class="grid app-grid">
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Accesible</h3>
-              <p>Live QLab accessibility: captions, audio description and sign-language video on phone and tablet.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="accesible.html" aria-label="Open Accesible on the Mac App Store">
-              <img src="../assets/images/accesible-square-1080.png" alt="Accesible — Mac App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint">Available on the Mac App Store. <strong>7-day free trial</strong> for eligible new subscribers; full terms at checkout.</p>
+          <p class="section-intro">App orbit: tap one to bring it to the center. Tools for real backstage workflows with QLab, OSC, PJLink and digital mixers.</p>
+
+          <div
+            class="app-carousel"
+            data-app-carousel
+            data-ui-more="Learn more"
+            data-ui-more-short="More"
+            data-ui-video="Video"
+            data-ui-video-long="Watch on YouTube"
+            data-ui-soon="Coming soon"
+            data-ui-open="Open"
+            data-ui-soon-aria="coming soon"
+            data-apps="[{&quot;name&quot;: &quot;Accesible&quot;, &quot;blurb&quot;: &quot;Captions, audio description and sign language with QLab.&quot;, &quot;detail&quot;: &quot;Live QLab accessibility: captions, audio description and sign-language video on phone and tablet. 7-day free trial for eligible new subscribers.&quot;, &quot;href&quot;: &quot;accesible.html&quot;, &quot;image&quot;: &quot;../assets/images/accesible-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4wL8Vcm&quot;, &quot;video&quot;: &quot;LidbLByLTzo&quot;}, {&quot;name&quot;: &quot;Shutter PJ-OSC&quot;, &quot;blurb&quot;: &quot;PJLink shutter and power via buttons or OSC (Mac).&quot;, &quot;detail&quot;: &quot;Control PJLink-compatible projector shutter and power by UI buttons or OSC. Available on the Mac App Store.&quot;, &quot;href&quot;: &quot;shutter-pj-osc.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pj-osc-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4nwjDiG&quot;}, {&quot;name&quot;: &quot;Shutter PJLINK&quot;, &quot;blurb&quot;: &quot;PJ-LINK on iPhone, iPad and Apple Watch.&quot;, &quot;detail&quot;: &quot;PJ-LINK direct mode (TCP 4352). OSC forwarding requires Shutter PJ-OSC on the Mac.&quot;, &quot;href&quot;: &quot;shutter-pjlink-ios.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pjlink-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4ds0FVC&quot;}, {&quot;name&quot;: &quot;MIDItoOSC&quot;, &quot;blurb&quot;: &quot;MIDI→OSC and Live mode between desks.&quot;, &quot;detail&quot;: &quot;Version 2.1.0: clone or translate your mix to a second desk, even across different consoles.&quot;, &quot;href&quot;: &quot;miditoosc.html&quot;, &quot;image&quot;: &quot;../assets/images/miditoosc-square-1080.png?v=2&quot;, &quot;store&quot;: &quot;https://apple.co/4ftaJ3c&quot;, &quot;video&quot;: &quot;qsv95wvWbQA&quot;}, {&quot;name&quot;: &quot;Easy Routing&quot;, &quot;blurb&quot;: &quot;Visual M32/X32 routing on Mac.&quot;, &quot;detail&quot;: &quot;Grid routing for Midas M32 and Behringer X32: tap to assign or set OFF.&quot;, &quot;href&quot;: &quot;easy-routing-m32-x32.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-x32-easy-routing-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/4eXQev2&quot;, &quot;video&quot;: &quot;3QmC9ZDqLDo&quot;}, {&quot;name&quot;: &quot;M32 Patch&quot;, &quot;blurb&quot;: &quot;Visual M32/X32 routing on iOS.&quot;, &quot;detail&quot;: &quot;Same idea as Easy Routing — standalone app for iPhone and iPad.&quot;, &quot;href&quot;: &quot;m32-patch.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-patch-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/44TAL9z&quot;, &quot;video&quot;: &quot;F1m7BdGkXe8&quot;}, {&quot;name&quot;: &quot;Stage With Me&quot;, &quot;blurb&quot;: &quot;Actor rehearsal (iOS and Android).&quot;, &quot;detail&quot;: &quot;Synthetic line prompts, record your voice, and save sessions.&quot;, &quot;href&quot;: &quot;stage-with-me.html&quot;, &quot;image&quot;: &quot;../assets/images/stage-with-me-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4uf2j4h&quot;, &quot;play&quot;: &quot;https://play.google.com/store/apps/details?id=com.stagewithme.app&quot;}, {&quot;name&quot;: &quot;Transparent Screen&quot;, &quot;blurb&quot;: &quot;New app pending App Store publication.&quot;, &quot;detail&quot;: &quot;When it ships, this planet will get its icon, page and links.&quot;, &quot;soon&quot;: true}]"
+          >
+            <div class="app-orbit-ring" aria-label="App orbit">
+              <button type="button" class="app-orbit-planet is-active" data-orbit-planet aria-label="Accesible" aria-current="true"><img src="../assets/images/accesible-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJ-OSC"><img src="../assets/images/shutter-pj-osc-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJLINK"><img src="../assets/images/shutter-pjlink-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="MIDItoOSC"><img src="../assets/images/miditoosc-square-1080.png?v=2" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Easy Routing"><img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="M32 Patch"><img src="../assets/images/m32-patch-square-1080.png?v=1" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage With Me"><img src="../assets/images/stage-with-me-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Transparent Screen"><span class="soon-mark">Soon</span></button>
+
+              <div class="app-orbit-center">
+                <a class="app-orbit-center-link" data-orbit-center-link href="accesible.html" aria-label="Open Accesible">
+                  <div class="app-orbit-center-art" data-orbit-center-art></div>
+                </a>
+                <h3 data-orbit-center-title>Accesible</h3>
+                <p class="app-orbit-center-desc" data-orbit-center-desc></p>
+                <div class="app-orbit-center-actions" data-orbit-center-actions></div>
+                <a class="app-orbit-center-video" data-orbit-center-video href="#" target="_blank" rel="noopener noreferrer" hidden>
+                  <img src="" alt="" width="120" height="68" loading="lazy">
+                  <span>Video</span>
+                </a>
+                <span class="app-orbit-center-soon" data-orbit-center-soon hidden>Coming soon</span>
               </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4wL8Vcm" target="_blank" rel="noopener noreferrer" aria-label="7-day free trial · then subscription"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
             </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="accesible.html">Learn more</a>
+
+            <div class="app-carousel-hint-row">
+              <button type="button" class="app-carousel-nav" data-carousel-prev aria-label="Previous app">‹</button>
+              <p class="app-carousel-counter" data-carousel-counter>1 / 8</p>
+              <button type="button" class="app-carousel-nav" data-carousel-next aria-label="Next app">›</button>
             </div>
-            <a class="app-card-video" href="https://youtu.be/LidbLByLTzo" target="_blank" rel="noopener noreferrer" aria-label="Watch Accesible video on YouTube">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/LidbLByLTzo/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Watch video</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Shutter PJ-OSC (macOS)</h3>
-              <p>Control PJLink-compatible projector shutter and power by UI buttons or OSC.</p>
+
+            <div class="app-orbit-detail" data-orbit-detail>
+              <h3 data-orbit-detail-title></h3>
+              <p data-orbit-detail-desc></p>
+              <div class="app-orbit-detail-actions" data-orbit-detail-actions></div>
+              <a class="app-orbit-detail-video" data-orbit-detail-video href="#" target="_blank" rel="noopener noreferrer" hidden>
+                <img src="" alt="" width="160" height="90" loading="lazy">
+                <span>Watch on YouTube</span>
+              </a>
             </div>
-            </article>
-            <a class="app-card-thumb" href="shutter-pj-osc.html" aria-label="Open Shutter PJ-OSC on the App Store">
-              <img src="../assets/images/shutter-pj-osc-square-1080.png" alt="Shutter PJ-OSC — App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Available on the App Store</strong> for Mac.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4nwjDiG" target="_blank" rel="noopener noreferrer" aria-label="Download Shutter PJ-OSC"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="shutter-pj-osc.html">Learn more</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Shutter PJLINK (iOS &amp; watchOS)</h3>
-              <p>iPhone and Apple Watch: <strong>PJ-LINK direct</strong> (TCP 4352) works on its own. <strong>OSC forwarding</strong> requires <a href="shutter-pj-osc.html">Shutter PJ-OSC</a> on the Mac installed, configured, and running.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="shutter-pjlink-ios.html" aria-label="Open Shutter PJLINK on the App Store">
-              <img src="../assets/images/shutter-pjlink-square-1080.png" alt="Shutter PJLINK — App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Available on the App Store</strong> for iPhone, iPad, and Apple Watch.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4ds0FVC" target="_blank" rel="noopener noreferrer" aria-label="Download Shutter PJLINK"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="shutter-pjlink-ios.html">Learn more</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>MIDItoOSC</h3>
-              <p>Version 2.1.0: more powerful and flexible. Live mode clones or translates your mix to a second desk — even across different consoles.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="miditoosc.html" aria-label="Open MIDItoOSC on the Mac App Store">
-              <img src="../assets/images/miditoosc-square-1080.png?v=2" alt="Version 2.1.0: more powerful and flexible. Live mode clones or translates your mix to a second desk — even across different consoles." loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Version 2.1.0</strong> on the Mac App Store (macOS).</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4ftaJ3c" target="_blank" rel="noopener noreferrer" aria-label="Download MIDItoOSC"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="miditoosc.html">Learn more</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/qsv95wvWbQA" target="_blank" rel="noopener noreferrer" aria-label="Watch MIDItoOSC video on YouTube">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/qsv95wvWbQA/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Watch video</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>M32 / X32 Easy Routing</h3>
-              <p>Visual matrix routing for Midas M32 and Behringer X32. Map inputs and outputs in seconds with a tap-to-assign workflow.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="easy-routing-m32-x32.html" aria-label="Open M32 / X32 Easy Routing on the Mac App Store">
-              <img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt="M32 / X32 Easy Routing — available on the Mac App Store" loading="lazy" decoding="async">
-            </a>
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Available on the App Store</strong> for Mac.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4eXQev2" target="_blank" rel="noopener noreferrer" aria-label="Download Easy Routing on the App Store"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="easy-routing-m32-x32.html">Learn more</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/3QmC9ZDqLDo" target="_blank" rel="noopener noreferrer" aria-label="Watch Easy Routing video on YouTube">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/3QmC9ZDqLDo/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Watch video</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>M32 Patch (iOS)</h3>
-              <p>Independent iOS app for visual matrix routing on Midas M32 and Behringer X32 — same idea as Easy Routing on Mac, separate apps.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="m32-patch.html" aria-label="Open M32 Patch on the App Store">
-              <img src="../assets/images/m32-patch-square-1080.png?v=1" alt="M32 Patch — available on the App Store for iPhone and iPad" loading="lazy" decoding="async">
-            </a>
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Available on the App Store</strong> for iPhone and iPad.</p>
-            </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer" aria-label="Download M32 Patch on the App Store"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="m32-patch.html">Learn more</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/F1m7BdGkXe8" target="_blank" rel="noopener noreferrer" aria-label="Watch M32 Patch video on YouTube">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/F1m7BdGkXe8/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Watch video</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Stage With Me (iOS, iPadOS &amp; Android)</h3>
-              <p>Rehearsal app for actors: synthetic voice gives line prompts, records your own voice, and saves sessions to track progress over time.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="stage-with-me.html" aria-label="Open StageWithMe on the App Store">
-              <img src="../assets/images/stage-with-me-square-1080.png" alt="StageWithMe — App Store launch" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>Now on the App Store and Google Play</strong> as <strong>StageWithMe</strong>.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4uf2j4h" target="_blank" rel="noopener noreferrer" aria-label="Download StageWithMe"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.stagewithme.app" target="_blank" rel="noopener noreferrer" aria-label="Get StageWithMe on Google Play">
-              <img src="../assets/images/get-it-on-google-play-en.png" alt="Get it on Google Play" width="202" height="60" loading="lazy" decoding="async">
-            </a>
-              <a class="btn btn-secondary" href="stage-with-me.html">Learn more</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
           </div>
         </div>
       </section>
@@ -283,5 +169,6 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  <script src="../js/app-carousel.js?v=3"></script>
 </body>
 </html>

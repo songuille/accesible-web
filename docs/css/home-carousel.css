@@ -1,0 +1,461 @@
+/* Local preview: circular orbit carousel — selected app in the center */
+
+.apps-orbit {
+  position: relative;
+  padding: 2rem 0 3rem;
+  overflow: hidden;
+}
+
+.apps-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 50% at 50% 48%, rgba(91, 141, 239, 0.2), transparent 68%),
+    radial-gradient(1px 1px at 12% 22%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 78% 18%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1.5px 1.5px at 64% 72%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 28% 68%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 88% 48%, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(1px 1px at 45% 12%, rgba(255, 255, 255, 0.22), transparent);
+}
+
+.apps-orbit .wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+}
+
+.preview-banner {
+  margin: 0 0 1.25rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  border: 1px dashed rgba(91, 141, 239, 0.55);
+  background: rgba(91, 141, 239, 0.1);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.preview-banner strong {
+  color: var(--text);
+}
+
+.app-carousel {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Circular stage */
+.app-orbit-ring {
+  --orbit-size: min(96vw, 42rem);
+  position: relative;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
+  margin: 0.5rem auto 0.75rem;
+}
+
+.app-orbit-ring::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px solid rgba(91, 141, 239, 0.22);
+  box-shadow:
+    0 0 40px rgba(91, 141, 239, 0.08) inset,
+    0 0 60px rgba(91, 141, 239, 0.06);
+  pointer-events: none;
+}
+
+.app-orbit-ring::after {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* Center feature */
+.app-orbit-center {
+  position: absolute;
+  inset: 22%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1.15rem 1.15rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(91, 141, 239, 0.18), transparent 55%),
+    linear-gradient(165deg, rgba(28, 37, 48, 0.98), rgba(12, 16, 22, 0.96));
+  box-shadow:
+    0 0 0 1px rgba(91, 141, 239, 0.1),
+    0 18px 50px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.app-orbit-center-link {
+  display: block;
+  width: 42%;
+  max-width: 9.5rem;
+  margin-bottom: 0.55rem;
+  flex-shrink: 0;
+  text-decoration: none;
+  border-radius: 18px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.app-orbit-center-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 2px rgba(91, 141, 239, 0.45);
+  text-decoration: none;
+}
+
+.app-orbit-center-link.is-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.app-orbit-center-link.is-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.app-orbit-center-art {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0b1220;
+}
+
+.app-orbit-center-art img,
+.app-orbit-center-art .soon-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-orbit-center-art .soon-mark {
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.app-orbit-center h3 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.05rem, 2.8vw, 1.45rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.app-orbit-center-desc {
+  margin: 0 0 0.6rem;
+  color: var(--text-muted);
+  font-size: clamp(0.78rem, 1.9vw, 0.95rem);
+  line-height: 1.35;
+  max-width: 92%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.app-orbit-center-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-orbit-center-actions .store-badge-link img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.app-orbit-center-actions .btn {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.app-orbit-center-video {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+  padding: 0.2rem 0.45rem 0.2rem 0.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.app-orbit-center-video:hover {
+  border-color: rgba(255, 0, 51, 0.45);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.app-orbit-center-video img {
+  width: 3.4rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.app-orbit-center-soon {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(91, 141, 239, 0.4);
+  background: rgba(91, 141, 239, 0.12);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Planets on the ring */
+.app-orbit-planet {
+  --planet-size: 4.75rem;
+  appearance: none;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: var(--planet-size);
+  height: var(--planet-size);
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), transparent 45%), #121821;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-size) * -0.435)) rotate(calc(var(--angle) * -1));
+  opacity: 0.85;
+  transition:
+    transform 0.25s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease,
+    width 0.2s ease,
+    height 0.2s ease;
+}
+
+.app-orbit-planet img,
+.app-orbit-planet .soon-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-orbit-planet .soon-mark {
+  display: grid;
+  place-items: center;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.app-orbit-planet:hover {
+  opacity: 1;
+  border-color: rgba(91, 141, 239, 0.65);
+  box-shadow: 0 0 16px rgba(91, 141, 239, 0.35);
+  --planet-size: 5.25rem;
+}
+
+.app-orbit-planet.is-active {
+  opacity: 1;
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 3px rgba(91, 141, 239, 0.28),
+    0 0 24px rgba(91, 141, 239, 0.45);
+  --planet-size: 5.4rem;
+}
+
+.app-orbit-planet:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.app-carousel-hint-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-carousel-nav {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(22, 29, 38, 0.9);
+  color: var(--text);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.app-carousel-nav:hover {
+  border-color: rgba(91, 141, 239, 0.55);
+  background: rgba(91, 141, 239, 0.12);
+}
+
+.app-carousel-counter {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+  min-width: 4rem;
+}
+
+/* Detail panel below the orbit (more readable on small screens / more space) */
+.app-orbit-detail {
+  max-width: 36rem;
+  margin: 0.25rem auto 0;
+  padding: 1.15rem 1.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(22, 29, 38, 0.72);
+}
+
+.app-orbit-detail[hidden] {
+  display: none;
+}
+
+.app-orbit-detail h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.app-orbit-detail p {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.app-orbit-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.app-orbit-detail-actions .store-badge-link img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.app-orbit-detail-video {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+  padding: 0.3rem 0.55rem 0.3rem 0.3rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.app-orbit-detail-video:hover {
+  border-color: rgba(255, 0, 51, 0.45);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.app-orbit-detail-video img {
+  width: 5.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .app-orbit-ring {
+    --orbit-size: min(98vw, 26rem);
+  }
+
+  .app-orbit-planet {
+    --planet-size: 3.5rem;
+  }
+
+  .app-orbit-planet:hover,
+  .app-orbit-planet.is-active {
+    --planet-size: 3.9rem;
+  }
+
+  .app-orbit-center {
+    inset: 24%;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .app-orbit-center-link {
+    max-width: 6.5rem;
+  }
+
+  .app-orbit-center-desc {
+    -webkit-line-clamp: 2;
+  }
+
+  .app-orbit-center-actions .store-badge-link {
+    display: none; /* badges live in detail panel on small screens */
+  }
+
+  .app-orbit-center-video {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .app-orbit-ring {
+    --orbit-size: min(92vw, 48rem);
+  }
+
+  .app-orbit-planet {
+    --planet-size: 5.5rem;
+  }
+
+  .app-orbit-planet:hover,
+  .app-orbit-planet.is-active {
+    --planet-size: 6.1rem;
+  }
+
+  .app-orbit-center {
+    inset: 21%;
+  }
+
+  .app-orbit-center-link {
+    max-width: 11rem;
+  }
+
+  .app-orbit-center-actions .store-badge-link img {
+    height: 36px;
+  }
+}

@@ -19,6 +19,7 @@
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
   <link rel="stylesheet" href="../css/styles.css?v=23">
+  <link rel="stylesheet" href="../css/home-carousel.css?v=5">
 </head>
 <body>
   <div class="page">
@@ -65,178 +66,63 @@
           </div>
         </div>
       </section>
-      <section id="apps">
+      <section id="apps" class="apps-orbit">
         <div class="wrap">
           <h2>Gure app-ak</h2>
-          <p class="section-intro">QLab, OSC, PJLink eta nahasgailu digitalekin lan egiteko tresnak.</p>
-          <div class="grid app-grid">
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Accesible</h3>
-              <p>QLab irisgarritasuna zuzenean: azpitituluak, audio-deskribapena eta zeinu-hizkuntzako bideoa mugikor eta tabletetan.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="accesible.html" aria-label="Ireki Accesible Mac App Store-n">
-              <img src="../assets/images/accesible-square-1080.png" alt="Accesible — Mac App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint">Mac App Store-an erabilgarri. Harpidetza berrientzat <strong>7 egun doan</strong> (eskubidea baduzu); baldintzak erosketan.</p>
+          <p class="section-intro">App-en orbita: ukitu bat erdigunean ikusteko. QLab, OSC, PJLink eta nahasgailu digitaletarako tresnak.</p>
+
+          <div
+            class="app-carousel"
+            data-app-carousel
+            data-ui-more="Gehiago ikusi"
+            data-ui-more-short="Gehiago"
+            data-ui-video="Bideoa"
+            data-ui-video-long="Ikusi YouTube-n"
+            data-ui-soon="Laster"
+            data-ui-open="Ireki"
+            data-ui-soon-aria="laster"
+            data-apps="[{&quot;name&quot;: &quot;Accesible&quot;, &quot;blurb&quot;: &quot;Azpitituluak, audio-deskribapena eta zeinu-hizkuntza QLab-ekin.&quot;, &quot;detail&quot;: &quot;QLab irisgarritasuna zuzenean: azpitituluak, audio-deskribapena eta zeinu-hizkuntzako bideoa mugikor eta tabletetan. 7 egun doan harpidedun berriei (hautagarriak).&quot;, &quot;href&quot;: &quot;accesible.html&quot;, &quot;image&quot;: &quot;../assets/images/accesible-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4wL8Vcm&quot;, &quot;video&quot;: &quot;LidbLByLTzo&quot;}, {&quot;name&quot;: &quot;Shutter PJ-OSC&quot;, &quot;blurb&quot;: &quot;PJLink shutter/power botoiekin edo OSC bidez (Mac).&quot;, &quot;detail&quot;: &quot;PJLink proiektoreen shutter eta power kontrola. Mac App Store-n.&quot;, &quot;href&quot;: &quot;shutter-pj-osc.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pj-osc-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4nwjDiG&quot;}, {&quot;name&quot;: &quot;Shutter PJLINK&quot;, &quot;blurb&quot;: &quot;PJ-LINK iPhone, iPad eta Apple Watch-en.&quot;, &quot;detail&quot;: &quot;PJ-LINK zuzena (TCP 4352). OSC birbidaltzeak Shutter PJ-OSC behar du Mac-en.&quot;, &quot;href&quot;: &quot;shutter-pjlink-ios.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pjlink-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4ds0FVC&quot;}, {&quot;name&quot;: &quot;MIDItoOSC&quot;, &quot;blurb&quot;: &quot;MIDI→OSC eta Live modua mahaien artean.&quot;, &quot;detail&quot;: &quot;2.1.0: mixa bigarren mesa batera klonatu edo itzuli, marka desberdinen artean ere.&quot;, &quot;href&quot;: &quot;miditoosc.html&quot;, &quot;image&quot;: &quot;../assets/images/miditoosc-square-1080.png?v=2&quot;, &quot;store&quot;: &quot;https://apple.co/4ftaJ3c&quot;, &quot;video&quot;: &quot;qsv95wvWbQA&quot;}, {&quot;name&quot;: &quot;Easy Routing&quot;, &quot;blurb&quot;: &quot;M32/X32 routing bisuala Mac-ean.&quot;, &quot;detail&quot;: &quot;Midas M32 eta Behringer X32 matrize routinga: ukitu esleitzeko edo OFF jartzeko.&quot;, &quot;href&quot;: &quot;easy-routing-m32-x32.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-x32-easy-routing-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/4eXQev2&quot;, &quot;video&quot;: &quot;3QmC9ZDqLDo&quot;}, {&quot;name&quot;: &quot;M32 Patch&quot;, &quot;blurb&quot;: &quot;M32/X32 routing bisuala iOS-en.&quot;, &quot;detail&quot;: &quot;Easy Routing-en ideia bera — iPhone eta iPad-erako app independentea.&quot;, &quot;href&quot;: &quot;m32-patch.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-patch-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/44TAL9z&quot;, &quot;video&quot;: &quot;F1m7BdGkXe8&quot;}, {&quot;name&quot;: &quot;Stage With Me&quot;, &quot;blurb&quot;: &quot;Aktoreentzako entsegua (iOS eta Android).&quot;, &quot;detail&quot;: &quot;Ahots sintetikoaren erreplikak, zure ahotsa grabatu eta saioak gorde.&quot;, &quot;href&quot;: &quot;stage-with-me.html&quot;, &quot;image&quot;: &quot;../assets/images/stage-with-me-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4uf2j4h&quot;, &quot;play&quot;: &quot;https://play.google.com/store/apps/details?id=com.stagewithme.app&quot;}, {&quot;name&quot;: &quot;Transparent Screen&quot;, &quot;blurb&quot;: &quot;App berria, argitaratzeko zain.&quot;, &quot;detail&quot;: &quot;App Store-n dagoenean, planeta honek ikonoa, orria eta estekak izango ditu.&quot;, &quot;soon&quot;: true}]"
+          >
+            <div class="app-orbit-ring" aria-label="App-en orbita">
+              <button type="button" class="app-orbit-planet is-active" data-orbit-planet aria-label="Accesible" aria-current="true"><img src="../assets/images/accesible-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJ-OSC"><img src="../assets/images/shutter-pj-osc-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJLINK"><img src="../assets/images/shutter-pjlink-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="MIDItoOSC"><img src="../assets/images/miditoosc-square-1080.png?v=2" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Easy Routing"><img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="M32 Patch"><img src="../assets/images/m32-patch-square-1080.png?v=1" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage With Me"><img src="../assets/images/stage-with-me-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Transparent Screen"><span class="soon-mark">Soon</span></button>
+
+              <div class="app-orbit-center">
+                <a class="app-orbit-center-link" data-orbit-center-link href="accesible.html" aria-label="Ireki Accesible">
+                  <div class="app-orbit-center-art" data-orbit-center-art></div>
+                </a>
+                <h3 data-orbit-center-title>Accesible</h3>
+                <p class="app-orbit-center-desc" data-orbit-center-desc></p>
+                <div class="app-orbit-center-actions" data-orbit-center-actions></div>
+                <a class="app-orbit-center-video" data-orbit-center-video href="#" target="_blank" rel="noopener noreferrer" hidden>
+                  <img src="" alt="" width="120" height="68" loading="lazy">
+                  <span>Bideoa</span>
+                </a>
+                <span class="app-orbit-center-soon" data-orbit-center-soon hidden>Laster</span>
               </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4wL8Vcm" target="_blank" rel="noopener noreferrer" aria-label="7 egun doan · ondoren harpidetza"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
             </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="accesible.html">Gehiago ikusi</a>
+
+            <div class="app-carousel-hint-row">
+              <button type="button" class="app-carousel-nav" data-carousel-prev aria-label="Aurreko app-a">‹</button>
+              <p class="app-carousel-counter" data-carousel-counter>1 / 8</p>
+              <button type="button" class="app-carousel-nav" data-carousel-next aria-label="Hurrengo app-a">›</button>
             </div>
-            <a class="app-card-video" href="https://youtu.be/LidbLByLTzo" target="_blank" rel="noopener noreferrer" aria-label="Ikusi Accesible bideoa YouTube-n">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/LidbLByLTzo/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Ikusi bideoa</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Shutter PJ-OSC (macOS)</h3>
-              <p>PJLink proiektoreen shutter/power kontrola botoiekin edo OSC bidez.</p>
+
+            <div class="app-orbit-detail" data-orbit-detail>
+              <h3 data-orbit-detail-title></h3>
+              <p data-orbit-detail-desc></p>
+              <div class="app-orbit-detail-actions" data-orbit-detail-actions></div>
+              <a class="app-orbit-detail-video" data-orbit-detail-video href="#" target="_blank" rel="noopener noreferrer" hidden>
+                <img src="" alt="" width="160" height="90" loading="lazy">
+                <span>Ikusi YouTube-n</span>
+              </a>
             </div>
-            </article>
-            <a class="app-card-thumb" href="shutter-pj-osc.html" aria-label="Ireki Shutter PJ-OSC App Store-n">
-              <img src="../assets/images/shutter-pj-osc-square-1080.png" alt="Shutter PJ-OSC — App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>App Store-n</strong> Mac-erako.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4nwjDiG" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu Shutter PJ-OSC"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="shutter-pj-osc.html">Gehiago ikusi</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Shutter PJLINK (iOS eta watchOS)</h3>
-              <p>iPhone eta Apple Watch: <strong>PJ-LINK zuzenean</strong> (TCP 4352) bere kabuz dabil. <strong>OSC birbidaltzeak</strong> Mac-en <a href="shutter-pj-osc.html">Shutter PJ-OSC</a> behar du: instalatuta, konfiguratuta eta martxan.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="shutter-pjlink-ios.html" aria-label="Ireki Shutter PJLINK App Store-n">
-              <img src="../assets/images/shutter-pjlink-square-1080.png" alt="Shutter PJLINK — App Store" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>App Store-n</strong> iPhone, iPad eta Apple Watch-erako.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4ds0FVC" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu Shutter PJLINK"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="shutter-pjlink-ios.html">Gehiago ikusi</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>MIDItoOSC</h3>
-              <p>2.1.0 bertsioa: boteretsuagoa eta malguagoa. Live moduak zure mixa bigarren mesa batera klonatzen edo itzultzen du — marka desberdinen artean ere.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="miditoosc.html" aria-label="Ireki MIDItoOSC Mac App Store-an">
-              <img src="../assets/images/miditoosc-square-1080.png?v=2" alt="2.1.0 bertsioa: boteretsuagoa eta malguagoa. Live moduak zure mixa bigarren mesa batera klonatzen edo itzultzen du — marka desberdinen artean ere." loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>2.1.0 bertsioa</strong> Mac App Store-n (macOS).</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4ftaJ3c" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu MIDItoOSC"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="miditoosc.html">Gehiago ikusi</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/qsv95wvWbQA" target="_blank" rel="noopener noreferrer" aria-label="Ikusi MIDItoOSC bideoa YouTube-n">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/qsv95wvWbQA/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Ikusi bideoa</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>M32 / X32 Easy Routing</h3>
-              <p>Midas M32 eta Behringer X32-rako matrize bidezko routing bisuala. Sarrerak eta irteerak segundo gutxitan esleitu.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="easy-routing-m32-x32.html" aria-label="Ireki M32 / X32 Easy Routing Mac App Store-n">
-              <img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt="M32 / X32 Easy Routing — Mac App Store-n eskuragarri" loading="lazy" decoding="async">
-            </a>
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>App Store-n eskuragarri</strong> Mac-erako.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4eXQev2" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu Easy Routing App Store-n"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="easy-routing-m32-x32.html">Gehiago ikusi</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/3QmC9ZDqLDo" target="_blank" rel="noopener noreferrer" aria-label="Ikusi Easy Routing bideoa YouTube-n">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/3QmC9ZDqLDo/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Ikusi bideoa</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>M32 Patch (iOS)</h3>
-              <p>iOS app independentea: matrize routing bisuala Midas M32 eta Behringer X32rako — Easy Routing Mac-ekoaren ideia bera, app bereiziak.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="m32-patch.html" aria-label="Ireki M32 Patch App Store-n">
-              <img src="../assets/images/m32-patch-square-1080.png?v=1" alt="M32 Patch — App Store-n eskuragarri iPhone eta iPad-erako" loading="lazy" decoding="async">
-            </a>
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>App Store-n eskuragarri</strong> iPhone eta iPad-erako.</p>
-            </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/44TAL9z" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu M32 Patch App Store-n"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="btn btn-secondary" href="m32-patch.html">Gehiago ikusi</a>
-            </div>
-            <a class="app-card-video" href="https://youtu.be/F1m7BdGkXe8" target="_blank" rel="noopener noreferrer" aria-label="Ikusi M32 Patch bideoa YouTube-n">
-              <span class="app-card-video-thumb"><img src="https://i.ytimg.com/vi/F1m7BdGkXe8/hqdefault.jpg" alt="" width="160" height="90" loading="lazy" decoding="async"></span>
-              <span class="app-card-video-label">Ikusi bideoa</span>
-            </a>
-          </div>
-<div class="app-grid-item">
-            <article class="card app-card">
-            <div class="app-card-text">
-              <h3>Stage With Me (iOS, iPadOS eta Android)</h3>
-              <p>Aktoreentzako entsegu app-a: ahots sintetikoak erreplikak ematen ditu, zure ahotsa grabatzen du, eta saioak gordetzen ditu bilakaera ikusteko.</p>
-            </div>
-            </article>
-            <a class="app-card-thumb" href="stage-with-me.html" aria-label="Ireki StageWithMe App Store-an">
-              <img src="../assets/images/stage-with-me-square-1080.png" alt="StageWithMe — App Store argitalpena" loading="lazy" decoding="async">
-            </a>
-            
-            <div class="app-card-actions">
-              <p class="app-card-store-hint"><strong>App Store-n eta Google Play-n eskuragarri</strong> <strong>StageWithMe</strong> izenarekin.</p>
-              </div>
-            <div class="app-card-badge-row">
-              <a class="store-badge-link" href="https://apple.co/4uf2j4h" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu StageWithMe"><img src="../assets/images/download-on-the-app-store-en-us-white.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="app-card-cta-secondary">
-              <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.stagewithme.app" target="_blank" rel="noopener noreferrer" aria-label="Deskargatu StageWithMe Google Play-n">
-              <img src="../assets/images/get-it-on-google-play-en.png" alt="Google Play-n eskuragarri" width="202" height="60" loading="lazy" decoding="async">
-            </a>
-              <a class="btn btn-secondary" href="stage-with-me.html">Gehiago ikusi</a>
-            </div>
-            <div class="app-card-video-slot" aria-hidden="true"></div>
-          </div>
           </div>
         </div>
       </section>
@@ -283,5 +169,6 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  <script src="../js/app-carousel.js?v=3"></script>
 </body>
 </html>
