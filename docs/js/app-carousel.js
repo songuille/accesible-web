@@ -140,19 +140,37 @@
       return "left";
     }
 
-    function updateLabelSides() {
+    function sizeClassForOffset(offset) {
+      // Distance from the selected (top) planet along the shorter arc.
+      var d = Math.min(offset, n - offset);
+      if (d === 0) return "top";
+      if (d === 1) return "near";
+      if (d === 2) return "mid";
+      return "far";
+    }
+
+    function updatePlanetChrome() {
       planets.forEach(function (planet, i) {
-        var label = planet.querySelector(".app-orbit-planet-name");
-        if (!label) return;
         var offset = (i - index + n) % n;
-        var side = labelSideForOffset(offset);
-        label.classList.remove(
-          "is-label-top",
-          "is-label-right",
-          "is-label-bottom",
-          "is-label-left"
+        var label = planet.querySelector(".app-orbit-planet-name");
+        if (label) {
+          var side = labelSideForOffset(offset);
+          label.classList.remove(
+            "is-label-top",
+            "is-label-right",
+            "is-label-bottom",
+            "is-label-left"
+          );
+          label.classList.add("is-label-" + side);
+        }
+        var size = sizeClassForOffset(offset);
+        planet.classList.remove(
+          "is-size-top",
+          "is-size-near",
+          "is-size-mid",
+          "is-size-far"
         );
-        label.classList.add("is-label-" + side);
+        planet.classList.add("is-size-" + size);
       });
     }
 
@@ -269,7 +287,7 @@
       if (delta < -n / 2) delta += n;
       rotation += delta * step;
       index = nextIndex;
-      updateLabelSides();
+      updatePlanetChrome();
       renderContent();
       animateSpinTo(rotation);
     }
@@ -288,7 +306,7 @@
     });
 
     root.setAttribute("tabindex", "0");
-    updateLabelSides();
+    updatePlanetChrome();
     paintSpin(0);
     renderContent();
   }

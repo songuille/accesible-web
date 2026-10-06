@@ -283,9 +283,10 @@
   font-weight: 600;
 }
 
-/* Planets on the ring — base angle is fixed; the ring itself spins on iOS-safe transform. */
+/* Planets on the ring — base angle is fixed; the ring itself spins on iOS-safe transform.
+   Selected (always at top) is clearly larger than the rest. */
 .app-orbit-planet {
-  --planet-size: 5.85rem;
+  --planet-size: 4.55rem;
   --angle: 0deg;
   appearance: none;
   position: absolute;
@@ -301,11 +302,11 @@
   overflow: visible;
   cursor: pointer;
   transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-travel) * -1));
-  opacity: 0.9;
+  opacity: 0.82;
   transition:
-    opacity 0.2s ease,
-    width 0.2s ease,
-    height 0.2s ease;
+    opacity 0.25s ease,
+    width 0.35s cubic-bezier(0.33, 1, 0.68, 1),
+    height 0.35s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .app-orbit-planet-billboard {
@@ -414,10 +415,45 @@
   padding: 0.2rem 0.35rem;
 }
 
+/* Size steps by distance from the selected top planet.
+   Top/selected stays largest; near → mid → far get progressively smaller. */
+.app-orbit-planet.is-size-far {
+  --planet-size: 3.55rem;
+  opacity: 0.72;
+}
+
+.app-orbit-planet.is-size-mid {
+  --planet-size: 4.35rem;
+  opacity: 0.82;
+}
+
+.app-orbit-planet.is-size-near {
+  --planet-size: 5.25rem;
+  opacity: 0.9;
+}
+
+.app-orbit-planet.is-size-top,
+.app-orbit-planet.is-active {
+  --planet-size: 7.35rem;
+  opacity: 1;
+  z-index: 6;
+}
+
 .app-orbit-planet:hover {
   opacity: 1;
   z-index: 5;
-  --planet-size: 6.4rem;
+}
+
+.app-orbit-planet.is-size-far:hover:not(.is-active) {
+  --planet-size: 3.9rem;
+}
+
+.app-orbit-planet.is-size-mid:hover:not(.is-active) {
+  --planet-size: 4.75rem;
+}
+
+.app-orbit-planet.is-size-near:hover:not(.is-active) {
+  --planet-size: 5.55rem;
 }
 
 .app-orbit-planet:hover .app-orbit-planet-face {
@@ -434,8 +470,12 @@
 
 .app-orbit-planet.is-active {
   opacity: 1;
-  z-index: 4;
-  --planet-size: 6.55rem;
+  z-index: 6;
+}
+
+.app-orbit-planet.is-active:hover,
+.app-orbit-planet.is-size-top:hover {
+  --planet-size: 7.35rem;
 }
 
 .app-orbit-planet.is-active .app-orbit-planet-face {
@@ -592,12 +632,38 @@
   }
 
   .app-orbit-planet {
-    --planet-size: 3.25rem;
+    --planet-size: 2.65rem;
   }
 
-  .app-orbit-planet:hover,
-  .app-orbit-planet.is-active {
-    --planet-size: 3.55rem;
+  .app-orbit-planet.is-size-far {
+    --planet-size: 2.2rem;
+  }
+
+  .app-orbit-planet.is-size-mid {
+    --planet-size: 2.65rem;
+  }
+
+  .app-orbit-planet.is-size-near {
+    --planet-size: 3.15rem;
+  }
+
+  .app-orbit-planet.is-size-top,
+  .app-orbit-planet.is-active,
+  .app-orbit-planet.is-active:hover,
+  .app-orbit-planet.is-size-top:hover {
+    --planet-size: 4.15rem;
+  }
+
+  .app-orbit-planet.is-size-far:hover:not(.is-active) {
+    --planet-size: 2.45rem;
+  }
+
+  .app-orbit-planet.is-size-mid:hover:not(.is-active) {
+    --planet-size: 2.9rem;
+  }
+
+  .app-orbit-planet.is-size-near:hover:not(.is-active) {
+    --planet-size: 3.35rem;
   }
 
   .app-orbit-planet-name {
@@ -690,12 +756,38 @@
   }
 
   .app-orbit-planet {
-    --planet-size: 6.75rem;
+    --planet-size: 5rem;
   }
 
-  .app-orbit-planet:hover,
-  .app-orbit-planet.is-active {
-    --planet-size: 7.35rem;
+  .app-orbit-planet.is-size-far {
+    --planet-size: 4rem;
+  }
+
+  .app-orbit-planet.is-size-mid {
+    --planet-size: 5rem;
+  }
+
+  .app-orbit-planet.is-size-near {
+    --planet-size: 5.85rem;
+  }
+
+  .app-orbit-planet.is-size-top,
+  .app-orbit-planet.is-active,
+  .app-orbit-planet.is-active:hover,
+  .app-orbit-planet.is-size-top:hover {
+    --planet-size: 8.1rem;
+  }
+
+  .app-orbit-planet.is-size-far:hover:not(.is-active) {
+    --planet-size: 4.4rem;
+  }
+
+  .app-orbit-planet.is-size-mid:hover:not(.is-active) {
+    --planet-size: 5.4rem;
+  }
+
+  .app-orbit-planet.is-size-near:hover:not(.is-active) {
+    --planet-size: 6.2rem;
   }
 
   .app-orbit-center {
