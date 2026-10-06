@@ -68,14 +68,18 @@
   box-sizing: border-box;
 }
 
-/* Circular stage */
+/* Circular stage
+   IMPORTANT: --orbit-size / --orbit-travel must be absolute lengths (rem/px),
+   never min(100%, …). iOS Safari invalidates transform calc() with % customs
+   and parks every planet in the center. */
 .app-orbit-ring {
-  --orbit-size: min(100%, 44rem);
-  --orbit-radius: 0.42;
+  --orbit-size: 44rem;
+  --orbit-travel: 18.5rem; /* ~0.42 * size */
   position: relative;
-  width: var(--orbit-size);
-  height: var(--orbit-size);
+  width: min(var(--orbit-size), 100%);
+  height: min(var(--orbit-size), 100%);
   max-width: 100%;
+  aspect-ratio: 1;
   margin: 0.5rem auto 0.75rem;
   box-sizing: border-box;
 }
@@ -280,7 +284,7 @@
   background: transparent;
   overflow: visible;
   cursor: pointer;
-  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-size) * var(--orbit-radius, 0.42) * -1)) rotate(calc(var(--angle) * -1));
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-travel) * -1)) rotate(calc(var(--angle) * -1));
   opacity: 0.9;
   transition:
     transform 0.25s ease,
@@ -495,7 +499,7 @@
 @media (max-width: 640px) {
   .apps-orbit {
     padding: 1.5rem 0 2.25rem;
-    overflow-x: clip;
+    overflow-x: hidden;
   }
 
   .apps-orbit .wrap {
@@ -504,26 +508,27 @@
   }
 
   .app-carousel {
-    /* room for planet labels under icons without pushing page width */
     padding: 0 0 1.75rem;
     overflow: hidden;
   }
 
   .app-orbit-ring {
-    /* % of wrap — never use vw (overflows padded containers on iPhone) */
-    --orbit-size: min(100%, 19.5rem);
-    --orbit-radius: 0.38;
+    /* rem-only travel distance — safe on iOS; box capped to viewport */
+    --orbit-size: 17.5rem;
+    --orbit-travel: 6.65rem; /* ~0.38 * size */
+    width: min(17.5rem, calc(100vw - 2.75rem));
+    height: min(17.5rem, calc(100vw - 2.75rem));
     margin-top: 0.25rem;
     margin-bottom: 1.25rem;
   }
 
   .app-orbit-planet {
-    --planet-size: 3.15rem;
+    --planet-size: 3.25rem;
   }
 
   .app-orbit-planet:hover,
   .app-orbit-planet.is-active {
-    --planet-size: 3.45rem;
+    --planet-size: 3.55rem;
   }
 
   .app-orbit-planet-name {
@@ -574,7 +579,10 @@
 
 @media (min-width: 900px) {
   .app-orbit-ring {
-    --orbit-size: min(92vw, 50rem);
+    --orbit-size: 48rem;
+    --orbit-travel: 20.15rem;
+    width: min(48rem, 100%);
+    height: min(48rem, 100%);
   }
 
   .app-orbit-planet {
