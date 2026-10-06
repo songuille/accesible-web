@@ -49,7 +49,15 @@
       planet.appendChild(face);
       var label = document.createElement("span");
       label.className = "app-orbit-planet-name";
-      label.textContent = app.name;
+      // Keep "Transparent Screen" on two lines so it doesn't invade the center disk.
+      if (app.name === "Transparent Screen") {
+        label.classList.add("is-stacked");
+        label.appendChild(document.createTextNode("Transparent"));
+        label.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode("Screen"));
+      } else {
+        label.textContent = app.name;
+      }
       planet.appendChild(label);
     });
 
