@@ -349,9 +349,11 @@
 }
 
 .app-orbit-planet-name.is-stacked {
-  min-width: 0;
-  max-width: 5.2rem;
+  width: max-content;
+  min-width: max-content;
+  max-width: none;
   white-space: normal;
+  overflow: visible;
   text-overflow: clip;
   border-radius: 0.65rem;
   line-height: 1.12;
@@ -549,7 +551,10 @@
   }
 
   .app-orbit-planet-name.is-stacked {
-    max-width: 3.4rem;
+    width: max-content;
+    min-width: max-content;
+    max-width: none;
+    overflow: visible;
     padding: 0.14rem 0.28rem;
   }
 
