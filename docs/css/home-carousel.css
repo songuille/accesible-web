@@ -3,9 +3,14 @@
 .apps-orbit {
   position: relative;
   /* Extra top padding so the selected planet's label above the ring isn't clipped */
-  padding: 2rem 0 2.5rem;
+  padding: 1.25rem 0 2rem;
   overflow: hidden;
   max-width: 100%;
+  /* Orbit opens the homepage — keep it near the top of the viewport */
+  min-height: min(72vh, 46rem);
+  display: flex;
+  align-items: center;
+}
   background-color: #050a12;
   background-image:
     linear-gradient(
@@ -36,6 +41,7 @@
 .apps-orbit .wrap {
   position: relative;
   z-index: 1;
+  width: 100%;
   max-width: min(1100px, 100%);
   overflow: visible;
   box-sizing: border-box;
@@ -558,8 +564,10 @@
 
 @media (max-width: 640px) {
   .apps-orbit {
-    padding: 1.35rem 0 1.75rem;
+    padding: 0.85rem 0 1.35rem;
     overflow-x: hidden;
+    min-height: calc(100svh - 4.75rem);
+    align-items: flex-start;
   }
 
   .apps-orbit .wrap {

@@ -396,6 +396,67 @@ a:focus-visible {
   color: var(--accent);
 }
 
+/* Home: claim sits beside the logo so the orbit can start above the fold */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.site-claim {
+  margin: 0;
+  font-size: clamp(0.78rem, 2.2vw, 1.05rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-muted);
+  max-width: 18rem;
+}
+
+.site-header--home {
+  padding: 0.65rem 0;
+}
+
+.site-header--home .inner {
+  gap: 0.75rem;
+}
+
+.home-outro {
+  padding: 2rem 0 2.75rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.home-outro-tagline {
+  margin: 0 auto 1.25rem;
+  max-width: 36rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  /* Keep the home chrome compact so the orbit is visible without scrolling */
+  .site-header--home .nav {
+    display: none;
+  }
+
+  .site-header--home .inner {
+    flex-wrap: nowrap;
+  }
+
+  .site-header--home .header-right {
+    flex-shrink: 0;
+  }
+
+  .site-claim {
+    max-width: 11.5rem;
+    font-size: 0.72rem;
+  }
+}
+
 .nav {
   display: flex;
   gap: 1.25rem;
