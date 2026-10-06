@@ -82,6 +82,10 @@
   aspect-ratio: 1;
   margin: 0.5rem auto 0.75rem;
   box-sizing: border-box;
+  /* Animate a real transform (not a custom property) so iOS Safari interpolates. */
+  transform: rotate(0deg);
+  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
 }
 
 .app-orbit-ring::before {
@@ -117,6 +121,9 @@
   text-align: center;
   padding: 1rem 1.15rem 1.15rem;
   border-radius: 50%;
+  /* Counter-rotate with the ring so the featured app stays upright. */
+  transform: rotate(0deg);
+  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     radial-gradient(circle at 50% 35%, rgba(91, 141, 239, 0.18), transparent 55%),
@@ -268,9 +275,10 @@
   font-weight: 600;
 }
 
-/* Planets on the ring */
+/* Planets on the ring — base angle is fixed; the ring itself spins on iOS-safe transform. */
 .app-orbit-planet {
   --planet-size: 5.85rem;
+  --angle: 0deg;
   appearance: none;
   position: absolute;
   z-index: 3;
@@ -284,22 +292,29 @@
   background: transparent;
   overflow: visible;
   cursor: pointer;
-  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-travel) * -1)) rotate(calc(var(--angle) * -1));
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-travel) * -1));
   opacity: 0.9;
   transition:
-    transform 0.55s cubic-bezier(0.33, 1, 0.68, 1),
     opacity 0.2s ease,
     width 0.2s ease,
     height 0.2s ease;
 }
 
+.app-orbit-planet-billboard {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .app-orbit-planet {
-    transition:
-      transform 0.01ms linear,
-      opacity 0.2s ease,
-      width 0.2s ease,
-      height 0.2s ease;
+  .app-orbit-ring,
+  .app-orbit-center,
+  .app-orbit-planet-billboard {
+    transition-duration: 0.01ms;
   }
 }
 

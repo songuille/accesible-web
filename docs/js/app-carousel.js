@@ -19,6 +19,8 @@
     };
 
     var planets = Array.prototype.slice.call(root.querySelectorAll("[data-orbit-planet]"));
+    var ring = root.querySelector(".app-orbit-ring");
+    var center = root.querySelector(".app-orbit-center");
     var centerArt = root.querySelector("[data-orbit-center-art]");
     var centerTitle = root.querySelector("[data-orbit-center-title]");
     var centerDesc = root.querySelector("[data-orbit-center-desc]");
@@ -39,16 +41,21 @@
     var n = apps.length;
     var step = 360 / n;
     // Accumulated ring rotation so the selected planet sits at the top (0deg).
+    // Applied as real transform on the ring (iOS Safari won't interpolate CSS vars in transform).
     var rotation = 0;
 
     planets.forEach(function (planet, i) {
-      planet.style.setProperty("--angle", step * i + "deg");
+      var baseAngle = step * i;
+      planet.style.setProperty("--angle", baseAngle + "deg");
+      planet.dataset.baseAngle = String(baseAngle);
       var app = apps[i];
       if (!app || planet.querySelector(".app-orbit-planet-name")) return;
+      var billboard = document.createElement("span");
+      billboard.className = "app-orbit-planet-billboard";
       var face = document.createElement("span");
       face.className = "app-orbit-planet-face";
       while (planet.firstChild) face.appendChild(planet.firstChild);
-      planet.appendChild(face);
+      billboard.appendChild(face);
       var label = document.createElement("span");
       label.className = "app-orbit-planet-name";
       // Keep "Transparent Screen" on two lines so it doesn't invade the center disk.
@@ -60,7 +67,8 @@
       } else {
         label.textContent = app.name;
       }
-      planet.appendChild(label);
+      billboard.appendChild(label);
+      planet.appendChild(billboard);
     });
 
     function badgeHtml(href, img, alt, aria) {
@@ -122,11 +130,25 @@
       if (img) img.src = "https://i.ytimg.com/vi/" + app.video + "/hqdefault.jpg";
     }
 
+    function applySpin() {
+      // Ring spins; center + billboards counter-rotate so icons/labels stay upright.
+      if (ring) ring.style.transform = "rotate(" + -rotation + "deg)";
+      if (center) center.style.transform = "rotate(" + rotation + "deg)";
+      planets.forEach(function (planet) {
+        var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
+        var billboard = planet.querySelector(".app-orbit-planet-billboard");
+        if (billboard) {
+          billboard.style.transform = "rotate(" + (rotation - base) + "deg)";
+        }
+      });
+    }
+
     function render() {
       var app = apps[index];
 
+      applySpin();
+
       planets.forEach(function (planet, i) {
-        planet.style.setProperty("--angle", step * i - rotation + "deg");
         planet.classList.toggle("is-active", i === index);
         planet.setAttribute("aria-current", i === index ? "true" : "false");
       });
