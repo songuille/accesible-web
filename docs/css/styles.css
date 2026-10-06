@@ -923,9 +923,13 @@ section h2 {
   }
 }
 
-/* Catálogo ancho: 7 apps en una sola fila sin solaparse */
+/* Catálogo ancho (grid legacy); la órbita limita su propio wrap */
 #apps .wrap {
-  max-width: min(1440px, 98vw);
+  max-width: min(1440px, 100%);
+}
+
+#apps.apps-orbit .wrap {
+  max-width: min(1100px, 100%);
 }
 
 @media (min-width: 1200px) {

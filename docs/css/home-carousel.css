@@ -4,6 +4,7 @@
   position: relative;
   padding: 2.25rem 0 3.25rem;
   overflow: hidden;
+  max-width: 100%;
   background-color: #050a12;
   background-image:
     linear-gradient(
@@ -34,7 +35,9 @@
 .apps-orbit .wrap {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: min(1100px, 100%);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .apps-orbit h2,
@@ -59,15 +62,22 @@
 .app-carousel {
   display: grid;
   gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Circular stage */
 .app-orbit-ring {
-  --orbit-size: min(96vw, 44rem);
+  --orbit-size: min(100%, 44rem);
+  --orbit-radius: 0.42;
   position: relative;
   width: var(--orbit-size);
   height: var(--orbit-size);
+  max-width: 100%;
   margin: 0.5rem auto 0.75rem;
+  box-sizing: border-box;
 }
 
 .app-orbit-ring::before {
@@ -270,7 +280,7 @@
   background: transparent;
   overflow: visible;
   cursor: pointer;
-  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-size) * -0.435)) rotate(calc(var(--angle) * -1));
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-size) * var(--orbit-radius, 0.42) * -1)) rotate(calc(var(--angle) * -1));
   opacity: 0.9;
   transition:
     transform 0.25s ease,
@@ -483,26 +493,63 @@
 }
 
 @media (max-width: 640px) {
+  .apps-orbit {
+    padding: 1.5rem 0 2.25rem;
+    overflow-x: clip;
+  }
+
+  .apps-orbit .wrap {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .app-carousel {
+    /* room for planet labels under icons without pushing page width */
+    padding: 0 0 1.75rem;
+    overflow: hidden;
+  }
+
   .app-orbit-ring {
-    --orbit-size: min(98vw, 28rem);
+    /* % of wrap — never use vw (overflows padded containers on iPhone) */
+    --orbit-size: min(100%, 19.5rem);
+    --orbit-radius: 0.38;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .app-orbit-planet {
-    --planet-size: 4.35rem;
+    --planet-size: 3.15rem;
   }
 
   .app-orbit-planet:hover,
   .app-orbit-planet.is-active {
-    --planet-size: 4.85rem;
+    --planet-size: 3.45rem;
+  }
+
+  .app-orbit-planet-name {
+    font-size: 0.58rem;
+    max-width: 3.6rem;
+    padding: 0.12rem 0.28rem;
+    top: calc(100% + 0.18rem);
+  }
+
+  .app-orbit-planet:hover .app-orbit-planet-name {
+    font-size: 0.72rem;
+    max-width: 4.6rem;
+    transform: translateX(-50%) scale(1.06);
   }
 
   .app-orbit-center {
     inset: 24%;
-    padding: 0.65rem 0.75rem;
+    padding: 0.55rem 0.6rem;
   }
 
   .app-orbit-center-link {
-    max-width: 6.5rem;
+    max-width: 5.5rem;
+  }
+
+  .app-orbit-center h3 {
+    font-size: clamp(1.05rem, 5vw, 1.35rem);
   }
 
   .app-orbit-center-desc {
@@ -515,6 +562,13 @@
 
   .app-orbit-center-video {
     display: none;
+  }
+
+  .app-orbit-detail {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 1rem;
   }
 }
 
