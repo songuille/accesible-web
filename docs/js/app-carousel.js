@@ -38,6 +38,8 @@
     var index = 0;
     var n = apps.length;
     var step = 360 / n;
+    // Accumulated ring rotation so the selected planet sits at the top (0deg).
+    var rotation = 0;
 
     planets.forEach(function (planet, i) {
       planet.style.setProperty("--angle", step * i + "deg");
@@ -124,6 +126,7 @@
       var app = apps[index];
 
       planets.forEach(function (planet, i) {
+        planet.style.setProperty("--angle", step * i - rotation + "deg");
         planet.classList.toggle("is-active", i === index);
         planet.setAttribute("aria-current", i === index ? "true" : "false");
       });
@@ -170,7 +173,14 @@
     }
 
     function go(to) {
-      index = ((to % n) + n) % n;
+      var nextIndex = ((to % n) + n) % n;
+      if (nextIndex === index) return;
+      var delta = nextIndex - index;
+      // Shortest turn on the ring (e.g. 0 → 7 with 8 apps = one step back).
+      if (delta > n / 2) delta -= n;
+      if (delta < -n / 2) delta += n;
+      rotation += delta * step;
+      index = nextIndex;
       render();
     }
 
