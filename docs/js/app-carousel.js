@@ -41,6 +41,16 @@
 
     planets.forEach(function (planet, i) {
       planet.style.setProperty("--angle", step * i + "deg");
+      var app = apps[i];
+      if (!app || planet.querySelector(".app-orbit-planet-name")) return;
+      var face = document.createElement("span");
+      face.className = "app-orbit-planet-face";
+      while (planet.firstChild) face.appendChild(planet.firstChild);
+      planet.appendChild(face);
+      var label = document.createElement("span");
+      label.className = "app-orbit-planet-name";
+      label.textContent = app.name;
+      planet.appendChild(label);
     });
 
     function badgeHtml(href, img, alt, aria) {

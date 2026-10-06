@@ -1,9 +1,22 @@
-/* Local preview: circular orbit carousel — selected app in the center */
+/* Circular orbit carousel — selected app in the center */
 
 .apps-orbit {
   position: relative;
-  padding: 2rem 0 3rem;
+  padding: 2.25rem 0 3.25rem;
   overflow: hidden;
+  background-color: #050a12;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(16, 24, 40, 0.8) 0%,
+      rgba(26, 38, 62, 0.66) 38%,
+      rgba(26, 38, 62, 0.64) 58%,
+      rgba(16, 24, 40, 0.84) 100%
+    ),
+    url("../assets/images/home-orbit-bg.jpg");
+  background-position: center 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .apps-orbit::before {
@@ -12,19 +25,21 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 55% 50% at 50% 48%, rgba(91, 141, 239, 0.2), transparent 68%),
-    radial-gradient(1px 1px at 12% 22%, rgba(255, 255, 255, 0.45), transparent),
-    radial-gradient(1px 1px at 78% 18%, rgba(255, 255, 255, 0.35), transparent),
-    radial-gradient(1.5px 1.5px at 64% 72%, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 28% 68%, rgba(255, 255, 255, 0.25), transparent),
-    radial-gradient(1px 1px at 88% 48%, rgba(255, 255, 255, 0.28), transparent),
-    radial-gradient(1px 1px at 45% 12%, rgba(255, 255, 255, 0.22), transparent);
+    /* soft lift so app icons separate from the dark stage */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.14) 45%, rgba(255, 255, 255, 0.07)),
+    radial-gradient(ellipse 52% 46% at 50% 48%, rgba(150, 195, 255, 0.2), transparent 74%),
+    radial-gradient(ellipse 95% 85% at 50% 50%, transparent 38%, rgba(3, 8, 16, 0.68) 100%);
 }
 
 .apps-orbit .wrap {
   position: relative;
   z-index: 1;
   max-width: 1100px;
+}
+
+.apps-orbit h2,
+.apps-orbit .section-intro {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
 }
 
 .preview-banner {
@@ -48,7 +63,7 @@
 
 /* Circular stage */
 .app-orbit-ring {
-  --orbit-size: min(96vw, 42rem);
+  --orbit-size: min(96vw, 44rem);
   position: relative;
   width: var(--orbit-size);
   height: var(--orbit-size);
@@ -110,7 +125,7 @@
 }
 
 .app-orbit-center-link:hover {
-  transform: scale(1.03);
+  transform: scale(1.08);
   box-shadow: 0 0 0 2px rgba(91, 141, 239, 0.45);
   text-decoration: none;
 }
@@ -152,10 +167,19 @@
 }
 
 .app-orbit-center h3 {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.05rem, 2.8vw, 1.45rem);
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.35rem, 3.6vw, 1.95rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.15;
+  transform-origin: center top;
+  transition: transform 0.22s ease, text-shadow 0.22s ease;
+}
+
+.app-orbit-center:hover h3,
+.app-orbit-center-link:hover + h3 {
+  transform: scale(1.14);
+  text-shadow: 0 4px 22px rgba(91, 141, 239, 0.45);
 }
 
 .app-orbit-center-desc {
@@ -232,7 +256,7 @@
 
 /* Planets on the ring */
 .app-orbit-planet {
-  --planet-size: 4.75rem;
+  --planet-size: 5.85rem;
   appearance: none;
   position: absolute;
   z-index: 3;
@@ -242,20 +266,29 @@
   height: var(--planet-size);
   margin: 0;
   padding: 0;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.14);
-  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), transparent 45%), #121821;
-  overflow: hidden;
+  border: 0;
+  background: transparent;
+  overflow: visible;
   cursor: pointer;
   transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--orbit-size) * -0.435)) rotate(calc(var(--angle) * -1));
-  opacity: 0.85;
+  opacity: 0.9;
   transition:
     transform 0.25s ease,
-    border-color 0.2s ease,
     opacity 0.2s ease,
-    box-shadow 0.2s ease,
     width 0.2s ease,
     height 0.2s ease;
+}
+
+.app-orbit-planet-face {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), transparent 45%), #121821;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .app-orbit-planet img,
@@ -269,30 +302,82 @@
 .app-orbit-planet .soon-mark {
   display: grid;
   place-items: center;
-  font-size: 0.58rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
+.app-orbit-planet-name {
+  position: absolute;
+  top: calc(100% + 0.28rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: max-content;
+  max-width: 7.5rem;
+  padding: 0.18rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(8, 12, 20, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  opacity: 0.92;
+  transition: transform 0.2s ease, font-size 0.2s ease, opacity 0.2s ease, background 0.2s ease, max-width 0.2s ease;
+}
+
 .app-orbit-planet:hover {
   opacity: 1;
+  z-index: 5;
+  --planet-size: 6.4rem;
+}
+
+.app-orbit-planet:hover .app-orbit-planet-face {
   border-color: rgba(91, 141, 239, 0.65);
   box-shadow: 0 0 16px rgba(91, 141, 239, 0.35);
-  --planet-size: 5.25rem;
+}
+
+.app-orbit-planet:hover .app-orbit-planet-name {
+  font-size: 0.95rem;
+  max-width: 10rem;
+  opacity: 1;
+  transform: translateX(-50%) scale(1.12);
+  background: rgba(10, 16, 28, 0.92);
+  border-color: rgba(91, 141, 239, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 .app-orbit-planet.is-active {
   opacity: 1;
+  z-index: 4;
+  --planet-size: 6.55rem;
+}
+
+.app-orbit-planet.is-active .app-orbit-planet-face {
   border-color: var(--accent);
   box-shadow:
     0 0 0 3px rgba(91, 141, 239, 0.28),
     0 0 24px rgba(91, 141, 239, 0.45);
-  --planet-size: 5.4rem;
+}
+
+.app-orbit-planet.is-active .app-orbit-planet-name {
+  opacity: 1;
+  border-color: rgba(91, 141, 239, 0.4);
 }
 
 .app-orbit-planet:focus-visible {
+  outline: none;
+}
+
+.app-orbit-planet:focus-visible .app-orbit-planet-face {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -399,16 +484,16 @@
 
 @media (max-width: 640px) {
   .app-orbit-ring {
-    --orbit-size: min(98vw, 26rem);
+    --orbit-size: min(98vw, 28rem);
   }
 
   .app-orbit-planet {
-    --planet-size: 3.5rem;
+    --planet-size: 4.35rem;
   }
 
   .app-orbit-planet:hover,
   .app-orbit-planet.is-active {
-    --planet-size: 3.9rem;
+    --planet-size: 4.85rem;
   }
 
   .app-orbit-center {
@@ -435,16 +520,16 @@
 
 @media (min-width: 900px) {
   .app-orbit-ring {
-    --orbit-size: min(92vw, 48rem);
+    --orbit-size: min(92vw, 50rem);
   }
 
   .app-orbit-planet {
-    --planet-size: 5.5rem;
+    --planet-size: 6.75rem;
   }
 
   .app-orbit-planet:hover,
   .app-orbit-planet.is-active {
-    --planet-size: 6.1rem;
+    --planet-size: 7.35rem;
   }
 
   .app-orbit-center {
