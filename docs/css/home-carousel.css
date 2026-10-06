@@ -10,7 +10,6 @@
   min-height: min(72vh, 46rem);
   display: flex;
   align-items: center;
-}
   background-color: #050a12;
   background-image:
     linear-gradient(
