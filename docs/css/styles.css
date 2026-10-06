@@ -400,7 +400,7 @@ a:focus-visible {
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 1.65rem;
+  gap: 3.5rem;
   min-width: 0;
   flex: 1 1 auto;
 }
@@ -460,7 +460,7 @@ a:focus-visible {
   }
 
   .brand-lockup {
-    gap: 1.15rem;
+    gap: 2rem;
   }
 
   .site-claim {
