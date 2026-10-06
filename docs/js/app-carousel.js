@@ -130,15 +130,35 @@
       if (img) img.src = "https://i.ytimg.com/vi/" + app.video + "/hqdefault.jpg";
     }
 
+    function labelSideForOffset(offset) {
+      // Selected sits at top: 1 top, 3 right, 1 bottom, 3 left (with 8 apps).
+      if (offset === 0) return "top";
+      if (n % 2 === 0 && offset === n / 2) return "bottom";
+      if (offset < n / 2) return "right";
+      return "left";
+    }
+
     function applySpin() {
       // Ring spins; center + billboards counter-rotate so icons/labels stay upright.
       if (ring) ring.style.transform = "rotate(" + -rotation + "deg)";
       if (center) center.style.transform = "rotate(" + rotation + "deg)";
-      planets.forEach(function (planet) {
+      planets.forEach(function (planet, i) {
         var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
         var billboard = planet.querySelector(".app-orbit-planet-billboard");
         if (billboard) {
           billboard.style.transform = "rotate(" + (rotation - base) + "deg)";
+        }
+        var label = planet.querySelector(".app-orbit-planet-name");
+        if (label) {
+          var offset = (i - index + n) % n;
+          var side = labelSideForOffset(offset);
+          label.classList.remove(
+            "is-label-top",
+            "is-label-right",
+            "is-label-bottom",
+            "is-label-left"
+          );
+          label.classList.add("is-label-" + side);
         }
       });
     }
