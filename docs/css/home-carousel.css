@@ -2,7 +2,8 @@
 
 .apps-orbit {
   position: relative;
-  padding: 1.25rem 0 2.5rem;
+  /* Extra top padding so the selected planet's label above the ring isn't clipped */
+  padding: 2rem 0 2.5rem;
   overflow: hidden;
   max-width: 100%;
   background-color: #050a12;
@@ -36,7 +37,7 @@
   position: relative;
   z-index: 1;
   max-width: min(1100px, 100%);
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -64,8 +65,9 @@
   gap: 1rem;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
+  padding-top: 0.35rem;
 }
 
 /* Circular stage
@@ -80,11 +82,13 @@
   height: min(var(--orbit-size), 100%);
   max-width: 100%;
   aspect-ratio: 1;
-  margin: 0.25rem auto 0.5rem;
+  /* Leave room above the ring for the top miniature label */
+  margin: 1.75rem auto 0.5rem;
   box-sizing: border-box;
   /* Rotation is driven every frame from JS (rAF) for reliable iOS animation. */
   transform: rotate(0deg);
   will-change: transform;
+  overflow: visible;
 }
 
 .app-orbit-ring::before {
@@ -554,18 +558,19 @@
 
 @media (max-width: 640px) {
   .apps-orbit {
-    padding: 0.65rem 0 1.75rem;
+    padding: 1.35rem 0 1.75rem;
     overflow-x: hidden;
   }
 
   .apps-orbit .wrap {
     padding-left: 0.85rem;
     padding-right: 0.85rem;
+    overflow: visible;
   }
 
   .app-carousel {
-    padding: 0 0 1.25rem;
-    overflow: hidden;
+    padding: 0.15rem 0 1.25rem;
+    overflow: visible;
   }
 
   .app-orbit-ring {
@@ -574,7 +579,7 @@
     --orbit-travel: 6.65rem; /* ~0.38 * size */
     width: min(17.5rem, calc(100vw - 2.75rem));
     height: min(17.5rem, calc(100vw - 2.75rem));
-    margin-top: 0;
+    margin-top: 1.45rem;
     margin-bottom: 0.85rem;
   }
 
