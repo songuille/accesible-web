@@ -2,7 +2,7 @@
 
 .apps-orbit {
   position: relative;
-  padding: 2.25rem 0 3.25rem;
+  padding: 1.25rem 0 2.5rem;
   overflow: hidden;
   max-width: 100%;
   background-color: #050a12;
@@ -80,11 +80,10 @@
   height: min(var(--orbit-size), 100%);
   max-width: 100%;
   aspect-ratio: 1;
-  margin: 0.5rem auto 0.75rem;
+  margin: 0.25rem auto 0.5rem;
   box-sizing: border-box;
-  /* Animate a real transform (not a custom property) so iOS Safari interpolates. */
+  /* Rotation is driven every frame from JS (rAF) for reliable iOS animation. */
   transform: rotate(0deg);
-  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
   will-change: transform;
 }
 
@@ -121,9 +120,8 @@
   text-align: center;
   padding: 1rem 1.15rem 1.15rem;
   border-radius: 50%;
-  /* Counter-rotate with the ring so the featured app stays upright. */
+  /* Counter-rotate with the ring so the featured app stays upright (JS/rAF). */
   transform: rotate(0deg);
-  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     radial-gradient(circle at 50% 35%, rgba(91, 141, 239, 0.18), transparent 55%),
@@ -306,16 +304,7 @@
   width: 100%;
   height: 100%;
   transform: rotate(0deg);
-  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
   will-change: transform;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .app-orbit-ring,
-  .app-orbit-center,
-  .app-orbit-planet-billboard {
-    transition-duration: 0.01ms;
-  }
 }
 
 .app-orbit-planet-face {
@@ -565,7 +554,7 @@
 
 @media (max-width: 640px) {
   .apps-orbit {
-    padding: 1.5rem 0 2.25rem;
+    padding: 0.65rem 0 1.75rem;
     overflow-x: hidden;
   }
 
@@ -575,7 +564,7 @@
   }
 
   .app-carousel {
-    padding: 0 0 1.75rem;
+    padding: 0 0 1.25rem;
     overflow: hidden;
   }
 
@@ -585,8 +574,8 @@
     --orbit-travel: 6.65rem; /* ~0.38 * size */
     width: min(17.5rem, calc(100vw - 2.75rem));
     height: min(17.5rem, calc(100vw - 2.75rem));
-    margin-top: 0.25rem;
-    margin-bottom: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.85rem;
   }
 
   .app-orbit-planet {

@@ -40,9 +40,11 @@
     var index = 0;
     var n = apps.length;
     var step = 360 / n;
-    // Accumulated ring rotation so the selected planet sits at the top (0deg).
-    // Applied as real transform on the ring (iOS Safari won't interpolate CSS vars in transform).
+    // Target ring rotation (selected planet at top). Painted via rAF so iOS animates reliably.
     var rotation = 0;
+    var paintedRotation = 0;
+    var spinRaf = 0;
+    var SPIN_MS = 560;
 
     planets.forEach(function (planet, i) {
       var baseAngle = step * i;
@@ -138,35 +140,79 @@
       return "left";
     }
 
-    function applySpin() {
-      // Ring spins; center + billboards counter-rotate so icons/labels stay upright.
-      if (ring) ring.style.transform = "rotate(" + -rotation + "deg)";
-      if (center) center.style.transform = "rotate(" + rotation + "deg)";
+    function updateLabelSides() {
       planets.forEach(function (planet, i) {
-        var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
-        var billboard = planet.querySelector(".app-orbit-planet-billboard");
-        if (billboard) {
-          billboard.style.transform = "rotate(" + (rotation - base) + "deg)";
-        }
         var label = planet.querySelector(".app-orbit-planet-name");
-        if (label) {
-          var offset = (i - index + n) % n;
-          var side = labelSideForOffset(offset);
-          label.classList.remove(
-            "is-label-top",
-            "is-label-right",
-            "is-label-bottom",
-            "is-label-left"
-          );
-          label.classList.add("is-label-" + side);
-        }
+        if (!label) return;
+        var offset = (i - index + n) % n;
+        var side = labelSideForOffset(offset);
+        label.classList.remove(
+          "is-label-top",
+          "is-label-right",
+          "is-label-bottom",
+          "is-label-left"
+        );
+        label.classList.add("is-label-" + side);
       });
     }
 
-    function render() {
-      var app = apps[index];
+    function paintSpin(rot) {
+      // Drive transforms every frame — CSS transitions are unreliable on iOS Safari
+      // when layout also updates (center art / labels) in the same turn.
+      if (ring) ring.style.transform = "rotate(" + -rot + "deg)";
+      if (center) center.style.transform = "rotate(" + rot + "deg)";
+      planets.forEach(function (planet) {
+        var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
+        var billboard = planet.querySelector(".app-orbit-planet-billboard");
+        if (billboard) {
+          billboard.style.transform = "rotate(" + (rot - base) + "deg)";
+        }
+      });
+      paintedRotation = rot;
+    }
 
-      applySpin();
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function prefersReducedMotion() {
+      return (
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      );
+    }
+
+    function animateSpinTo(target) {
+      if (spinRaf) {
+        cancelAnimationFrame(spinRaf);
+        spinRaf = 0;
+      }
+      var from = paintedRotation;
+      var to = target;
+      if (from === to) {
+        paintSpin(to);
+        return;
+      }
+      if (prefersReducedMotion()) {
+        paintSpin(to);
+        return;
+      }
+      var start = performance.now();
+      function frame(now) {
+        var t = Math.min(1, (now - start) / SPIN_MS);
+        paintSpin(from + (to - from) * easeOutCubic(t));
+        if (t < 1) {
+          spinRaf = requestAnimationFrame(frame);
+        } else {
+          spinRaf = 0;
+          paintedRotation = to;
+        }
+      }
+      spinRaf = requestAnimationFrame(frame);
+    }
+
+    function renderContent() {
+      var app = apps[index];
 
       planets.forEach(function (planet, i) {
         planet.classList.toggle("is-active", i === index);
@@ -223,7 +269,9 @@
       if (delta < -n / 2) delta += n;
       rotation += delta * step;
       index = nextIndex;
-      render();
+      updateLabelSides();
+      renderContent();
+      animateSpinTo(rotation);
     }
 
     planets.forEach(function (planet, i) {
@@ -240,7 +288,9 @@
     });
 
     root.setAttribute("tabindex", "0");
-    render();
+    updateLabelSides();
+    paintSpin(0);
+    renderContent();
   }
 
   document.querySelectorAll("[data-app-carousel]").forEach(initOrbit);
