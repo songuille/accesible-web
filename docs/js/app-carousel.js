@@ -42,6 +42,8 @@
     var step = 360 / n;
     var rotation = 0;
     var paintedRotation = 0;
+    var spinFallbackTimer = 0;
+    var SPIN_MS = 560;
 
     planets.forEach(function (planet, i) {
       var baseAngle = step * i;
@@ -168,13 +170,14 @@
       });
     }
 
-    function paintSpin(rot) {
+    function paintRing(rot) {
       if (ring) {
         ring.style.transform = "translate3d(0,0,0) rotate(" + -rot + "deg)";
       }
-      if (center) {
-        center.style.transform = "translate3d(0,0,0) rotate(" + rot + "deg)";
-      }
+      paintedRotation = rot;
+    }
+
+    function paintBillboards(rot) {
       planets.forEach(function (planet) {
         var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
         var billboard = planet.querySelector(".app-orbit-planet-billboard");
@@ -183,7 +186,21 @@
             "translate3d(0,0,0) rotate(" + (rot - base) + "deg)";
         }
       });
-      paintedRotation = rot;
+    }
+
+    function releaseBillboards() {
+      planets.forEach(function (planet) {
+        var billboard = planet.querySelector(".app-orbit-planet-billboard");
+        if (billboard) billboard.style.transform = "";
+      });
+    }
+
+    function finishSpin() {
+      if (spinFallbackTimer) {
+        clearTimeout(spinFallbackTimer);
+        spinFallbackTimer = 0;
+      }
+      paintBillboards(rotation);
     }
 
     function prefersReducedMotion() {
@@ -196,14 +213,24 @@
     function scheduleSpin(to) {
       if (to === paintedRotation) return;
       if (prefersReducedMotion() || !root.classList.contains("orbit-spin-ready")) {
-        paintSpin(to);
+        paintRing(to);
+        paintBillboards(to);
         return;
       }
-      // Double rAF: commit layout, then change transform so iOS runs CSS transition.
+      if (spinFallbackTimer) clearTimeout(spinFallbackTimer);
+      releaseBillboards();
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
-          paintSpin(to);
+          paintRing(to);
+          spinFallbackTimer = setTimeout(finishSpin, SPIN_MS + 80);
         });
+      });
+    }
+
+    if (ring) {
+      ring.addEventListener("transitionend", function (e) {
+        if (e.target !== ring || e.propertyName !== "transform") return;
+        finishSpin();
       });
     }
 
@@ -284,7 +311,8 @@
 
     root.setAttribute("tabindex", "0");
     updatePlanetChrome();
-    paintSpin(0);
+    paintRing(0);
+    paintBillboards(0);
     renderContent();
     requestAnimationFrame(function () {
       root.classList.add("orbit-spin-ready");
