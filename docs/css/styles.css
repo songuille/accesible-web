@@ -481,8 +481,12 @@ a:focus-visible {
 
   .site-header--home .brand-lockup-text {
     margin-left: 0;
-    /* Match desktop intent: indent toward mid nav / Shutter PJLINK zone */
-    padding-left: clamp(4.5rem, 28vw, 9rem);
+    /* Full width under logo — avoid clipping the tagline on narrow screens */
+    padding-left: 0.15rem;
+    padding-right: 0.35rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .site-header--home .nav {
@@ -509,10 +513,12 @@ a:focus-visible {
   .site-claim-sub {
     max-width: none;
     font-size: 0.64rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+    line-height: 1.38;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }
 
