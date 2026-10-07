@@ -40,9 +40,10 @@
     var index = 0;
     var n = apps.length;
     var step = 360 / n;
+    // Target ring rotation (selected planet at top). Painted via rAF so iOS animates reliably.
     var rotation = 0;
     var paintedRotation = 0;
-    var spinFallbackTimer = 0;
+    var spinRaf = 0;
     var SPIN_MS = 560;
 
     planets.forEach(function (planet, i) {
@@ -59,6 +60,7 @@
       billboard.appendChild(face);
       var label = document.createElement("span");
       label.className = "app-orbit-planet-name";
+      // Keep "Transparent Screen" on two lines so it doesn't invade the center disk.
       if (app.name === "Transparent Screen") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Transparent"));
@@ -131,6 +133,7 @@
     }
 
     function labelSideForOffset(offset) {
+      // Selected sits at top: 1 top, 3 right, 1 bottom, 3 left (with 8 apps).
       if (offset === 0) return "top";
       if (n % 2 === 0 && offset === n / 2) return "bottom";
       if (offset < n / 2) return "right";
@@ -138,6 +141,7 @@
     }
 
     function sizeClassForOffset(offset) {
+      // Distance from the selected (top) planet along the shorter arc.
       var d = Math.min(offset, n - offset);
       if (d === 0) return "top";
       if (d === 1) return "near";
@@ -170,37 +174,23 @@
       });
     }
 
-    function paintRing(rot) {
-      if (ring) {
-        ring.style.transform = "translate3d(0,0,0) rotate(" + -rot + "deg)";
-      }
-      paintedRotation = rot;
-    }
-
-    function paintBillboards(rot) {
+    function paintSpin(rot) {
+      // Drive transforms every frame — CSS transitions are unreliable on iOS Safari
+      // when layout also updates (center art / labels) in the same turn.
+      if (ring) ring.style.transform = "rotate(" + -rot + "deg)";
+      if (center) center.style.transform = "rotate(" + rot + "deg)";
       planets.forEach(function (planet) {
         var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
         var billboard = planet.querySelector(".app-orbit-planet-billboard");
         if (billboard) {
-          billboard.style.transform =
-            "translate3d(0,0,0) rotate(" + (rot - base) + "deg)";
+          billboard.style.transform = "rotate(" + (rot - base) + "deg)";
         }
       });
+      paintedRotation = rot;
     }
 
-    function releaseBillboards() {
-      planets.forEach(function (planet) {
-        var billboard = planet.querySelector(".app-orbit-planet-billboard");
-        if (billboard) billboard.style.transform = "";
-      });
-    }
-
-    function finishSpin() {
-      if (spinFallbackTimer) {
-        clearTimeout(spinFallbackTimer);
-        spinFallbackTimer = 0;
-      }
-      paintBillboards(rotation);
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
     }
 
     function prefersReducedMotion() {
@@ -210,28 +200,33 @@
       );
     }
 
-    function scheduleSpin(to) {
-      if (to === paintedRotation) return;
-      if (prefersReducedMotion() || !root.classList.contains("orbit-spin-ready")) {
-        paintRing(to);
-        paintBillboards(to);
+    function animateSpinTo(target) {
+      if (spinRaf) {
+        cancelAnimationFrame(spinRaf);
+        spinRaf = 0;
+      }
+      var from = paintedRotation;
+      var to = target;
+      if (from === to) {
+        paintSpin(to);
         return;
       }
-      if (spinFallbackTimer) clearTimeout(spinFallbackTimer);
-      releaseBillboards();
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          paintRing(to);
-          spinFallbackTimer = setTimeout(finishSpin, SPIN_MS + 80);
-        });
-      });
-    }
-
-    if (ring) {
-      ring.addEventListener("transitionend", function (e) {
-        if (e.target !== ring || e.propertyName !== "transform") return;
-        finishSpin();
-      });
+      if (prefersReducedMotion()) {
+        paintSpin(to);
+        return;
+      }
+      var start = performance.now();
+      function frame(now) {
+        var t = Math.min(1, (now - start) / SPIN_MS);
+        paintSpin(from + (to - from) * easeOutCubic(t));
+        if (t < 1) {
+          spinRaf = requestAnimationFrame(frame);
+        } else {
+          spinRaf = 0;
+          paintedRotation = to;
+        }
+      }
+      spinRaf = requestAnimationFrame(frame);
     }
 
     function renderContent() {
@@ -287,13 +282,14 @@
       var nextIndex = ((to % n) + n) % n;
       if (nextIndex === index) return;
       var delta = nextIndex - index;
+      // Shortest turn on the ring (e.g. 0 → 7 with 8 apps = one step back).
       if (delta > n / 2) delta -= n;
       if (delta < -n / 2) delta += n;
       rotation += delta * step;
       index = nextIndex;
       updatePlanetChrome();
       renderContent();
-      scheduleSpin(rotation);
+      animateSpinTo(rotation);
     }
 
     planets.forEach(function (planet, i) {
@@ -311,12 +307,8 @@
 
     root.setAttribute("tabindex", "0");
     updatePlanetChrome();
-    paintRing(0);
-    paintBillboards(0);
+    paintSpin(0);
     renderContent();
-    requestAnimationFrame(function () {
-      root.classList.add("orbit-spin-ready");
-    });
   }
 
   document.querySelectorAll("[data-app-carousel]").forEach(initOrbit);

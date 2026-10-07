@@ -79,7 +79,7 @@
    IMPORTANT: --orbit-size / --orbit-travel must be absolute lengths (rem/px),
    never min(100%, …). iOS Safari invalidates transform calc() with % customs
    and parks every planet in the center. */
-.app-orbit-stage {
+.app-orbit-ring {
   --orbit-size: 44rem;
   --orbit-travel: 18.5rem; /* ~0.42 * size */
   position: relative;
@@ -87,32 +87,13 @@
   height: min(var(--orbit-size), 100%);
   max-width: 100%;
   aspect-ratio: 1;
+  /* Leave room above the ring for the top miniature label */
   margin: 1.75rem auto 0.5rem;
   box-sizing: border-box;
-}
-
-.app-orbit-ring {
-  position: absolute;
-  inset: 0;
-  box-sizing: border-box;
-  transform: translate3d(0, 0, 0) rotate(0deg);
-  overflow: visible;
-}
-
-[data-app-carousel]:not(.orbit-spin-ready) .app-orbit-ring {
-  transition: none !important;
-}
-
-/* iOS: animate only the ring; center stays fixed; billboards snap upright after. */
-[data-app-carousel].orbit-spin-ready .app-orbit-ring {
-  transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
+  /* Rotation is driven every frame from JS (rAF) for reliable iOS animation. */
+  transform: rotate(0deg);
   will-change: transform;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-app-carousel].orbit-spin-ready .app-orbit-ring {
-    transition: none;
-  }
+  overflow: visible;
 }
 
 .app-orbit-ring::before {
@@ -148,6 +129,8 @@
   text-align: center;
   padding: 1rem 1.15rem 1.15rem;
   border-radius: 50%;
+  /* Counter-rotate with the ring so the featured app stays upright (JS/rAF). */
+  transform: rotate(0deg);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     radial-gradient(circle at 50% 35%, rgba(91, 141, 239, 0.18), transparent 55%),
@@ -330,7 +313,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transform: translate3d(0, 0, 0) rotate(0deg);
+  transform: rotate(0deg);
+  will-change: transform;
 }
 
 .app-orbit-planet-face {
@@ -636,7 +620,7 @@
     overflow: visible;
   }
 
-  .app-orbit-stage {
+  .app-orbit-ring {
     /* rem-only travel distance — safe on iOS; box capped to viewport */
     --orbit-size: 17.5rem;
     --orbit-travel: 6.65rem; /* ~0.38 * size */
@@ -763,7 +747,7 @@
 }
 
 @media (min-width: 900px) {
-  .app-orbit-stage {
+  .app-orbit-ring {
     --orbit-size: 48rem;
     --orbit-travel: 20.15rem;
     width: min(48rem, 100%);
