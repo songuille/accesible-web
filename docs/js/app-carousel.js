@@ -44,7 +44,9 @@
     var rotation = 0;
     var paintedRotation = 0;
     var spinRaf = 0;
-    var SPIN_MS = 560;
+    var spinMsParsed = parseInt(root.getAttribute("data-spin-ms"), 10);
+    var SPIN_MS =
+      spinMsParsed >= 200 && spinMsParsed <= 2000 ? spinMsParsed : 780;
 
     planets.forEach(function (planet, i) {
       var baseAngle = step * i;
@@ -177,13 +179,16 @@
     function paintSpin(rot) {
       // Drive transforms every frame — CSS transitions are unreliable on iOS Safari
       // when layout also updates (center art / labels) in the same turn.
-      if (ring) ring.style.transform = "rotate(" + -rot + "deg)";
-      if (center) center.style.transform = "rotate(" + rot + "deg)";
+      var ringTf = "translate3d(0,0,0) rotate(" + -rot + "deg)";
+      var centerTf = "translate3d(0,0,0) rotate(" + rot + "deg)";
+      if (ring) ring.style.transform = ringTf;
+      if (center) center.style.transform = centerTf;
       planets.forEach(function (planet) {
         var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
         var billboard = planet.querySelector(".app-orbit-planet-billboard");
         if (billboard) {
-          billboard.style.transform = "rotate(" + (rot - base) + "deg)";
+          billboard.style.transform =
+            "translate3d(0,0,0) rotate(" + (rot - base) + "deg)";
         }
       });
       paintedRotation = rot;
@@ -200,7 +205,8 @@
       );
     }
 
-    function animateSpinTo(target) {
+    function animateSpinTo(target, onDone) {
+      onDone = typeof onDone === "function" ? onDone : function () {};
       if (spinRaf) {
         cancelAnimationFrame(spinRaf);
         spinRaf = 0;
@@ -209,10 +215,12 @@
       var to = target;
       if (from === to) {
         paintSpin(to);
+        onDone();
         return;
       }
       if (prefersReducedMotion()) {
         paintSpin(to);
+        onDone();
         return;
       }
       var start = performance.now();
@@ -224,6 +232,7 @@
         } else {
           spinRaf = 0;
           paintedRotation = to;
+          onDone();
         }
       }
       spinRaf = requestAnimationFrame(frame);
@@ -288,8 +297,8 @@
       rotation += delta * step;
       index = nextIndex;
       updatePlanetChrome();
-      renderContent();
-      animateSpinTo(rotation);
+      // Defer center/detail DOM updates until the spin finishes so iOS paints each frame.
+      animateSpinTo(rotation, renderContent);
     }
 
     planets.forEach(function (planet, i) {
