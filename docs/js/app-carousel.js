@@ -40,11 +40,17 @@
     var index = 0;
     var n = apps.length;
     var step = 360 / n;
-    // Target ring rotation (selected planet at top). Painted via rAF so iOS animates reliably.
+    // Target ring rotation (selected planet at top).
     var rotation = 0;
     var paintedRotation = 0;
     var spinRaf = 0;
+    var spinAnim = null;
     var SPIN_MS = 560;
+    var SPIN_EASING = "cubic-bezier(0.33, 1, 0.68, 1)";
+    var canAnimate =
+      typeof Element !== "undefined" &&
+      ring &&
+      typeof ring.animate === "function";
 
     planets.forEach(function (planet, i) {
       var baseAngle = step * i;
@@ -175,8 +181,6 @@
     }
 
     function paintSpin(rot) {
-      // Drive transforms every frame — CSS transitions are unreliable on iOS Safari
-      // when layout also updates (center art / labels) in the same turn.
       if (ring) ring.style.transform = "rotate(" + -rot + "deg)";
       if (center) center.style.transform = "rotate(" + rot + "deg)";
       planets.forEach(function (planet) {
@@ -187,6 +191,28 @@
         }
       });
       paintedRotation = rot;
+    }
+
+    function cancelSpinAnimations() {
+      if (spinAnim && spinAnim.cancel) {
+        spinAnim.cancel();
+        spinAnim = null;
+      }
+      if (spinRaf) {
+        cancelAnimationFrame(spinRaf);
+        spinRaf = 0;
+      }
+      function cancelEl(el) {
+        if (!el || !el.getAnimations) return;
+        el.getAnimations().forEach(function (a) {
+          a.cancel();
+        });
+      }
+      cancelEl(ring);
+      cancelEl(center);
+      planets.forEach(function (planet) {
+        cancelEl(planet.querySelector(".app-orbit-planet-billboard"));
+      });
     }
 
     function easeOutCubic(t) {
@@ -200,11 +226,67 @@
       );
     }
 
-    function animateSpinTo(target) {
-      if (spinRaf) {
-        cancelAnimationFrame(spinRaf);
-        spinRaf = 0;
+    function animateSpinWithWAAPI(from, to) {
+      cancelSpinAnimations();
+      var timing = {
+        duration: SPIN_MS,
+        easing: SPIN_EASING,
+        fill: "forwards",
+      };
+      var ringAnim = ring.animate(
+        [
+          { transform: "rotate(" + -from + "deg)" },
+          { transform: "rotate(" + -to + "deg)" },
+        ],
+        timing
+      );
+      spinAnim = ringAnim;
+      if (center) {
+        center.animate(
+          [
+            { transform: "rotate(" + from + "deg)" },
+            { transform: "rotate(" + to + "deg)" },
+          ],
+          timing
+        );
       }
+      planets.forEach(function (planet) {
+        var base = parseFloat(planet.dataset.baseAngle || "0") || 0;
+        var billboard = planet.querySelector(".app-orbit-planet-billboard");
+        if (!billboard) return;
+        billboard.animate(
+          [
+            { transform: "rotate(" + (from - base) + "deg)" },
+            { transform: "rotate(" + (to - base) + "deg)" },
+          ],
+          timing
+        );
+      });
+      ringAnim.onfinish = function () {
+        spinAnim = null;
+        paintSpin(to);
+      };
+      ringAnim.oncancel = function () {
+        if (spinAnim === ringAnim) spinAnim = null;
+      };
+    }
+
+    function animateSpinWithRaf(from, to) {
+      cancelSpinAnimations();
+      var start = performance.now();
+      function frame(now) {
+        var t = Math.min(1, (now - start) / SPIN_MS);
+        paintSpin(from + (to - from) * easeOutCubic(t));
+        if (t < 1) {
+          spinRaf = requestAnimationFrame(frame);
+        } else {
+          spinRaf = 0;
+        }
+      }
+      spinRaf = requestAnimationFrame(frame);
+    }
+
+    function animateSpinTo(target) {
       var from = paintedRotation;
       var to = target;
       if (from === to) {
@@ -215,18 +297,11 @@
         paintSpin(to);
         return;
       }
-      var start = performance.now();
-      function frame(now) {
-        var t = Math.min(1, (now - start) / SPIN_MS);
-        paintSpin(from + (to - from) * easeOutCubic(t));
-        if (t < 1) {
-          spinRaf = requestAnimationFrame(frame);
-        } else {
-          spinRaf = 0;
-          paintedRotation = to;
-        }
+      if (canAnimate) {
+        animateSpinWithWAAPI(from, to);
+        return;
       }
-      spinRaf = requestAnimationFrame(frame);
+      animateSpinWithRaf(from, to);
     }
 
     function renderContent() {
@@ -288,8 +363,10 @@
       rotation += delta * step;
       index = nextIndex;
       updatePlanetChrome();
-      renderContent();
       animateSpinTo(rotation);
+      requestAnimationFrame(function () {
+        renderContent();
+      });
     }
 
     planets.forEach(function (planet, i) {
