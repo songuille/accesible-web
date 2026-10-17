@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-STORE = "https://apps.apple.com/app/id6816732870"
+STORE = "https://apple.co/4eCORRI"
 IMAGE = "../assets/images/transparent-screen-square-1080.png"
 BANNER = "../assets/images/transparent-screen-banner-1200x720.png"
 HREF = "transparent-screen.html"
