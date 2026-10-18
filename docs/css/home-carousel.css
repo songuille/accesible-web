@@ -1,5 +1,10 @@
 /* Circular orbit carousel — selected app in the center */
 
+/* Author `display:` rules must never override the HTML hidden attribute. */
+[data-app-carousel] [hidden] {
+  display: none !important;
+}
+
 .apps-orbit {
   position: relative;
   /* Extra top padding so the selected planet's label above the ring isn't clipped */
@@ -758,7 +763,7 @@
   .app-orbit-center-actions,
   .app-orbit-center-video,
   .app-orbit-center-soon {
-    display: none; /* detail panel below keeps the rest */
+    display: none !important; /* detail panel below keeps the rest */
   }
 
   .app-orbit-detail {
