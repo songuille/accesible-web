@@ -113,7 +113,7 @@
           "Google Play · " + app.name
         );
       }
-      if (app.href && !app.soon) {
+      if (app.href) {
         html +=
           '<a class="btn btn-secondary" href="' +
           app.href +
@@ -260,12 +260,16 @@
         }
       }
       if (centerLink) {
-        if (app.href && !app.soon) {
+        if (app.href) {
           centerLink.href = app.href;
-          centerLink.setAttribute("aria-label", ui.open + " " + app.name);
           centerLink.removeAttribute("aria-disabled");
           centerLink.classList.remove("is-disabled");
           centerLink.tabIndex = 0;
+          if (app.soon) {
+            centerLink.setAttribute("aria-label", app.name + " (" + ui.soonAria + ")");
+          } else {
+            centerLink.setAttribute("aria-label", ui.open + " " + app.name);
+          }
         } else {
           centerLink.removeAttribute("href");
           centerLink.setAttribute("aria-disabled", "true");

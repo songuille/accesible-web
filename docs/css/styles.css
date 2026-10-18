@@ -1339,3 +1339,18 @@ section h2 {
   object-position: center center;
   background: color-mix(in srgb, var(--panel) 86%, white 14%);
 }
+
+
+.app-icon-hero {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem auto 1.25rem;
+}
+
+.app-icon-hero img {
+  width: min(20rem, 72vw);
+  height: auto;
+  border-radius: 22%;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
