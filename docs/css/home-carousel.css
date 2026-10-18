@@ -271,7 +271,6 @@
 }
 
 .app-orbit-center-soon {
-  display: inline-block;
   margin-top: 0.35rem;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
@@ -280,6 +279,15 @@
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* Do not override [hidden] — otherwise "Próximamente" stays visible for every app. */
+.app-orbit-center-soon:not([hidden]) {
+  display: inline-block;
+}
+
+.app-orbit-center-soon[hidden] {
+  display: none !important;
 }
 
 /* Planets on the ring — base angle is fixed; the ring itself spins on iOS-safe transform.
