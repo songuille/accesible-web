@@ -68,6 +68,11 @@
         label.appendChild(document.createTextNode("Transparent"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Screen"));
+      } else if (app.name === "Stage Recorder") {
+        label.classList.add("is-stacked");
+        label.appendChild(document.createTextNode("Stage"));
+        label.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode("Recorder"));
       } else {
         label.textContent = app.name;
       }
@@ -135,7 +140,7 @@
     }
 
     function labelSideForOffset(offset) {
-      // Selected sits at top: 1 top, 3 right, 1 bottom, 3 left (with 8 apps).
+      // Selected sits at top; sides follow ring offset (works for even/odd planet counts).
       if (offset === 0) return "top";
       if (n % 2 === 0 && offset === n / 2) return "bottom";
       if (offset < n / 2) return "right";
