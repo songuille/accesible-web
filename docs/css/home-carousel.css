@@ -242,7 +242,6 @@
 }
 
 .app-orbit-center-video {
-  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   margin-top: 0.45rem;
@@ -254,6 +253,15 @@
   text-decoration: none;
   font-size: 0.72rem;
   font-weight: 600;
+}
+
+/* Same as center-soon: class display must not override the hidden attribute. */
+.app-orbit-center-video:not([hidden]) {
+  display: inline-flex;
+}
+
+.app-orbit-center-video[hidden] {
+  display: none !important;
 }
 
 .app-orbit-center-video:hover {
@@ -583,7 +591,6 @@
 }
 
 .app-orbit-detail-video {
-  display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   margin-top: 0.85rem;
@@ -594,6 +601,14 @@
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+.app-orbit-detail-video:not([hidden]) {
+  display: inline-flex;
+}
+
+.app-orbit-detail-video[hidden] {
+  display: none !important;
 }
 
 .app-orbit-detail-video:hover {

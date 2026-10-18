@@ -128,14 +128,15 @@
       if (!el) return;
       var label = el.querySelector("span");
       if (label) label.textContent = longLabel ? ui.videoLong : ui.video;
+      var img = el.querySelector("img");
       if (!app.video) {
         el.hidden = true;
         el.removeAttribute("href");
+        if (img) img.removeAttribute("src");
         return;
       }
       el.hidden = false;
       el.href = "https://youtu.be/" + app.video;
-      var img = el.querySelector("img");
       if (img) img.src = "https://i.ytimg.com/vi/" + app.video + "/hqdefault.jpg";
     }
 
