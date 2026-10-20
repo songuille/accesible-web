@@ -73,6 +73,11 @@
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Recorder"));
+      } else if (app.name === "Stage Edit") {
+        label.classList.add("is-stacked");
+        label.appendChild(document.createTextNode("Stage"));
+        label.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode("Edit"));
       } else {
         label.textContent = app.name;
       }
