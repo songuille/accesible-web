@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=15">
+  <link rel="stylesheet" href="../css/styles.css?v=36">
 </head>
 <body>
   <div class="page">
@@ -28,20 +28,35 @@
         <div class="header-right">
           <nav class="nav" aria-label="Principal">
             <a href="index.html">Inicio</a>
-            <a href="accesible.html">Accesible</a>
-            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
-            <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
-            <a href="miditoosc.html">MIDItoOSC</a>
-            <a href="easy-routing-m32-x32.html">Easy Routing</a>
-            <a href="m32-patch.html">M32 Patch</a>
-            <a href="stage-with-me.html">Stage With Me</a>
-            <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
-            <a href="stage-edit.html">Stage Edit</a>
-            <a href="stage-rf.html">Stage RF</a>
+            <details class="nav-group">
+              <summary>Audio</summary>
+              <div class="nav-group-menu">
+              <a href="stage-multitrack.html">Stage Multitrack</a>
+              <a href="stage-edit.html">Stage Edit</a>
+              </div>
+            </details>
+            <a href="miditoosc.html">MIDI / OSC</a>
+            <a href="stage-rf.html">RF</a>
+            <a href="accesible.html">Accesibilidad</a>
+            <details class="nav-group">
+              <summary>Proyectores y pantalla</summary>
+              <div class="nav-group-menu">
+              <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+              <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
+              <a href="transparent-screen.html">Transparent Screen</a>
+              </div>
+            </details>
+            <details class="nav-group">
+              <summary>Patch y routing</summary>
+              <div class="nav-group-menu">
+              <a href="easy-routing-m32-x32.html">Easy Routing</a>
+              <a href="m32-patch.html">M32 Patch</a>
+              </div>
+            </details>
+            <a href="stage-with-me.html">Ensayo actoral</a>
             <a href="compare.html">Comparativa</a>
             <a href="resources.html">Recursos</a>
-            <a href="faq.html">FAQ</a>
+            <a href="faq.html" aria-current="page">FAQ</a>
             <a href="support.html">Soporte</a>
           </nav>
           <div class="lang-dropdown" role="navigation" aria-label="Selector de idioma">

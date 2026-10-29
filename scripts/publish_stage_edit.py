@@ -349,7 +349,7 @@ def build_page(lang):
             <a href="m32-patch.html">M32 Patch</a>
             <a href="stage-with-me.html">Stage With Me</a>
             <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
+            <a href="stage-multitrack.html">Stage Multitrack</a>
             <a href="stage-edit.html">Stage Edit</a>
             <a href="compare.html">{c['nav_compare']}</a>
             <a href="resources.html">{c['nav_resources']}</a>
@@ -468,10 +468,10 @@ def main():
         text = text[: m.start(1)] + encoded + text[m.end(1) :]
 
         if 'aria-label="Stage Edit"' not in text:
-            marker = 'aria-label="Stage Recorder"'
+            marker = 'aria-label="Stage Multitrack"'
             i = text.find(marker)
             if i < 0:
-                raise SystemExit(f"no Stage Recorder planet {lang}")
+                raise SystemExit(f"no Stage Multitrack planet {lang}")
             btn_end = text.find("</button>", i) + len("</button>")
             text = text[:btn_end] + "\n              " + planet_btn + text[btn_end:]
 
@@ -496,13 +496,13 @@ def main():
                 print("compare", lang)
 
     nav_pat = re.compile(
-        r'(<a href="stage-recorder\.html">Stage Recorder</a>)'
+        r'(<a href="stage-recorder\.html">Stage Multitrack</a>)'
         r'(?!\s*\n?\s*<a href="stage-edit\.html">)'
     )
     nav_count = 0
     for path in (ROOT / "docs").rglob("*.html"):
         text = path.read_text(encoding="utf-8")
-        if 'href="stage-recorder.html">Stage Recorder</a>' not in text:
+        if 'href="stage-multitrack.html">Stage Multitrack</a>' not in text:
             continue
         if 'href="stage-edit.html">Stage Edit</a>' in text:
             continue
@@ -518,7 +518,7 @@ def main():
     js_path = ROOT / "docs/js/app-carousel.js"
     js = js_path.read_text(encoding="utf-8")
     if 'app.name === "Stage Edit"' not in js:
-        old = '''      } else if (app.name === "Stage Recorder") {
+        old = '''      } else if (app.name === "Stage Multitrack") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
@@ -526,7 +526,7 @@ def main():
       } else {
         label.textContent = app.name;
       }'''
-        new = '''      } else if (app.name === "Stage Recorder") {
+        new = '''      } else if (app.name === "Stage Multitrack") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));

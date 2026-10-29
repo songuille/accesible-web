@@ -18,8 +18,8 @@
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=35">
-  <link rel="stylesheet" href="../css/home-carousel.css?v=48">
+  <link rel="stylesheet" href="../css/styles.css?v=36">
+  <link rel="stylesheet" href="../css/home-carousel.css?v=49">
 </head>
 <body>
   <div class="page">
@@ -43,19 +43,34 @@
   </details>
 </div>
         </div>
-        <nav class="nav" aria-label="Navegació principal">
-            <a href="index.html">Inici</a>
-            <a href="accesible.html">Accesible</a>
-            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
-            <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
-            <a href="miditoosc.html">MIDItoOSC</a>
-            <a href="easy-routing-m32-x32.html">Easy Routing</a>
-            <a href="m32-patch.html">M32 Patch</a>
-            <a href="stage-with-me.html">Stage With Me</a>
-            <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
-            <a href="stage-edit.html">Stage Edit</a>
-            <a href="stage-rf.html">Stage RF</a>
+        <nav class="nav" aria-label="Principal">
+            <a href="index.html" aria-current="page">Inici</a>
+            <details class="nav-group">
+              <summary>Àudio</summary>
+              <div class="nav-group-menu">
+              <a href="stage-multitrack.html">Stage Multitrack</a>
+              <a href="stage-edit.html">Stage Edit</a>
+              </div>
+            </details>
+            <a href="miditoosc.html">MIDI / OSC</a>
+            <a href="stage-rf.html">RF</a>
+            <a href="accesible.html">Accessibilitat</a>
+            <details class="nav-group">
+              <summary>Projectors i pantalla</summary>
+              <div class="nav-group-menu">
+              <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+              <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
+              <a href="transparent-screen.html">Transparent Screen</a>
+              </div>
+            </details>
+            <details class="nav-group">
+              <summary>Patch i routing</summary>
+              <div class="nav-group-menu">
+              <a href="easy-routing-m32-x32.html">Easy Routing</a>
+              <a href="m32-patch.html">M32 Patch</a>
+              </div>
+            </details>
+            <a href="stage-with-me.html">Assaig actoral</a>
             <a href="compare.html">Comparativa</a>
             <a href="resources.html">Recursos</a>
             <a href="faq.html">FAQ</a>
@@ -78,26 +93,26 @@
             data-ui-soon="Properament"
             data-ui-open="Obrir"
             data-ui-soon-aria="properament"
-            data-apps="[{&quot;name&quot;: &quot;Accesible&quot;, &quot;blurb&quot;: &quot;Subtítols, audiodescripció i llengua de signes amb QLab.&quot;, &quot;detail&quot;: &quot;Accessibilitat en viu amb QLab: subtítols, audiodescripció i vídeo en llengua de signes al mòbil i la tablet. 7 dies gratis per a nous subscriptors elegibles.&quot;, &quot;href&quot;: &quot;accesible.html&quot;, &quot;image&quot;: &quot;../assets/images/accesible-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4wL8Vcm&quot;, &quot;video&quot;: &quot;LidbLByLTzo&quot;}, {&quot;name&quot;: &quot;Shutter PJ-OSC&quot;, &quot;blurb&quot;: &quot;Shutter i power PJLink amb botons o OSC (Mac).&quot;, &quot;detail&quot;: &quot;Controla shutter i power de projectors PJLink amb botons o OSC. A la Mac App Store.&quot;, &quot;href&quot;: &quot;shutter-pj-osc.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pj-osc-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4nwjDiG&quot;}, {&quot;name&quot;: &quot;Shutter PJLINK&quot;, &quot;blurb&quot;: &quot;PJ-LINK a iPhone, iPad i Apple Watch.&quot;, &quot;detail&quot;: &quot;Mode PJ-LINK directe (TCP 4352). El reenviament OSC exigeix Shutter PJ-OSC al Mac.&quot;, &quot;href&quot;: &quot;shutter-pjlink-ios.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pjlink-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4ds0FVC&quot;}, {&quot;name&quot;: &quot;MIDItoOSC&quot;, &quot;blurb&quot;: &quot;MIDI→OSC i mode Live entre taules.&quot;, &quot;detail&quot;: &quot;Versió 2.1.0: clona o tradueix la mescla a una segona taula, fins i tot entre consoles diferents.&quot;, &quot;href&quot;: &quot;miditoosc.html&quot;, &quot;image&quot;: &quot;../assets/images/miditoosc-square-1080.png?v=2&quot;, &quot;store&quot;: &quot;https://apple.co/4ftaJ3c&quot;, &quot;video&quot;: &quot;qsv95wvWbQA&quot;}, {&quot;name&quot;: &quot;Easy Routing&quot;, &quot;blurb&quot;: &quot;Routing visual M32/X32 al Mac.&quot;, &quot;detail&quot;: &quot;Routing en graella per a Midas M32 i Behringer X32: toca per assignar o OFF.&quot;, &quot;href&quot;: &quot;easy-routing-m32-x32.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-x32-easy-routing-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/4eXQev2&quot;, &quot;video&quot;: &quot;3QmC9ZDqLDo&quot;}, {&quot;name&quot;: &quot;M32 Patch&quot;, &quot;blurb&quot;: &quot;Routing visual M32/X32 a iOS.&quot;, &quot;detail&quot;: &quot;Mateixa idea qu’Easy Routing, app independent per a iPhone i iPad.&quot;, &quot;href&quot;: &quot;m32-patch.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-patch-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/44TAL9z&quot;, &quot;video&quot;: &quot;F1m7BdGkXe8&quot;}, {&quot;name&quot;: &quot;Stage With Me&quot;, &quot;blurb&quot;: &quot;Assaig per a actors (iOS i Android).&quot;, &quot;detail&quot;: &quot;Dona la rèplica amb veu sintètica, grava la teva veu i desa sessions.&quot;, &quot;href&quot;: &quot;stage-with-me.html&quot;, &quot;image&quot;: &quot;../assets/images/stage-with-me-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4uf2j4h&quot;, &quot;play&quot;: &quot;https://play.google.com/store/apps/details?id=com.stagewithme.app&quot;}, {&quot;name&quot;: &quot;Transparent Screen&quot;, &quot;blurb&quot;: &quot;Veure l’escenari a través del Mac amb càmera o NDI.&quot;, &quot;detail&quot;: &quot;Transparent Screen posa la càmera darrere les finestres: QLab i la cue list queden a sobre. Webcam USB, Continuity Camera o NDI. Al Mac App Store.&quot;, &quot;href&quot;: &quot;transparent-screen.html&quot;, &quot;image&quot;: &quot;../assets/images/transparent-screen-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4eCORRI&quot;}, {&quot;name&quot;: &quot;Stage Recorder&quot;, &quot;blurb&quot;: &quot;Enregistradora multipista senzilla (no és un DAW).&quot;, &quot;detail&quot;: &quot;Enregistra sessions multipista (p. ex. des d’una M32), exporta les pistes al teu DAW i una barreja estèreo WAV de referència. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-recorder-square-1080.png&quot;, &quot;href&quot;: &quot;stage-recorder.html&quot;}, {&quot;name&quot;: &quot;Stage Edit&quot;, &quot;blurb&quot;: &quot;Editor de 2 pistes dual-mono per a Mac.&quot;, &quot;detail&quot;: &quot;Grava, edita ones i exporta WAV/AIFF sense un DAW complet. Dues pistes dual-mono per a Mac. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-edit-square-1080.png&quot;, &quot;href&quot;: &quot;stage-edit.html&quot;}, {&quot;name&quot;: &quot;Stage RF&quot;, &quot;blurb&quot;: &quot;Espectre UHF i rack sense fil a la mateixa vista.&quot;, &quot;detail&quot;: &quot;Barrido tinySA en viu i gestió de receptors de xarxa sense canviar d’app. Vista remota al navegador. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-rf-square-1080.png&quot;, &quot;href&quot;: &quot;stage-rf.html&quot;}]"
+            data-apps="[{&quot;name&quot;: &quot;Stage Multitrack&quot;, &quot;blurb&quot;: &quot;Enregistradora multipista senzilla (no és un DAW).&quot;, &quot;detail&quot;: &quot;Enregistra sessions multipista (p. ex. des d’una M32), exporta les pistes al teu DAW i una barreja estèreo WAV de referència. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-recorder-square-1080.png&quot;, &quot;href&quot;: &quot;stage-multitrack.html&quot;}, {&quot;name&quot;: &quot;Stage Edit&quot;, &quot;blurb&quot;: &quot;Editor de 2 pistes dual-mono per a Mac.&quot;, &quot;detail&quot;: &quot;Grava, edita ones i exporta WAV/AIFF sense un DAW complet. Dues pistes dual-mono per a Mac. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-edit-square-1080.png&quot;, &quot;href&quot;: &quot;stage-edit.html&quot;}, {&quot;name&quot;: &quot;MIDItoOSC&quot;, &quot;blurb&quot;: &quot;MIDI→OSC i mode Live entre taules.&quot;, &quot;detail&quot;: &quot;Versió 2.1.0: clona o tradueix la mescla a una segona taula, fins i tot entre consoles diferents.&quot;, &quot;href&quot;: &quot;miditoosc.html&quot;, &quot;image&quot;: &quot;../assets/images/miditoosc-square-1080.png?v=2&quot;, &quot;store&quot;: &quot;https://apple.co/4ftaJ3c&quot;, &quot;video&quot;: &quot;qsv95wvWbQA&quot;}, {&quot;name&quot;: &quot;Stage RF&quot;, &quot;blurb&quot;: &quot;Espectre UHF i rack sense fil a la mateixa vista.&quot;, &quot;detail&quot;: &quot;Barrido tinySA en viu i gestió de receptors de xarxa sense canviar d’app. Vista remota al navegador. Properament al Mac App Store.&quot;, &quot;soon&quot;: true, &quot;image&quot;: &quot;../assets/images/stage-rf-square-1080.png&quot;, &quot;href&quot;: &quot;stage-rf.html&quot;}, {&quot;name&quot;: &quot;Accesible&quot;, &quot;blurb&quot;: &quot;Subtítols, audiodescripció i llengua de signes amb QLab.&quot;, &quot;detail&quot;: &quot;Accessibilitat en viu amb QLab: subtítols, audiodescripció i vídeo en llengua de signes al mòbil i la tablet. 7 dies gratis per a nous subscriptors elegibles.&quot;, &quot;href&quot;: &quot;accesible.html&quot;, &quot;image&quot;: &quot;../assets/images/accesible-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4wL8Vcm&quot;, &quot;video&quot;: &quot;LidbLByLTzo&quot;}, {&quot;name&quot;: &quot;Shutter PJ-OSC&quot;, &quot;blurb&quot;: &quot;Shutter i power PJLink amb botons o OSC (Mac).&quot;, &quot;detail&quot;: &quot;Controla shutter i power de projectors PJLink amb botons o OSC. A la Mac App Store.&quot;, &quot;href&quot;: &quot;shutter-pj-osc.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pj-osc-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4nwjDiG&quot;}, {&quot;name&quot;: &quot;Shutter PJLINK&quot;, &quot;blurb&quot;: &quot;PJ-LINK a iPhone, iPad i Apple Watch.&quot;, &quot;detail&quot;: &quot;Mode PJ-LINK directe (TCP 4352). El reenviament OSC exigeix Shutter PJ-OSC al Mac.&quot;, &quot;href&quot;: &quot;shutter-pjlink-ios.html&quot;, &quot;image&quot;: &quot;../assets/images/shutter-pjlink-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4ds0FVC&quot;}, {&quot;name&quot;: &quot;Transparent Screen&quot;, &quot;blurb&quot;: &quot;Veure l’escenari a través del Mac amb càmera o NDI.&quot;, &quot;detail&quot;: &quot;Transparent Screen posa la càmera darrere les finestres: QLab i la cue list queden a sobre. Webcam USB, Continuity Camera o NDI. Al Mac App Store.&quot;, &quot;href&quot;: &quot;transparent-screen.html&quot;, &quot;image&quot;: &quot;../assets/images/transparent-screen-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4eCORRI&quot;}, {&quot;name&quot;: &quot;Easy Routing&quot;, &quot;blurb&quot;: &quot;Routing visual M32/X32 al Mac.&quot;, &quot;detail&quot;: &quot;Routing en graella per a Midas M32 i Behringer X32: toca per assignar o OFF.&quot;, &quot;href&quot;: &quot;easy-routing-m32-x32.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-x32-easy-routing-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/4eXQev2&quot;, &quot;video&quot;: &quot;3QmC9ZDqLDo&quot;}, {&quot;name&quot;: &quot;M32 Patch&quot;, &quot;blurb&quot;: &quot;Routing visual M32/X32 a iOS.&quot;, &quot;detail&quot;: &quot;Mateixa idea qu’Easy Routing, app independent per a iPhone i iPad.&quot;, &quot;href&quot;: &quot;m32-patch.html&quot;, &quot;image&quot;: &quot;../assets/images/m32-patch-square-1080.png?v=1&quot;, &quot;store&quot;: &quot;https://apple.co/44TAL9z&quot;, &quot;video&quot;: &quot;F1m7BdGkXe8&quot;}, {&quot;name&quot;: &quot;Stage With Me&quot;, &quot;blurb&quot;: &quot;Assaig per a actors (iOS i Android).&quot;, &quot;detail&quot;: &quot;Dona la rèplica amb veu sintètica, grava la teva veu i desa sessions.&quot;, &quot;href&quot;: &quot;stage-with-me.html&quot;, &quot;image&quot;: &quot;../assets/images/stage-with-me-square-1080.png&quot;, &quot;store&quot;: &quot;https://apple.co/4uf2j4h&quot;, &quot;play&quot;: &quot;https://play.google.com/store/apps/details?id=com.stagewithme.app&quot;}]"
           >
             <div class="app-orbit-ring" aria-label="Òrbita d’apps">
-              <button type="button" class="app-orbit-planet is-active" data-orbit-planet aria-label="Accesible" aria-current="true"><img src="../assets/images/accesible-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet is-active" data-orbit-planet aria-label="Stage Multitrack" aria-current="true"><img src="../assets/images/stage-recorder-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage Edit"><img src="../assets/images/stage-edit-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="MIDItoOSC"><img src="../assets/images/miditoosc-square-1080.png?v=2" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage RF"><img src="../assets/images/stage-rf-square-1080.png" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Accesible"><img src="../assets/images/accesible-square-1080.png" alt=""></button>
               <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJ-OSC"><img src="../assets/images/shutter-pj-osc-square-1080.png" alt=""></button>
               <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Shutter PJLINK"><img src="../assets/images/shutter-pjlink-square-1080.png" alt=""></button>
-              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="MIDItoOSC"><img src="../assets/images/miditoosc-square-1080.png?v=2" alt=""></button>
+              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Transparent Screen"><img src="../assets/images/transparent-screen-square-1080.png" alt=""></button>
               <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Easy Routing"><img src="../assets/images/m32-x32-easy-routing-square-1080.png?v=1" alt=""></button>
               <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="M32 Patch"><img src="../assets/images/m32-patch-square-1080.png?v=1" alt=""></button>
               <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage With Me"><img src="../assets/images/stage-with-me-square-1080.png" alt=""></button>
-              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Transparent Screen"><img src="../assets/images/transparent-screen-square-1080.png" alt=""></button>
-              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage Recorder"><img src="../assets/images/stage-recorder-square-1080.png" alt=""></button>
-              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage Edit"><img src="../assets/images/stage-edit-square-1080.png" alt=""></button>
-              <button type="button" class="app-orbit-planet" data-orbit-planet aria-label="Stage RF"><img src="../assets/images/stage-rf-square-1080.png" alt=""></button>
 
               <div class="app-orbit-center">
-                <a class="app-orbit-center-link" data-orbit-center-link href="accesible.html" aria-label="Obrir Accesible">
+                <a class="app-orbit-center-link" data-orbit-center-link href="stage-multitrack.html" aria-label="Obrir Stage Multitrack">
                   <div class="app-orbit-center-art" data-orbit-center-art></div>
                 </a>
-                <h3 data-orbit-center-title>Accesible</h3>
+                <h3 data-orbit-center-title>Stage Multitrack</h3>
                 <p class="app-orbit-center-desc" data-orbit-center-desc></p>
                 <div class="app-orbit-center-actions" data-orbit-center-actions></div>
                 <a class="app-orbit-center-video" data-orbit-center-video href="#" target="_blank" rel="noopener noreferrer" hidden>
@@ -177,6 +192,6 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
-  <script src="../js/app-carousel.js?v=23"></script>
+  <script src="../js/app-carousel.js?v=24"></script>
 </body>
 </html>

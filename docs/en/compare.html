@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" href="/assets/images/stageapps-favicon-32.png?v=3" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/stageapps-favicon-180.png?v=3">
-  <link rel="stylesheet" href="../css/styles.css?v=15">
+  <link rel="stylesheet" href="../css/styles.css?v=36">
 </head>
 <body>
   <div class="page">
@@ -28,18 +28,33 @@
         <div class="header-right">
           <nav class="nav" aria-label="Main">
             <a href="index.html">Home</a>
-            <a href="accesible.html">Accesible</a>
-            <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
-            <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
-            <a href="miditoosc.html">MIDItoOSC</a>
-            <a href="easy-routing-m32-x32.html">Easy Routing</a>
-            <a href="m32-patch.html">M32 Patch</a>
-            <a href="stage-with-me.html">Stage With Me</a>
-            <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
-            <a href="stage-edit.html">Stage Edit</a>
-            <a href="stage-rf.html">Stage RF</a>
-            <a href="compare.html">Compare</a>
+            <details class="nav-group">
+              <summary>Audio</summary>
+              <div class="nav-group-menu">
+              <a href="stage-multitrack.html">Stage Multitrack</a>
+              <a href="stage-edit.html">Stage Edit</a>
+              </div>
+            </details>
+            <a href="miditoosc.html">MIDI / OSC</a>
+            <a href="stage-rf.html">RF</a>
+            <a href="accesible.html">Accessibility</a>
+            <details class="nav-group">
+              <summary>Projectors & screen</summary>
+              <div class="nav-group-menu">
+              <a href="shutter-pj-osc.html">Shutter PJ-OSC</a>
+              <a href="shutter-pjlink-ios.html">Shutter PJLINK</a>
+              <a href="transparent-screen.html">Transparent Screen</a>
+              </div>
+            </details>
+            <details class="nav-group">
+              <summary>Patch & routing</summary>
+              <div class="nav-group-menu">
+              <a href="easy-routing-m32-x32.html">Easy Routing</a>
+              <a href="m32-patch.html">M32 Patch</a>
+              </div>
+            </details>
+            <a href="stage-with-me.html">Acting rehearsal</a>
+            <a href="compare.html" aria-current="page">Compare</a>
             <a href="resources.html">Resources</a>
             <a href="faq.html">FAQ</a>
             <a href="support.html">Support</a>
@@ -71,16 +86,16 @@
                 <tr><th>App</th><th>Best for</th><th>Protocols</th><th>Platform</th></tr>
               </thead>
               <tbody>
+                <tr><td>Stage Multitrack</td><td>Simple multitrack capture and export to a DAW</td><td>Multitrack audio / WAV</td><td>macOS · coming soon</td></tr>
+                <tr><td>Stage Edit</td><td>Edit two dual-mono tracks and export WAV/AIFF</td><td>Audio / WAV · AIFF</td><td>macOS · coming soon</td></tr>
+                <tr><td>MIDItoOSC</td><td>Mixer-to-show control bridge</td><td>MIDI, OSC</td><td>macOS</td></tr>
+                <tr><td>Stage RF</td><td>Live UHF spectrum and unified wireless rack control</td><td>USB tinySA · network OSC/IP</td><td>macOS 15+ · coming soon</td></tr>
                 <tr><td>Accesible</td><td>Accessibility services during shows</td><td>OSC, HTTP/WebSocket</td><td>macOS</td></tr>
                 <tr><td>Shutter PJ-OSC</td><td>Projector shutter and power automation</td><td>PJLink, OSC</td><td>macOS</td></tr>
                 <tr><td>Shutter PJLINK</td><td>Manual remote projector control</td><td>PJLink</td><td>iOS</td></tr>
+                <tr><td>Transparent Screen</td><td>See the stage through the booth monitor</td><td>Camera, Continuity Camera, NDI</td><td>macOS</td></tr>
                 <tr><td>M32 / X32 Easy Routing</td><td>Visual M32/X32 input and output routing</td><td>OSC</td><td>macOS</td></tr>
                 <tr><td>M32 Patch</td><td>Visual M32/X32 routing on iPhone/iPad</td><td>OSC</td><td>iOS / iPadOS</td></tr>
-                <tr><td>MIDItoOSC</td><td>Mixer-to-show control bridge</td><td>MIDI, OSC</td><td>macOS</td></tr>
-                              <tr><td>Transparent Screen</td><td>See the stage through the booth monitor</td><td>Camera, Continuity Camera, NDI</td><td>macOS</td></tr>
-                              <tr><td>Stage Recorder</td><td>Simple multitrack capture and export to a DAW</td><td>Multitrack audio / WAV</td><td>macOS · coming soon</td></tr>
-                              <tr><td>Stage Edit</td><td>Edit two dual-mono tracks and export WAV/AIFF</td><td>Audio / WAV · AIFF</td><td>macOS · coming soon</td></tr>
-                              <tr><td>Stage RF</td><td>Live UHF spectrum and unified wireless rack control</td><td>USB tinySA · network OSC/IP</td><td>macOS 15+ · coming soon</td></tr>
               </tbody>
             </table>
           </div>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create Stage Recorder product pages (coming soon) and wire them into the site."""
+"""Create Stage Multitrack product pages (coming soon) and wire them into the site."""
 import html as htmlmod
 import json
 import re
@@ -7,15 +7,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE = "../assets/images/stage-recorder-square-1080.png"
-HREF = "stage-recorder.html"
+HREF = "stage-multitrack.html"
 LANGS = ["es", "en", "fr", "de", "gl", "ca", "eu"]
 
 COPY = {
     "es": {
         "meta": "Grabadora multipista sencilla para Mac: captura sesiones (p. ej. M32/DN32) y exporta pistas o un WAV estéreo de referencia.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder no pretende ser un DAW: es una grabadora multipista sencilla para Mac. Sirve para obtener las pistas que luego editarás en tu DAW, o un WAV estéreo L/R de referencia.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack no pretende ser un DAW: es una grabadora multipista sencilla para Mac. Sirve para obtener las pistas que luego editarás en tu DAW, o un WAV estéreo L/R de referencia.",
         "features_h": "Características",
         "features": [
             "Grabación multipista sencilla: crea una sesión, asigna entradas y graba.",
@@ -26,7 +26,7 @@ COPY = {
         ],
         "soon_h": "Próximamente",
         "soon_p": "<strong>En breve en la Mac App Store.</strong> Mientras tanto puedes seguir las novedades de Stage Apps.",
-        "icon_alt": "Icono de Stage Recorder",
+        "icon_alt": "Icono de Stage Multitrack",
         "footer_links": '<p><a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a></p>',
         "nav_home": "Inicio",
         "nav_compare": "Comparativa",
@@ -46,9 +46,9 @@ COPY = {
     },
     "en": {
         "meta": "Simple multitrack recorder for Mac: capture sessions (e.g. M32/DN32) and export stems or a stereo WAV reference mix.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder is not trying to be a DAW: it is a simple multitrack recorder for Mac. Capture the tracks you will edit later in your DAW, or a stereo L/R WAV for reference.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack is not trying to be a DAW: it is a simple multitrack recorder for Mac. Capture the tracks you will edit later in your DAW, or a stereo L/R WAV for reference.",
         "features_h": "Features",
         "features": [
             "Simple multitrack recording: create a session, assign inputs and record.",
@@ -59,7 +59,7 @@ COPY = {
         ],
         "soon_h": "Coming soon",
         "soon_p": "<strong>Coming soon to the Mac App Store.</strong> Follow Stage Apps for updates.",
-        "icon_alt": "Stage Recorder icon",
+        "icon_alt": "Stage Multitrack icon",
         "footer_links": '<p><a href="compare.html">Compare apps</a> · <a href="use-cases.html">Use cases</a> · <a href="support.html">Support</a></p>',
         "nav_home": "Home",
         "nav_compare": "Compare",
@@ -79,9 +79,9 @@ COPY = {
     },
     "fr": {
         "meta": "Enregistreur multipiste simple pour Mac : capturez des sessions (p. ex. M32/DN32) et exportez les pistes ou un mix stéréo WAV de référence.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder n’est pas un DAW : c’est un enregistreur multipiste simple pour Mac. Obtenez les pistes à éditer ensuite dans votre DAW, ou un WAV stéréo L/R de référence.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack n’est pas un DAW : c’est un enregistreur multipiste simple pour Mac. Obtenez les pistes à éditer ensuite dans votre DAW, ou un WAV stéréo L/R de référence.",
         "features_h": "Fonctionnalités",
         "features": [
             "Enregistrement multipiste simple : créez une session, assignez les entrées et enregistrez.",
@@ -92,7 +92,7 @@ COPY = {
         ],
         "soon_h": "Bientôt",
         "soon_p": "<strong>Bientôt sur le Mac App Store.</strong> Suivez Stage Apps pour les nouveautés.",
-        "icon_alt": "Icône Stage Recorder",
+        "icon_alt": "Icône Stage Multitrack",
         "footer_links": '<p><a href="compare.html">Comparatif</a> · <a href="use-cases.html">Cas d’usage</a> · <a href="support.html">Support</a></p>',
         "nav_home": "Accueil",
         "nav_compare": "Comparatif",
@@ -112,9 +112,9 @@ COPY = {
     },
     "de": {
         "meta": "Einfacher Mehrspur-Recorder für den Mac: Sessions aufnehmen (z. B. M32/DN32) und Spuren oder eine Stereo-WAV-Referenz exportieren.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder will kein DAW sein: ein einfacher Mehrspur-Recorder für den Mac. Holen Sie die Spuren für Ihr DAW — oder eine Stereo-WAV-Referenz (L/R).",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack will kein DAW sein: ein einfacher Mehrspur-Recorder für den Mac. Holen Sie die Spuren für Ihr DAW — oder eine Stereo-WAV-Referenz (L/R).",
         "features_h": "Funktionen",
         "features": [
             "Einfache Mehrspuraufnahme: Session anlegen, Eingänge zuweisen und aufnehmen.",
@@ -145,9 +145,9 @@ COPY = {
     },
     "gl": {
         "meta": "Gravadora multipista sinxela para Mac: captura sesións (p. ex. M32/DN32) e exporta pistas ou un WAV estéreo de referencia.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder non pretende ser un DAW: é unha gravadora multipista sinxela para Mac. Serve para obter as pistas que logo editarás no teu DAW, ou un WAV estéreo L/R de referencia.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack non pretende ser un DAW: é unha gravadora multipista sinxela para Mac. Serve para obter as pistas que logo editarás no teu DAW, ou un WAV estéreo L/R de referencia.",
         "features_h": "Características",
         "features": [
             "Gravación multipista sinxela: crea unha sesión, asigna entradas e grava.",
@@ -158,7 +158,7 @@ COPY = {
         ],
         "soon_h": "Proximamente",
         "soon_p": "<strong>En breve na Mac App Store.</strong> Mentres tanto podes seguir as novidades de Stage Apps.",
-        "icon_alt": "Icona de Stage Recorder",
+        "icon_alt": "Icona de Stage Multitrack",
         "footer_links": '<p><a href="compare.html">Ver comparativa</a> · <a href="use-cases.html">Ver casos de uso</a> · <a href="support.html">Soporte</a></p>',
         "nav_home": "Inicio",
         "nav_compare": "Comparativa",
@@ -179,9 +179,9 @@ COPY = {
     },
     "ca": {
         "meta": "Enregistradora multipista senzilla per a Mac: captura sessions (p. ex. M32/DN32) i exporta pistes o un WAV estèreo de referència.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder no pretén ser un DAW: és una enregistradora multipista senzilla per a Mac. Serveix per obtenir les pistes que després editaràs al teu DAW, o un WAV estèreo L/R de referència.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack no pretén ser un DAW: és una enregistradora multipista senzilla per a Mac. Serveix per obtenir les pistes que després editaràs al teu DAW, o un WAV estèreo L/R de referència.",
         "features_h": "Característiques",
         "features": [
             "Enregistrament multipista senzill: crea una sessió, assigna entrades i grava.",
@@ -192,7 +192,7 @@ COPY = {
         ],
         "soon_h": "Properament",
         "soon_p": "<strong>Aviat al Mac App Store.</strong> Mentrestant pots seguir les novetats de Stage Apps.",
-        "icon_alt": "Icona de Stage Recorder",
+        "icon_alt": "Icona de Stage Multitrack",
         "footer_links": '<p><a href="compare.html">Veure comparativa</a> · <a href="use-cases.html">Veure casos d’ús</a> · <a href="support.html">Suport</a></p>',
         "nav_home": "Inici",
         "nav_compare": "Comparativa",
@@ -213,9 +213,9 @@ COPY = {
     },
     "eu": {
         "meta": "Mac-erako multipista grabagailu sinplea: saioak grabatu (adib. M32/DN32) eta pistak edo estereo WAV erreferentzia esportatu.",
-        "title": "Stage Recorder (macOS) — Stage Apps",
-        "h1": "Stage Recorder (macOS)",
-        "lead": "Stage Recorder ez da DAW bat izan nahi: Mac-erako multipista grabagailu sinplea da. Gero DAW-n editatzeko pistak lortzeko, edo L/R estereo WAV erreferentzia baterako.",
+        "title": "Stage Multitrack (macOS) — Stage Apps",
+        "h1": "Stage Multitrack (macOS)",
+        "lead": "Stage Multitrack ez da DAW bat izan nahi: Mac-erako multipista grabagailu sinplea da. Gero DAW-n editatzeko pistak lortzeko, edo L/R estereo WAV erreferentzia baterako.",
         "features_h": "Ezaugarriak",
         "features": [
             "Multipista grabaketa sinplea: sortu saioa, esleitu sarrerak eta grabatu.",
@@ -226,7 +226,7 @@ COPY = {
         ],
         "soon_h": "Laster",
         "soon_p": "<strong>Laster Mac App Store-n.</strong> Bitartean, jarraitu Stage Apps-en berriak.",
-        "icon_alt": "Stage Recorder ikonoa",
+        "icon_alt": "Stage Multitrack ikonoa",
         "footer_links": '<p><a href="compare.html">Konparaketa</a> · <a href="use-cases.html">Erabilera kasuak</a> · <a href="support.html">Laguntza</a></p>',
         "nav_home": "Hasiera",
         "nav_compare": "Konparaketa",
@@ -328,7 +328,7 @@ def build_page(lang):
             <a href="m32-patch.html">M32 Patch</a>
             <a href="stage-with-me.html">Stage With Me</a>
             <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
+            <a href="stage-multitrack.html">Stage Multitrack</a>
             <a href="compare.html">{c['nav_compare']}</a>
             <a href="resources.html">{c['nav_resources']}</a>
             <a href="faq.html">{c['nav_faq']}</a>
@@ -416,7 +416,7 @@ def main():
         m = re.search(r'data-apps="([^"]+)"', text)
         apps = json.loads(htmlmod.unescape(m.group(1)))
         for app in apps:
-            if app.get("name") == "Stage Recorder":
+            if app.get("name") == "Stage Multitrack":
                 app["href"] = HREF
                 app["image"] = IMAGE
                 app["soon"] = True
@@ -440,10 +440,10 @@ def main():
         text = path.read_text(encoding="utf-8")
         if 'href="transparent-screen.html">Transparent Screen</a>' not in text:
             continue
-        if 'href="stage-recorder.html">Stage Recorder</a>' in text:
+        if 'href="stage-multitrack.html">Stage Multitrack</a>' in text:
             continue
         new, n = nav_pat.subn(
-            r'\1\n            <a href="stage-recorder.html">Stage Recorder</a>',
+            r'\1\n            <a href="stage-multitrack.html">Stage Multitrack</a>',
             text,
         )
         if n:

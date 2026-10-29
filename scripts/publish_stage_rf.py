@@ -377,7 +377,7 @@ def build_page(lang):
             <a href="m32-patch.html">M32 Patch</a>
             <a href="stage-with-me.html">Stage With Me</a>
             <a href="transparent-screen.html">Transparent Screen</a>
-            <a href="stage-recorder.html">Stage Recorder</a>
+            <a href="stage-multitrack.html">Stage Multitrack</a>
             <a href="stage-edit.html">Stage Edit</a>
             <a href="stage-rf.html">Stage RF</a>
             <a href="compare.html">{c['nav_compare']}</a>

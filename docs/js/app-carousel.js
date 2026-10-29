@@ -68,11 +68,11 @@
         label.appendChild(document.createTextNode("Transparent"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Screen"));
-      } else if (app.name === "Stage Recorder") {
+      } else if (app.name === "Stage Multitrack" || app.name === "Stage Recorder") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
-        label.appendChild(document.createTextNode("Recorder"));
+        label.appendChild(document.createTextNode("Multitrack"));
       } else if (app.name === "Stage Edit") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
