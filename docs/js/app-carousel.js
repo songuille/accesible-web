@@ -73,9 +73,9 @@
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Multitrack"));
-      } else if (app.name === "Stage Edit") {
+      } else if (app.name === "Stage Audio Edit" || app.name === "Stage Edit") {
         label.classList.add("is-stacked");
-        label.appendChild(document.createTextNode("Stage"));
+        label.appendChild(document.createTextNode("Stage Audio"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Edit"));
       } else if (app.name === "Stage RF") {
