@@ -78,6 +78,11 @@
         label.appendChild(document.createTextNode("Stage Audio"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("Edit"));
+      } else if (app.name === "Stage Align") {
+        label.classList.add("is-stacked");
+        label.appendChild(document.createTextNode("Stage"));
+        label.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode("Align"));
       } else if (app.name === "Stage Backup") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
