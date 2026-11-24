@@ -17,6 +17,7 @@
   <url><loc>https://stageapps.org/es/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/es/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/es/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/es/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/es/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/es/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/es/support.html</loc></url>
@@ -38,6 +39,7 @@
   <url><loc>https://stageapps.org/en/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/en/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/en/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/en/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/en/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/en/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/en/support.html</loc></url>
@@ -59,6 +61,7 @@
   <url><loc>https://stageapps.org/fr/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/fr/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/fr/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/fr/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/fr/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/fr/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/fr/support.html</loc></url>
@@ -80,32 +83,12 @@
   <url><loc>https://stageapps.org/de/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/de/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/de/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/de/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/de/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/de/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/de/support.html</loc></url>
   <url><loc>https://stageapps.org/de/transparent-screen.html</loc></url>
   <url><loc>https://stageapps.org/de/use-cases.html</loc></url>
-  <url><loc>https://stageapps.org/eu/accesible.html</loc></url>
-  <url><loc>https://stageapps.org/eu/compare.html</loc></url>
-  <url><loc>https://stageapps.org/eu/easy-routing-m32-x32.html</loc></url>
-  <url><loc>https://stageapps.org/eu/faq.html</loc></url>
-  <url><loc>https://stageapps.org/eu/index.html</loc></url>
-  <url><loc>https://stageapps.org/eu/m32-patch.html</loc></url>
-  <url><loc>https://stageapps.org/eu/miditoosc.html</loc></url>
-  <url><loc>https://stageapps.org/eu/privacy.html</loc></url>
-  <url><loc>https://stageapps.org/eu/resources.html</loc></url>
-  <url><loc>https://stageapps.org/eu/shutter-pj-osc.html</loc></url>
-  <url><loc>https://stageapps.org/eu/shutter-pjlink-ios.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-align.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-backup.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-edit.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-multitrack.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-rf.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-with-me-android-privacy.html</loc></url>
-  <url><loc>https://stageapps.org/eu/stage-with-me.html</loc></url>
-  <url><loc>https://stageapps.org/eu/support.html</loc></url>
-  <url><loc>https://stageapps.org/eu/transparent-screen.html</loc></url>
-  <url><loc>https://stageapps.org/eu/use-cases.html</loc></url>
   <url><loc>https://stageapps.org/gl/accesible.html</loc></url>
   <url><loc>https://stageapps.org/gl/compare.html</loc></url>
   <url><loc>https://stageapps.org/gl/easy-routing-m32-x32.html</loc></url>
@@ -122,6 +105,7 @@
   <url><loc>https://stageapps.org/gl/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/gl/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/gl/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/gl/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/gl/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/gl/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/gl/support.html</loc></url>
@@ -143,11 +127,34 @@
   <url><loc>https://stageapps.org/ca/stage-edit.html</loc></url>
   <url><loc>https://stageapps.org/ca/stage-multitrack.html</loc></url>
   <url><loc>https://stageapps.org/ca/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/ca/stage-spl.html</loc></url>
   <url><loc>https://stageapps.org/ca/stage-with-me-android-privacy.html</loc></url>
   <url><loc>https://stageapps.org/ca/stage-with-me.html</loc></url>
   <url><loc>https://stageapps.org/ca/support.html</loc></url>
   <url><loc>https://stageapps.org/ca/transparent-screen.html</loc></url>
   <url><loc>https://stageapps.org/ca/use-cases.html</loc></url>
+  <url><loc>https://stageapps.org/eu/accesible.html</loc></url>
+  <url><loc>https://stageapps.org/eu/compare.html</loc></url>
+  <url><loc>https://stageapps.org/eu/easy-routing-m32-x32.html</loc></url>
+  <url><loc>https://stageapps.org/eu/faq.html</loc></url>
+  <url><loc>https://stageapps.org/eu/index.html</loc></url>
+  <url><loc>https://stageapps.org/eu/m32-patch.html</loc></url>
+  <url><loc>https://stageapps.org/eu/miditoosc.html</loc></url>
+  <url><loc>https://stageapps.org/eu/privacy.html</loc></url>
+  <url><loc>https://stageapps.org/eu/resources.html</loc></url>
+  <url><loc>https://stageapps.org/eu/shutter-pj-osc.html</loc></url>
+  <url><loc>https://stageapps.org/eu/shutter-pjlink-ios.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-align.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-backup.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-edit.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-multitrack.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-rf.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-spl.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-with-me-android-privacy.html</loc></url>
+  <url><loc>https://stageapps.org/eu/stage-with-me.html</loc></url>
+  <url><loc>https://stageapps.org/eu/support.html</loc></url>
+  <url><loc>https://stageapps.org/eu/transparent-screen.html</loc></url>
+  <url><loc>https://stageapps.org/eu/use-cases.html</loc></url>
   <url><loc>https://stageapps.org/support.html</loc></url>
   <url><loc>https://stageapps.org/privacy.html</loc></url>
 </urlset>
