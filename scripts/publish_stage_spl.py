@@ -86,7 +86,6 @@ def build_nav(lang: str, current: str) -> str:
             [
                 ("stage-multitrack.html", "Stage Multitrack"),
                 ("stage-edit.html", "Stage Audio Edit"),
-                ("stage-align.html", "Stage Align"),
                 (HREF, "Stage SPL"),
             ],
         ),
@@ -244,11 +243,9 @@ def update_index(lang: str) -> None:
     else:
         insert_at = None
         for i, n in enumerate(names):
-            if n == "Stage Align":
+            if n in ("Stage Audio Edit", "Stage Edit"):
                 insert_at = i + 1
                 break
-            if n in ("Stage Audio Edit", "Stage Edit") and insert_at is None:
-                insert_at = i + 1
             if n in ("Stage Multitrack", "Stage Recorder") and insert_at is None:
                 insert_at = i + 1
         if insert_at is None:
@@ -306,7 +303,7 @@ def update_compare(lang: str) -> None:
         )
     else:
         m = re.search(
-            r"(<tr><td>Stage Align</td>.*?</tr>)",
+            r"(<tr><td>Stage Audio Edit</td>.*?</tr>)",
             text,
             re.S,
         )
@@ -335,22 +332,22 @@ def update_other_pages(lang: str) -> None:
 def update_js() -> None:
     path = DOCS / "js" / "app-carousel.js"
     js = path.read_text(encoding="utf-8")
-    needle = '''      } else if (app.name === "Stage Align") {
+    needle = '''      } else if (app.name === "Stage Backup") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
-        label.appendChild(document.createTextNode("Align"));
+        label.appendChild(document.createTextNode("Backup"));
       }'''
-    insert = '''      } else if (app.name === "Stage Align") {
-        label.classList.add("is-stacked");
-        label.appendChild(document.createTextNode("Stage"));
-        label.appendChild(document.createElement("br"));
-        label.appendChild(document.createTextNode("Align"));
-      } else if (app.name === "Stage SPL") {
+    insert = '''      } else if (app.name === "Stage SPL") {
         label.classList.add("is-stacked");
         label.appendChild(document.createTextNode("Stage"));
         label.appendChild(document.createElement("br"));
         label.appendChild(document.createTextNode("SPL"));
+      } else if (app.name === "Stage Backup") {
+        label.classList.add("is-stacked");
+        label.appendChild(document.createTextNode("Stage"));
+        label.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode("Backup"));
       }'''
     if 'app.name === "Stage SPL"' not in js:
         if needle not in js:
